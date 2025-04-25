@@ -1,1 +1,11 @@
-
+/**
+ * @name Fortnite
+ * @author Kira Kohler
+ * @version 6.9.0
+ * @description Tema con fondo creado por Kira y Diego
+ * @website www.kirakohler.es
+ */
+ 
+@import url(https://raw.githubusercontent.com/Kira-Kohler/theme/refs/heads/main/DiscordGlowTheme.css);
+@import url(https://raw.githubusercontent.com/DiscordStyles/RadialStatus/deploy/RadialStatus.theme.css);
+@import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/base/Apple.css);
