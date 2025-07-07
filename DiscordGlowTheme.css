@@ -2759,7 +2759,7 @@ code {
   --streaming-color: #593695;
   --offline-color: #6c6c6c;
   --background-shading-percent: 80%;
-  --background-image: url(https://autumn.revolt.chat/attachments/1dajpEHmx9HD1x7dWJXjujLTtgZnP-p6oVK79zB8id/Wallpaper.png);
+  --background-image: url(https://github.com/Kira-Kohler/theme/blob/main/wallpaper1920x1080.png?raw=true);
   --background-attachment: fixed;
   --background-filter: saturate(calc(var(--saturation-factor, 1) * 1));
   --user-popout-image: var(--background-image);
@@ -2769,7 +2769,7 @@ code {
   --user-modal-image: var(--background-image);
   --user-modal-attachment: var(--background-attachment);
   --user-modal-filter: brightness(var(--background-brightness, 100%)) contrast(var(--background-contrast, 100%)) saturate(var(--background-saturation, 100%)) invert(var(--background-invert, 0%)) grayscale(var(--background-grayscale, 0%)) sepia(var(--background-sepia, 0%)) blur(calc(var(--background-blur, 0px) + 3px));
-  --home-icon: url(https://autumn.revolt.chat/attachments/oNgtrglpVDSPSAKqLuNh1KV1viibmBMzeYh_b6BXbM/heart2.png);
+  --home-icon: url(https://raw.githubusercontent.com/Kira-Kohler/theme/refs/heads/main/heart2.png);
   --main-font: 'Times New Roman', sans-serif;
   --code-font: Consolas, Liberation Mono, Menlo, Courier, monospace;
   --channel-unread: var(--main-color);
