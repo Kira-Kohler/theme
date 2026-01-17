@@ -1,2883 +1,3398 @@
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.radioIndicatorChecked__001a7 .refreshIconStroke__001a7,
-.refreshIconStroke__001a7 {
-  stroke: var(--interactive-active)
-}
 
-.loadingCard_f369db,
-.visual-refresh .wrapper_d852db {
-  animation: 1.5s ease-in-out infinite cv-card-loading
+@keyframes cv-channel-select{
+    from{
+        right:100%
+    }
+    to{
+        right:0
+    }
+}
+@keyframes cv-card-loading{
+    0%{
+        opacity:.66
+    }
+    50%{
+        opacity:.33
+    }
+    100%{
+        opacity:.66
+    }
+}
+
+._2debea61131de3de-info::after{
+    content:"Kira and Diego" " " "v6.9";
+    color:var(--text-muted);
+    font-size:12px;
+    line-height:1.3333333333;
+    font-weight:400;
+    font-family:var(--font-primary)
+}
+:is(.theme-dark,.theme-light):not(.platform-osx) .c38106a3f0c3ca76-leading::before{
+    content:"Kira and Diego";
+    position:static;
+    margin-left:10px;
+    font-size:16px;
+    font-weight:600;
+    color:var(--text-default);
+    order:2;
+    filter:drop-shadow(0 0 5px var(--hsl-main-color))
+}
+:is(.theme-dark,.theme-light):not(.platform-osx) .c38106a3f0c3ca76-leading::after{
+    content:"6.9";
+    position:static;
+    margin-top:-5px;
+    margin-left:5px;
+    font-family:var(--code-font);
+    font-size:11px;
+    font-weight:600;
+    color:var(--text-muted);
+    order:3
+}
+
+._201d5e8a3c09670a-button{
+    border-radius:4px
+}
+._201d5e8a3c09670a-lookFilled:is(._201d5e8a3c09670a-colorBrand,._201d5e8a3c09670a-colorPrimary){
+    background-color:var(--hsl-main-color);
+    border:none
+}
+._201d5e8a3c09670a-lookFilled:is(._201d5e8a3c09670a-colorBrand,._201d5e8a3c09670a-colorPrimary):hover{
+    background-color:var(--hsl-hover-color)
+}
+._201d5e8a3c09670a-lookFilled:is(._201d5e8a3c09670a-colorBrand,._201d5e8a3c09670a-colorPrimary):disabled{
+    background-color:var(--hsl-main-color)
+}
+._201d5e8a3c09670a-lookFilled._201d5e8a3c09670a-colorGreen{
+    background-color:var(--hsl-success-color);
+    border:none
+}
+._201d5e8a3c09670a-lookFilled._201d5e8a3c09670a-colorGreen:hover{
+    background-color:hsl(from var(--hsl-success-color) h s l/0.8)
+}
+._201d5e8a3c09670a-lookFilled._201d5e8a3c09670a-colorGreen:disabled{
+    background-color:hsl(from var(--hsl-success-color) h s l/0.8)
+}
+._201d5e8a3c09670a-lookFilled._201d5e8a3c09670a-colorRed{
+    background-color:var(--hsl-danger-color);
+    border:none
+}
+._201d5e8a3c09670a-lookFilled._201d5e8a3c09670a-colorRed:hover{
+    background-color:hsl(from var(--hsl-danger-color) h s l/0.8)
+}
+._201d5e8a3c09670a-lookFilled._201d5e8a3c09670a-colorRed:disabled{
+    background-color:var(--hsl-danger-color)
+}
+._201d5e8a3c09670a-lookFilled:is(._201d5e8a3c09670a-colorWhite,._201d5e8a3c09670a-colorBrandInverted){
+    color:var(--hsl-main-color);
+    border:none
+}
+._201d5e8a3c09670a-lookFilled:is(._201d5e8a3c09670a-colorWhite,._201d5e8a3c09670a-colorBrandInverted):hover{
+    color:var(--hsl-hover-color)
+}
+._201d5e8a3c09670a-lookOutlined:is(._201d5e8a3c09670a-colorBrand,._201d5e8a3c09670a-colorPrimary){
+    border-color:var(--hsl-main-color)
+}
+._201d5e8a3c09670a-lookOutlined:is(._201d5e8a3c09670a-colorBrand,._201d5e8a3c09670a-colorPrimary):hover{
+    border-color:var(--hsl-hover-color);
+    background-color:var(--hsl-hover-color)
+}
+._201d5e8a3c09670a-lookOutlined._201d5e8a3c09670a-colorGreen{
+    border-color:var(--hsl-success-color)
 }
-
-.avatar_c19a55.clickable_c19a55:active,
-.memberInner__5d473:active {
-  transform: scale(.9)
+._201d5e8a3c09670a-lookOutlined._201d5e8a3c09670a-colorGreen:hover{
+    border-color:hsl(from var(--hsl-success-color) h s l/0.8);
+    background-color:hsl(from var(--hsl-success-color) h s l/0.8)
 }
-
-@keyframes cv-channel-select {
-  from {
-    right: 100%
-  }
-
-  to {
-    right: 0
-  }
+._201d5e8a3c09670a-lookOutlined._201d5e8a3c09670a-colorRed{
+    background-color:rgba(0,0,0,0);
+    border-color:var(--hsl-danger-color);
+    color:var(--button-outline-brand-text)
 }
-
-@keyframes cv-card-loading {
-
-  0%,
-  100% {
-    opacity: .66
-  }
-
-  50% {
-    opacity: .33
-  }
+._201d5e8a3c09670a-lookOutlined._201d5e8a3c09670a-colorRed:hover{
+    border-color:hsl(from var(--hsl-danger-color) h s l/0.8);
+    background-color:hsl(from var(--hsl-danger-color) h s l/0.8);
+    color:var(--button-outline-brand-text)
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.info__2debe::after {
-  content: "Kira and Diego" " " "v6.9";
-  color: var(--text-muted);
-  font-size: 12px;
-  line-height: 1.3333333333;
-  font-weight: 400;
-  font-family: var(--font-primary)
+._201d5e8a3c09670a-lookLink ._201d5e8a3c09670a-contents{
+    background:none
 }
-
-.leading_c38106::before {
-  content: "Kira and Diego";
-  position: static;
-  margin-left: 10px;
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--text-normal);
-  order: 2;
-  filter: drop-shadow(0 0 5px var(--hsl-main-color))
+._201d5e8a3c09670a-lookLink:hover ._201d5e8a3c09670a-contents{
+    text-decoration:underline
 }
-
-.leading_c38106::after {
-  content: "v6.9";
-  position: static;
-  margin-top: 3px;
-  margin-left: 5px;
-  font-family: var(--code-font);
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--text-muted);
-  order: 3
+:is(.theme-light,.theme-dark) ._201d5e8a3c09670a-lookLink:is(._201d5e8a3c09670a-colorPrimary,._201d5e8a3c09670a-colorLink){
+    color:var(--hsl-main-color)
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-html {
-  --__i18n-attachment: "More"
+._201d5e8a3c09670a-lookLink._201d5e8a3c09670a-colorBrand{
+    color:var(--hsl-main-color)
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.app_a3002d,
-.headerText__636a2,
-.submenuIcon__636a2 {
-  color: transparent
+._201d5e8a3c09670a-lookLink._201d5e8a3c09670a-colorRed{
+    color:var(--hsl-danger-color)
 }
-
-.sidebar_c48ade[data-collapsed=true] .buttons__37e49,
-.visual-refresh-chat-input .formWithLoadedChatInput_f75fb0:before {
-  display: none
+.a22cb0c66246f5d3-button{
+    border-radius:4px
 }
-
-.sidebar_c48ade[data-collapsed=true] .avatarWrapper__37e49 {
-  justify-content: center
+.a22cb0c66246f5d3-primary{
+    background:var(--hsl-main-color);
+    border-color:rgba(0,0,0,0)
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.burstGlow__23977,
-.button__201d5,
-.checkbox_f525d3,
-.visual-refresh .reactions__23977 {
-  border-radius: 4px
+.a22cb0c66246f5d3-primary:hover,.a22cb0c66246f5d3-primary:active{
+    background:var(--hsl-hover-color);
+    border-color:rgba(0,0,0,0)
 }
-
-.lookFilled__201d5:is(.colorBrand__201d5, .colorPrimary__201d5) {
-  background-color: var(--hsl-main-color);
-  border: none
+.a22cb0c66246f5d3-secondary{
+    background:rgba(0,0,0,0);
+    border-color:var(--hsl-main-color)
 }
-
-.lookFilled__201d5:is(.colorBrand__201d5, .colorPrimary__201d5):hover {
-  background-color: var(--hsl-hover-color)
+.a22cb0c66246f5d3-secondary:hover,.a22cb0c66246f5d3-secondary:active{
+    background:rgba(0,0,0,0);
+    border-color:var(--hsl-hover-color)
 }
-
-.lookFilled__201d5:is(.colorBrand__201d5, .colorPrimary__201d5):disabled {
-  background-color: var(--hsl-main-color)
+.a22cb0c66246f5d3-active{
+    background:var(--hsl-success-color);
+    border-color:rgba(0,0,0,0)
 }
-
-.lookFilled__201d5.colorGreen__201d5 {
-  background-color: var(--hsl-success-color);
-  border: none
+.a22cb0c66246f5d3-active:hover,.a22cb0c66246f5d3-active:active{
+    background:hsl(from var(--hsl-success-color) h s l/0.8);
+    border-color:rgba(0,0,0,0)
 }
-
-.lookFilled__201d5.colorGreen__201d5:hover {
-  background-color: hsl(from var(--hsl-success-color) h s l/.8)
+.a22cb0c66246f5d3-critical-primary{
+    background:var(--hsl-danger-color);
+    border-color:rgba(0,0,0,0)
 }
-
-.lookFilled__201d5.colorRed__201d5 {
-  background-color: var(--hsl-danger-color);
-  border: none
+.a22cb0c66246f5d3-critical-primary:hover,.a22cb0c66246f5d3-critical-primary:active{
+    background:hsl(from var(--hsl-danger-color) h s l/0.8);
+    border-color:rgba(0,0,0,0)
 }
-
-.colorDanger_c1e9c4:active:not(.hideInteraction_c1e9c4),
-.lookFilled__201d5.colorRed__201d5:hover {
-  background-color: hsl(from var(--hsl-danger-color) h s l/.8)
+.a22cb0c66246f5d3-critical-secondary{
+    background:rgba(0,0,0,0);
+    border-color:var(--hsl-danger-color);
+    color:var(--control-critical-primary-text-default)
 }
-
-.colorDanger_c1e9c4.focused_c1e9c4,
-.lookFilled__201d5.colorRed__201d5:disabled {
-  background-color: var(--hsl-danger-color)
+.a22cb0c66246f5d3-critical-secondary:hover,.a22cb0c66246f5d3-critical-secondary:active{
+    background:rgba(0,0,0,0);
+    border-color:hsl(from var(--hsl-danger-color) h s l/0.8);
+    color:var(--control-critical-primary-text-default)
 }
 
-.lookFilled__201d5:is(.colorWhite__201d5, .colorBrandInverted__201d5) {
-  color: var(--hsl-main-color);
-  border: none
+._09aca73e6d4b214b-checkbox{
+    border-radius:4px
 }
-
-.lookFilled__201d5:is(.colorWhite__201d5, .colorBrandInverted__201d5):hover {
-  color: var(--hsl-hover-color)
+._09aca73e6d4b214b-checkbox._09aca73e6d4b214b-checked{
+    border-color:var(--hsl-main-color);
+    background-color:rgba(0,0,0,0)
 }
 
-.lookOutlined__201d5:is(.colorBrand__201d5, .colorPrimary__201d5) {
-  border-color: var(--hsl-main-color)
+._72c3859781ebce8f-wrapper{
+    background:var(--hsl-input-shading);
+    border-color:var(--hsl-input-border-shading)
 }
-
-.lookOutlined__201d5:is(.colorBrand__201d5, .colorPrimary__201d5):hover {
-  border-color: var(--hsl-hover-color);
-  background-color: var(--hsl-hover-color)
+._72c3859781ebce8f-wrapper:not([data-read-only=true]):has(input:focus,textarea:focus){
+    border-color:var(--hsl-main-color);
+    box-shadow:0 0 2px 0 var(--hsl-main-color)
 }
-
-.lookOutlined__201d5.colorGreen__201d5 {
-  border-color: var(--hsl-success-color)
+._0f0849b61557225e-input::-moz-placeholder{
+    color:var(--text-muted)
 }
-
-.lookOutlined__201d5.colorGreen__201d5:hover {
-  border-color: hsl(from var(--hsl-success-color) h s l/.8);
-  background-color: hsl(from var(--hsl-success-color) h s l/.8)
+._0f0849b61557225e-input::placeholder{
+    color:var(--text-muted)
 }
-
-.lookOutlined__201d5.colorRed__201d5 {
-  background-color: rgba(0, 0, 0, 0);
-  border-color: var(--hsl-danger-color);
-  color: var(--button-outline-brand-text)
+.mana-text-inputs ._72c3859781ebce8f-wrapper{
+    background:var(--hsl-input-shading);
+    border-color:var(--hsl-input-border-shading)
 }
-
-.lookOutlined__201d5.colorRed__201d5:hover {
-  border-color: hsl(from var(--hsl-danger-color) h s l/.8);
-  background-color: hsl(from var(--hsl-danger-color) h s l/.8);
-  color: var(--button-outline-brand-text)
+.mana-text-inputs ._72c3859781ebce8f-wrapper:not([data-read-only=true]):has(input:focus,textarea:focus){
+    outline:none
 }
 
-.lookLink__201d5 .contents__201d5 {
-  background: 0 0
+._88a69141dd70013a-item[aria-checked=true]{
+    background-color:rgba(0,0,0,0)
 }
-
-.lookLink__201d5:hover .contents__201d5 {
-  text-decoration: underline
+._88a69141dd70013a-refreshIconStroke{
+    r:10 !important;
+    stroke:var(--interactive-text-active)
 }
-
-:is(.theme-light, .theme-dark) .lookLink__201d5:is(.colorPrimary__201d5, .colorLink__201d5) {
-  color: var(--hsl-main-color)
+._88a69141dd70013a-refreshIcon{
+    fill:var(--interactive-text-active)
 }
-
-.anchor_edefb8,
-.calendarPicker_d27f17 .react-datepicker__current-month,
-.card__73069 a,
-.content__235ca a,
-.cta__93db4,
-.fakeLink_ada32f,
-.lookLink__201d5.colorBrand__201d5,
-.markup__75297 a,
-.operations_bab751 a,
-.playing_a8e786 .playIcon_a8e786,
-.spine__5b40b,
-.visual-refresh .active__34c2c,
-.visual-refresh .addButtonIcon__29444,
-.visual-refresh .cta__9271d,
-.visual-refresh .privateChannelsHeaderContainer__99e7c,
-a {
-  color: var(--hsl-main-color)
+._88a69141dd70013a-radioIndicatorChecked ._88a69141dd70013a-refreshIconFill{
+    fill:none
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.checkbox_f525d3.checked_f525d3 {
-  border-color: var(--hsl-main-color);
-  background-color: rgba(0, 0, 0, 0)
+._88a69141dd70013a-radioIndicatorChecked ._88a69141dd70013a-refreshIconStroke{
+    stroke:var(--interactive-text-active)
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.addFriendInputWrapper__72ba7,
-.input__0f084,
-.searchBar__5ec2f {
-  background-color: var(--hsl-input-shading);
-  border: none;
-  box-shadow: 0 0 0 2px var(--hsl-input-border-shading)
+._88a69141dd70013a-radioBar{
+    background-color:var(--hsl-card-shading);
+    transition:all .1s ease
 }
-
-.input__0f084::-moz-placeholder {
-  color: var(--text-muted)
+._88a69141dd70013a-radioBar:hover{
+    box-shadow:inset 0 0 0 2px var(--radio-bar-accent-color, var(--hsl-hover-color))
 }
-
-.input__0f084::placeholder {
-  color: var(--text-muted)
+._88a69141dd70013a-item[aria-checked=true] ._88a69141dd70013a-radioBar{
+    background-color:var(--radio-bar-accent-color, var(--hsl-main-color))
 }
 
-.categoryFadeBlurple_d02962,
-.categoryFadeBlurple_d02962:hover,
-.categoryFade_d02962,
-.input__0f084:hover,
-.input__0f084[readonly],
-.interactionsContainerHeader_af3b89,
-.visual-refresh .chat_f75fb0[data-has-border=true],
-.visual-refresh .container_a592e1,
-.visual-refresh .scroller__7d20c,
-.visual-refresh .section__00943,
-.visual-refresh.theme-midnight .content_f75fb0 {
-  border: none
+.a562c840daab72a7-slider .a562c840daab72a7-bar,.a562c840daab72a7-slider .a562c840daab72a7-markDash{
+    background:var(--hsl-card-shading)
 }
-
-.input__0f084.focused__0f084,
-.input__0f084:focus {
-  box-shadow: 0 0 2px 2px var(--hsl-main-color)
+.a562c840daab72a7-slider .a562c840daab72a7-barFill{
+    background:var(--hsl-main-color)
 }
-
-.input__0f084.inputField_d64f22 {
-  border: none;
-  box-shadow: none;
-  background: 0 0
+.a562c840daab72a7-slider .a562c840daab72a7-grabber{
+    filter:drop-shadow(0 0 3px var(--hsl-main-color))
 }
 
-.copyInput_cedfaf .input__0f084,
-.input__0f084 .multiInputField_b404ff {
-  background-color: rgba(0, 0, 0, 0);
-  box-shadow: none
+._3f21e80f8677ec40-container{
+    background:hsl(from var(--interactive-text-default) h s l/0.2) !important
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.itemFilled__001a7,
-.item__001a7[aria-checked=true] {
-  background-color: rgba(0, 0, 0, 0)
+._3f21e80f8677ec40-container._3f21e80f8677ec40-checked{
+    background:var(--hsl-main-color) !important
 }
-
-.refreshIconStroke__001a7 {
-  r: 10 !important
+._3f21e80f8677ec40-container._3f21e80f8677ec40-checked path{
+    fill:var(--hsl-main-color)
 }
 
-.colorDanger_c1e9c4.focused_c1e9c4:not(.checkboxContainer_c1e9c4) path,
-.refreshIcon__001a7 {
-  fill: var(--interactive-active)
+.aa8da23faa27393c-top .aa8da23faa27393c-item{
+    --selected-tab-item-color: var(--hsl-hover-color)
 }
-
-.colorDanger_c1e9c4:active:not(.hideInteraction_c1e9c4) .label_c1e9c4,
-.radioIndicatorChecked__001a7,
-.selectedIcon__3f413 {
-  color: var(--interactive-active)
+.aa8da23faa27393c-top .aa8da23faa27393c-item.aa8da23faa27393c-selected{
+    --selected-tab-item-color: var(--hsl-main-color);
+    color:var(--interactive-text-active)
 }
-
-.radioIndicatorChecked__001a7 .refreshIconFill__001a7 {
-  fill: none
+:is(.aa8da23faa27393c-topPill,.aa8da23faa27393c-side) .aa8da23faa27393c-themed.aa8da23faa27393c-item:hover:not(.aa8da23faa27393c-disabled){
+    background-color:var(--background-mod-subtle)
 }
-
-.radioBar__001a7 {
-  background-color: var(--hsl-card-shading);
-  transition: background-color .1s, color .1s
+:is(.aa8da23faa27393c-topPill,.aa8da23faa27393c-side) .aa8da23faa27393c-themed.aa8da23faa27393c-item.aa8da23faa27393c-selected{
+    background-color:var(--hsl-main-color)
 }
-
-.item__001a7[aria-checked=true] .radioBar__001a7 {
-  background-color: var(--radio-bar-accent-color, var(--hsl-main-color))
+:is(.aa8da23faa27393c-topPill,.aa8da23faa27393c-side) .aa8da23faa27393c-themed.aa8da23faa27393c-item.aa8da23faa27393c-selected:hover:not(.aa8da23faa27393c-disabled){
+    background-color:var(--hsl-main-color)
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.bumpBox_cacd02,
-.slider_a562c8 .bar_a562c8,
-.slider_a562c8 .markDash_a562c8 {
-  background: var(--hsl-card-shading)
+.aa8da23faa27393c-header{
+    color:var(--hsl-main-color);
+    display:flex;
+    align-items:center;
+    justify-content:center
 }
-
-.mediaBarGrabber_b26b79,
-.mediaBarInteractionDragging_b26b79 .mediaBarGrabber_b26b79,
-.mediaBarInteraction_b26b79:hover .mediaBarGrabber_b26b79,
-.mediaBarProgress_b26b79,
-.mediaBarProgress_b26b79::after,
-.mediaBarProgress_b26b79::before,
-.ripple_a8e786,
-.slider_a562c8 .barFill_a562c8,
-.wanderingCubes__0b5bb .item__0b5bb {
-  background: var(--hsl-main-color)
+.aa8da23faa27393c-header::before{
+    content:"";
+    height:2px;
+    flex-grow:1;
+    background:linear-gradient(to left, var(--hsl-main-color) 50%, transparent);
+    margin-right:5px
 }
-
-.slider_a562c8 .grabber_a562c8 {
-  filter: drop-shadow(0 0 3px var(--hsl-main-color))
+.aa8da23faa27393c-header::after{
+    content:"";
+    height:2px;
+    flex-grow:1;
+    background:linear-gradient(to right, var(--hsl-main-color) 50%, transparent);
+    margin-left:5px
 }
 
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.container__87bf1 {
-  background: hsl(from var(--interactive-normal) h s l/.1) !important
+.container_a45028{
+    background:var(--hsl-input-shading);
+    border-color:var(--hsl-input-border-shading)
 }
-
-.container__87bf1.checked__87bf1,
-.visual-refresh .maskBackground_db811b,
-.visual-refresh .progressBar__89dcd {
-  background: var(--hsl-main-color) !important
+.container_a45028:focus-within{
+    border-color:var(--hsl-main-color);
+    box-shadow:0 0 2px 0 var(--hsl-main-color)
 }
-
-.container__87bf1.checked__87bf1 path,
-.iconContainer__98cf7 circle {
-  fill: var(--hsl-main-color)
+.container_fea832{
+    background:var(--hsl-input-shading);
+    border-color:var(--hsl-input-border-shading)
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.visual-refresh .top_b3f026 .item_b3f026 {
-  --selected-tab-item-color: var(--hsl-hover-color)
+.container_fea832:focus-within{
+    border-color:var(--hsl-main-color);
+    box-shadow:0 0 2px 0 var(--hsl-main-color)
 }
 
-.visual-refresh .top_b3f026 .item_b3f026.selected_b3f026 {
-  --selected-tab-item-color: var(--hsl-main-color);
-  color: var(--interactive-active)
+.c1521037ef09de7e-pageButton:hover{
+    background:var(--background-mod-subtle)
 }
-
-.visual-refresh :is(.topPill_b3f026, .side_b3f026) .themed_b3f026.item_b3f026:hover:not(.disabled_b3f026) {
-  background-color: var(--background-modifier-accent)
+.c1521037ef09de7e-activeButton,.c1521037ef09de7e-activeButton:hover{
+    background:var(--hsl-main-color)
 }
 
-.visual-refresh :is(.topPill_b3f026, .side_b3f026) .themed_b3f026.item_b3f026.selected_b3f026 {
-  background-color: var(--hsl-main-color)
+:is(html,body,._51fd70792ee2e563-appMount){
+    background:none
 }
-
-.visual-refresh :is(.topPill_b3f026, .side_b3f026) .themed_b3f026.item_b3f026.selected_b3f026:hover:not(.disabled_b3f026) {
-  background-color: var(--hsl-main-color)
+.a3002d7de5be5280-app{
+    background:var(--hsl-background-shading);
+    color:rgba(0,0,0,0)
 }
-
-.header_b3f026 {
-  color: var(--hsl-main-color);
-  display: flex;
-  align-items: center;
-  justify-content: center
+._160d8e55254637e5-app{
+    background:hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * 0.1))
 }
-
-.header_b3f026::before {
-  content: "";
-  height: 2px;
-  flex-grow: 1;
-  background: linear-gradient(to left, var(--hsl-main-color) 50%, transparent);
-  margin-right: 5px
+._960e4207cea8323e-bg{
+    background:var(--background-image) var(--background-position)/var(--background-size) no-repeat;
+    background-attachment:var(--background-attachment);
+    filter:var(--background-filter);
+    z-index:-1
 }
-
-.header_b3f026::after {
-  content: "";
-  height: 2px;
-  flex-grow: 1;
-  background: linear-gradient(to right, var(--hsl-main-color) 50%, transparent);
-  margin-left: 5px
+.a2f5142ba8328dfd-container{
+    background:var(--hsl-background-shading)
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.visual-refresh :is(html, body, .appMount__51fd7) {
-  background: 0 0
+._46696d17714f10ab-wanderingCubes ._46696d17714f10ab-item{
+    background:var(--hsl-main-color)
 }
-
-.app__160d8,
-.outer_c0bea0:not(.custom-user-profile-theme),
-.visual-refresh .container_a2f514 {
-  background: var(--hsl-background-shading)
+._46696d17714f10ab-path{
+    stroke:var(--hsl-main-color)
 }
-
-.visual-refresh .bg__960e4 {
-  background: var(--background-image) center/cover no-repeat;
-  background-attachment: var(--background-attachment);
-  filter: var(--background-filter);
-  z-index: -1
+._61a6bac39bf12a0c-wrapper{
+    background:var(--hsl-background-shading)
 }
-
-.path__0b5bb {
-  stroke: var(--hsl-main-color)
+.focus-rings-ring{
+    box-shadow:0 0 0 4px var(--focus-color)
 }
 
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-::-moz-placeholder {
-  font-family: var(--main-font)
+::-moz-placeholder{
+    font-family:var(--main-font)
 }
-
-::placeholder,
-body,
-button,
-input,
-select,
-textarea {
-  font-family: var(--main-font)
+body,button,input,select,textarea,::placeholder{
+    font-family:var(--main-font)
 }
-
-code {
-  font-family: var(--code-font)
+code{
+    font-family:var(--code-font)
 }
-
-::-moz-selection {
-  background: var(--hsl-main-color);
-  color: var(--text-normal)
+::-moz-selection{
+    background:var(--hsl-main-color);
+    color:var(--text-default)
 }
-
-::selection {
-  background: var(--hsl-main-color);
-  color: var(--text-normal)
+::selection{
+    background:var(--hsl-main-color);
+    color:var(--text-default)
 }
 
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.bar_c38106 {
-  background-color: rgba(0, 0, 0, 0);
-  padding-left: 0
+.c38106a3f0c3ca76-bar{
+    background-color:rgba(0,0,0,0);
+    padding-left:0
 }
-
-.leading_c38106 {
-  gap: 0;
-  margin: 0 6px
+.c38106a3f0c3ca76-leading{
+    gap:0;
+    margin:0 6px
 }
 
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.notice__6e2b9 {
-  border-radius: 4px;
-  background: hsl(from var(--custom-notice-background) h s l/.8)
+._6e2b9359c6f84cfd-notice{
+    border-radius:4px
 }
-
-.colorDanger__6e2b9 {
-  --custom-notice-background: var(--hsl-danger-color)
+._6e2b9359c6f84cfd-colorBrand{
+    --custom-notice-background: hsl(from var(--hsl-main-color) h s l/.8)
 }
-
-.colorStreamerMode__6e2b9 {
-  --custom-notice-background: var(--hsl-streaming-color)
+._6e2b9359c6f84cfd-colorDanger{
+    --custom-notice-background: hsl(from var(--hsl-danger-color) h s l/.8)
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-:is(.auto__99f8c, .auto_d125d2)::-webkit-scrollbar {
-  width: 14px
+._6e2b9359c6f84cfd-colorStreamerMode{
+    --custom-notice-background: hsl(from var(--hsl-streaming-color) h s l/.8)
 }
-
-:is(.auto__99f8c, .auto_d125d2)::-webkit-scrollbar-thumb,
-:is(.auto__99f8c, .auto_d125d2)::-webkit-scrollbar-track {
-  border: 3px solid transparent;
-  border-radius: 7px
+.c5cd6ac154c385c9-notice{
+    background:hsl(from var(--hsl-main-color) h s l/0.8)
 }
-
-:is(.auto__99f8c, .auto_d125d2)::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0)
+.c5cd6ac154c385c9-button:hover{
+    background:rgba(0,0,0,0)
 }
 
-:is(.thin__99f8c, .thin_d125d2)::-webkit-scrollbar {
-  width: 8px
+:is(._99f8cc7ad4790ce9-auto,.d125d22cdfd32cfe-auto)::-webkit-scrollbar{
+    width:14px
 }
-
-:is(.thin__99f8c, .thin_d125d2)::-webkit-scrollbar-thumb,
-:is(.thin__99f8c, .thin_d125d2)::-webkit-scrollbar-track {
-  border: 3px solid transparent;
-  border-radius: 5px
+:is(._99f8cc7ad4790ce9-auto,.d125d22cdfd32cfe-auto)::-webkit-scrollbar-thumb,:is(._99f8cc7ad4790ce9-auto,.d125d22cdfd32cfe-auto)::-webkit-scrollbar-track{
+    border:3px solid rgba(0,0,0,0);
+    border-radius:7px
 }
-
-:is(:is(.auto__99f8c, .auto_d125d2), :is(.thin__99f8c, .thin_d125d2))::-webkit-scrollbar-thumb {
-  background-color: var(--hsl-main-color)
+:is(._99f8cc7ad4790ce9-auto,.d125d22cdfd32cfe-auto)::-webkit-scrollbar-track{
+    background:rgba(0,0,0,0)
 }
-
-:is(:is(.auto__99f8c, .auto_d125d2), :is(.thin__99f8c, .thin_d125d2))::-webkit-scrollbar-thumb:active {
-  background-color: var(--hsl-hover-color)
+:is(._99f8cc7ad4790ce9-thin,.d125d22cdfd32cfe-thin)::-webkit-scrollbar{
+    width:8px
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.container__93db4,
-.dot__44492,
-.hoverButton__06ab4.selected__06ab4,
-.hoverButton__06ab4:hover,
-.themedBackground__74017,
-.threadSuggestionBar__841c8,
-.visual-refresh .audioControls_cf09d8,
-.visual-refresh .channelChatWrapper_cb9592,
-.visual-refresh .chat_f75fb0,
-.visual-refresh .descriptionContainer_ca49a1,
-.visual-refresh .divider_ee23ac,
-.visual-refresh .gradient_ca49a1,
-.visual-refresh .linkContainer_ca49a1,
-.visual-refresh .resizeHandle__01ae2,
-.visual-refresh .root_bfe55a,
-.visual-refresh .wrapper_cb9592,
-.visual-refresh-chat-input .channelAttachmentArea_b77158,
-.visual-refresh:not(.visual-refresh-chat-input) .channelAttachmentArea_b77158,
-.visual-refresh:not(.visual-refresh-chat-input) .stackedBars__74017 {
-  background: rgba(0, 0, 0, 0)
+:is(._99f8cc7ad4790ce9-thin,.d125d22cdfd32cfe-thin)::-webkit-scrollbar-thumb,:is(._99f8cc7ad4790ce9-thin,.d125d22cdfd32cfe-thin)::-webkit-scrollbar-track{
+    border:3px solid rgba(0,0,0,0);
+    border-radius:5px
 }
-
-.visual-refresh .chat_f75fb0.threadSidebarOpen_f75fb0 {
-  border-bottom-right-radius: 0
+:is(:is(._99f8cc7ad4790ce9-auto,.d125d22cdfd32cfe-auto),:is(._99f8cc7ad4790ce9-thin,.d125d22cdfd32cfe-thin))::-webkit-scrollbar-thumb{
+    background-color:var(--hsl-main-color)
 }
-
-.visual-refresh :is(.chatContent_f75fb0, .scroller__28a87) {
-  background: hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * .4))
+:is(:is(._99f8cc7ad4790ce9-auto,.d125d22cdfd32cfe-auto),:is(._99f8cc7ad4790ce9-thin,.d125d22cdfd32cfe-thin))::-webkit-scrollbar-thumb:active{
+    background-color:var(--hsl-hover-color)
 }
 
-.visual-refresh :is(.wrapper_d852db, .wrapper_fc8177) {
-  background-color: rgba(0, 0, 0, 0)
+.b26b790fd1005393-mediaBarProgress,.b26b790fd1005393-mediaBarProgress::before,.b26b790fd1005393-mediaBarProgress::after{
+    background:var(--hsl-main-color)
 }
-
-.visual-refresh .wrapper_f7ecac {
-  background-color: var(--hsl-popout-shading);
-  border-color: var(--hsl-popout-shading);
-  box-shadow: none
+.b26b790fd1005393-mediaBarGrabber,.b26b790fd1005393-mediaBarInteraction:hover .b26b790fd1005393-mediaBarGrabber,.b26b790fd1005393-mediaBarInteractionDragging .b26b790fd1005393-mediaBarGrabber{
+    background:var(--hsl-main-color)
 }
 
-.allPerksScroller_ca1a02,
-.list_f391e3,
-.mainPageScroller_ca1a02,
-.noChannel__01d5c,
-.visual-refresh .container_cbd375,
-.visual-refresh .peopleColumn__133bf,
-.visual-refresh .scroller__23746,
-.visual-refresh .searchHeader_f3b986 {
-  background: hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * .4))
+._921c50dc4baa4b4f-authBox{
+    background-color:var(--hsl-modal-shading)
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.visual-refresh:not(.visual-refresh-chat-input) .form_f75fb0 {
-  margin-top: 4px
+._920b86c5b761e645-list{
+    background-color:var(--background-mod-subtle)
 }
 
-.visual-refresh:not(.visual-refresh-chat-input) .channelTextArea__74017 {
-  background-color: var(--hsl-input-shading);
-  box-shadow: 0 0 0 2px var(--hsl-input-border-shading);
-  border-color: transparent
+._2b1f52e43a8f1c02-numberBadge,._2b1f52e43a8f1c02-textBadge{
+    background:var(--hsl-main-color) !important;
+    color:var(--text-strong)
 }
 
-.visual-refresh:not(.visual-refresh-chat-input) .channelTextArea__74017:focus-within {
-  border-color: transparent;
-  box-shadow: 0 0 2px 2px var(--hsl-main-color)
-}
 
-.container__86ab2,
-.contentPreview__9a337,
-.seeAllPerksButton_ca1a02,
-.visual-refresh .box_f8c98c,
-.visual-refresh .collapseable__217b7,
-.visual-refresh .collapseable__217b7.toggled__217b7,
-.visual-refresh .collapseable__217b7:active,
-.visual-refresh .container__9271d,
-.visual-refresh .container_a8e786,
-.visual-refresh .container_ca49a1,
-.visual-refresh .file__0ccae,
-.visual-refresh .footer__4d95d,
-.visual-refresh .mainTableContainer__09a38,
-.visual-refresh .messages__1ccd1,
-.visual-refresh .searchResult__02a39,
-.visual-refresh .textContainer__4d95d,
-.visual-refresh .tile__72090,
-.visual-refresh .wrapperAudio_cf09d8,
-.visual-refresh .wrapper_d5f3cd,
-.visual-refresh-chat-input .upload_aa605f,
-.visual-refresh:not(.visual-refresh-chat-input) .upload_aa605f {
-  background: var(--hsl-card-shading);
-  border: none
+.f75fb00fb7356cbe-chat{
+    background:rgba(0,0,0,0)
 }
-
-.visual-refresh-chat-input .channelBottomBarArea_f75fb0 {
-  margin: 0 16px
+.f75fb00fb7356cbe-chat[data-has-border=true]{
+    border:none
 }
-
-.visual-refresh-chat-input .channelTextArea__74017 {
-  background: rgba(0, 0, 0, 0);
-  border: none;
-  padding: 2px 2px 0
+.f75fb00fb7356cbe-chat.f75fb00fb7356cbe-threadSidebarOpen{
+    border-bottom-right-radius:0
 }
-
-.visual-refresh-chat-input :is(.channelTextArea_f75fb0, .channelTextArea__5126c) .themedBackground__74017 {
-  background-color: var(--hsl-input-shading);
-  box-shadow: 0 0 0 2px var(--hsl-input-border-shading);
-  border-radius: 8px
+.theme-midnight .f75fb00fb7356cbe-content{
+    border:none
 }
-
-.visual-refresh-chat-input :is(.channelTextArea_f75fb0, .channelTextArea__5126c) .themedBackground__74017:focus-within {
-  box-shadow: 0 0 2px 2px var(--hsl-main-color)
+.f75fb00fb7356cbe-chatContent,.f35c3c1aaf31dfd5-scroller{
+    background:hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * 0.4))
 }
-
-.visual-refresh-chat-input .typing_b88801 {
-  margin-left: 20px;
-  font-size: 14px;
-  opacity: .9
+._36d072eab2b2e737-chatGradientBase{
+    background:none
 }
-
-.member__5d473:hover .username__703b9:before,
-.repliedTextPreview_c19a55 .clickable_c19a55:hover,
-.repliedTextPreview_c19a55 .repliedMessageClickableSpineHovered_c19a55 {
-  opacity: 1
+._36d072eab2b2e737-scrollerSpacer{
+    height:20px
 }
-
-.visual-refresh-chat-input .channelBottomBarArea_f75fb0 .stackedBars__74017 {
-  margin-bottom: 8px;
-  border: none;
-  border-radius: 8px;
-  background: var(--hsl-popout-shading)
+._36d072eab2b2e737-scroller::-webkit-scrollbar-track{
+    margin-bottom:20px
 }
-
-.visual-refresh-chat-input .accessoryBar__74017 {
-  border: none;
-  margin-left: 0;
-  pointer-events: none
+.d852db00c0588eb9-wrapper,.fc817765600a960a-wrapper{
+    background-color:rgba(0,0,0,0)
 }
-
-.visual-refresh-chat-input .accessoryBarLeft__74017,
-.visual-refresh-chat-input .accessoryBarRight__74017 {
-  pointer-events: initial
+.d852db00c0588eb9-wrapper{
+    animation:cv-card-loading 1.5s infinite ease-in-out
 }
-
-.scrollableContainer__74017::-webkit-scrollbar-thumb {
-  background-color: var(--hsl-main-color)
+.f7ecaca5c80dbf3a-wrapper{
+    background-color:var(--hsl-popout-shading);
+    border-color:var(--hsl-popout-shading);
+    box-shadow:none
 }
-
-.chatHeaderBar_a5700d,
-.contentInteractable__636a2 .postEnrollmentBackgroundExpanded__636a2,
-.default_e18686,
-.default_e18686:hover,
-.popout__76f04,
-.toolbar_bba883 {
-  background-color: var(--hsl-popout-shading)
+._01d5c7193c9f2ff4-noChannel{
+    background:hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * 0.4))
 }
-
-.toolbar_bba883::before {
-  border-top-color: var(--hsl-popout-shading)
+.dc83f5490ab160ad-chatHeaderBar{
+    background:rgba(0,0,0,0)
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.visual-refresh .callContainer_cb9592 {
-  background: hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * .4));
-  border: none
+.b4b2c318c99fc487-role{
+    background:hsl(from var(--custom-role-label-color) h s l/0.2)
 }
 
-.wrapper_cb9592.minimum_cb9592 .callContainer_cb9592 {
-  background: hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * .6))
+.f75fb00fb7356cbe-form{
+    margin-top:4px
 }
-
-.hoverButtonGroup__06ab4,
-.quickSelectPopout_ebaca5,
-.visual-refresh .languageSelector__4d95d {
-  background: var(--hsl-popout-shading)
+._740174f3d6a2c8fe-channelTextArea{
+    background-color:var(--hsl-input-shading);
+    box-shadow:0 0 0 2px var(--hsl-input-border-shading);
+    border-color:rgba(0,0,0,0)
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.divider__908e2 {
-  --divider-color: var(--hsl-main-color)
+._740174f3d6a2c8fe-channelTextArea:focus-within{
+    border-color:rgba(0,0,0,0);
+    box-shadow:0 0 2px 2px var(--hsl-main-color)
 }
-
-.divider__908e2.hasContent__908e2 {
-  border-color: transparent
+._740174f3d6a2c8fe-stackedBars,.b77158512e0ab116-channelAttachmentArea{
+    background:rgba(0,0,0,0)
 }
-
-.visual-refresh .content__908e2 {
-  display: flex;
-  flex: 1;
-  background-color: rgba(0, 0, 0, 0);
-  align-items: center;
-  font-weight: 700
+.aa605f19898fe32e-upload{
+    background:var(--hsl-card-shading);
+    border:none
 }
-
-.content__908e2::after,
-.content__908e2::before {
-  content: "";
-  height: 1px;
-  flex-grow: 1;
-  background: var(--background-modifier-accent)
+._841c8f861f7b2704-threadSuggestionBar,._740174f3d6a2c8fe-themedBackground{
+    background:rgba(0,0,0,0)
 }
-
-.content__908e2::before {
-  margin-right: 10px
+._740174f3d6a2c8fe-scrollableContainer::-webkit-scrollbar-thumb{
+    background-color:var(--hsl-main-color)
 }
-
-.content__908e2::after {
-  margin-left: 10px
+.ada32f6ad5a36c58-before_inlineCode,.ada32f6ad5a36c58-after_inlineCode,.ada32f6ad5a36c58-before_inlineCode{
+    background:hsl(from var(--hsl-card-shading) h s calc(100 - l)/calc(alpha * 0.5))
 }
-
-.isUnread__908e2 .content__908e2::after,
-.isUnread__908e2 .content__908e2::before {
-  background: var(--divider-color)
+.aa63abf63dbd9cce-activeButtonChild{
+    color:var(--interactive-text-default)
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.avatar_c19a55 {
-  transition: .3s ease-in-out, transform .1s ease-in-out
+:is(.theme-light,.theme-dark) .aa63abf63dbd9cce-button:is(:focus,:focus-within,:hover) .aa63abf63dbd9cce-activeButtonChild{
+    color:var(--interactive-text-active)
 }
-
-.botTagRegular__82f07,
-.icon__1b24f,
-.icon__93db4,
-.sessionIcon__803f2,
-.visual-refresh .icon_d404a3 {
-  background: var(--hsl-main-color);
-  color: var(--header-primary)
+.bba88350df28dff1-toolbar{
+    background-color:var(--hsl-popout-shading);
+    box-shadow:none
 }
-
-.visual-refresh .markup__75297 code {
-  background: var(--hsl-card-shading);
-  border: 1px solid var(--hsl-card-shading-inverted)
+.bba88350df28dff1-toolbar::before{
+    border-top-color:var(--hsl-popout-shading)
 }
 
-.visual-refresh .markup__75297 code.inline {
-  border: none;
-  background: hsl(from var(--hsl-card-shading) h s calc(100 - l)/ calc(alpha * .5));
-  padding: 2px 6px
+.cb9592ad77576717-wrapper,.cb9592ad77576717-channelChatWrapper{
+    background:rgba(0,0,0,0)
 }
-
-.messageSpine_c19a55::before,
-.repliedMessageClickableSpine_c19a55,
-.visual-refresh .container__9271d,
-.visual-refresh .cozy_c19a55.hasThread_c19a55::after,
-.visual-refresh .shopCard_c3d04b:hover {
-  border-color: var(--hsl-main-color)
+.cb9592ad77576717-callContainer{
+    background:hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * 0.4));
+    border:none
 }
-
-.commandContainer_c94584 .command_c94584:not(:last-child):hover,
-.container_eb2cd2:hover,
-.repliedMessageClickableSpine_c19a55.repliedMessageContentHovered_c19a55,
-.repliedMessageClickableSpine_c19a55:hover {
-  border-color: var(--hsl-hover-color)
+.bfe55a0aaaf62375-root{
+    background:rgba(0,0,0,0)
 }
-
-.repliedTextPreview_c19a55 {
-  color: var(--text-normal);
-  opacity: .7
+._116642f293ef6ec6-pulseGradient{
+    display:none
 }
-
-.executedCommand_c19a55 .appLauncherOnboardingCommandName_c19a55 {
-  color: var(--hsl-main-color);
-  background: rgba(0, 0, 0, 0)
+._8c88a94ae71180ac-clipBadgeIcon{
+    background:var(--hsl-main-color) !important
 }
-
-.executedCommand_c19a55 .appLauncherOnboardingCommandName_c19a55:hover {
-  color: var(--hsl-hover-color);
-  background: rgba(0, 0, 0, 0)
+._211d1cc3f7e37d69-participantsButton{
+    background:var(--hsl-popout-shading)
 }
-
-.replying__5126c {
-  --background-mentioned: hsl(from var(--hsl-main-color) h s l/.1);
-  --background-mentioned-hover: hsl(from var(--hsl-hover-color) h s l/.1);
-  background: var(--background-mentioned)
+._1405b3b8e8eb5fd0-buttonSection{
+    background:var(--hsl-popout-shading);
+    border:none;
+    border-radius:4px
 }
-
-.replying__5126c .selected__5126c,
-.replying__5126c:hover {
-  background: var(--background-mentioned-hover) !important
+.f1ceaca61b18918e-colorable.f1ceaca61b18918e-disconnect{
+    background:var(--hsl-danger-color)
 }
-
-.replying__5126c::before {
-  background: var(--hsl-hover-color)
+._2f4f7eb58b61c328-border._2f4f7eb58b61c328-speaking{
+    box-shadow:inset 0 0 0 2px var(--hsl-main-color)
 }
-
-.wrapper_f61d60 {
-  background-color: var(--hsl-main-color);
-  color: var(--text-normal);
-  border-radius: 5px;
-  padding: 0 4px
+.cb9592ad77576717-wrapper.cb9592ad77576717-minimum{
+    background:hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * 0.6))
 }
-
-.colorDefault_c1e9c4.focused_c1e9c4,
-.option__56fec:hover,
-.wrapper__6e9f8:hover .childWrapper__6e9f8,
-.wrapper_f61d60:hover {
-  background-color: var(--hsl-hover-color)
+.ebaca56eb4bb23eb-quickSelectPopout{
+    background:var(--hsl-popout-shading)
 }
 
-.mentioned__5126c {
-  --background-mentioned: hsl(from var(--hsl-main-color) h s l/.1);
-  --background-mentioned-hover: hsl(from var(--hsl-hover-color) h s l/.1)
+._908e20001ad67812-divider{
+    --divider-color: var(--hsl-main-color)
 }
-
-.colorDefault_c1e9c4:active:not(.hideInteraction_c1e9c4),
-.mentioned__5126c:before,
-.spineBorder__5b40b,
-.wrapper__6e9f8.selected__6e9f8 .childWrapper__6e9f8 {
-  background-color: var(--hsl-main-color)
+._908e20001ad67812-divider._908e20001ad67812-hasContent{
+    border-color:rgba(0,0,0,0)
 }
-
-.blockquoteContainer__75297 .blockquoteDivider__75297,
-.platform-win .sidebar_c48ade {
-  border-radius: 0
+._908e20001ad67812-content{
+    display:flex;
+    flex:1;
+    background:rgba(0,0,0,0);
+    align-items:center;
+    font-weight:700
 }
-
-.visual-refresh .embedFull__623de {
-  background: var(--hsl-card-shading);
-  border-top: none;
-  border-right: none;
-  border-bottom: none
+._908e20001ad67812-content::before,._908e20001ad67812-content::after{
+    content:"";
+    height:1px;
+    flex-grow:1;
+    background:var(--background-mod-subtle)
 }
-
-.visual-refresh .statusOnline_d5f3cd {
-  background: var(--hsl-online-color)
+._908e20001ad67812-content::before{
+    margin-right:10px
 }
-
-.visual-refresh .statusOffline_d5f3cd {
-  background: var(--hsl-offline-color)
+._908e20001ad67812-content::after{
+    margin-left:10px
 }
-
-.card__4d7bb,
-.embedCard__44492,
-.footerContainer__44492,
-.mulitplePlaceholderUsername__27cc6,
-.placeholderAvatar__27cc6,
-.placeholderUsername__27cc6,
-.topPerksCard__3add8,
-.visual-refresh .container_bc0d35,
-.visual-refresh .tile__72090:hover,
-.visual-refresh .wrapper_cf09d8,
-.wrapper__5b98e {
-  background: var(--hsl-card-shading)
+._908e20001ad67812-isUnread ._908e20001ad67812-content::before,._908e20001ad67812-isUnread ._908e20001ad67812-content::after{
+    background:var(--divider-color)
 }
 
-.optionPillItem__3f413 .optionPillBtn__3f413,
-.visual-refresh .cardText_c3d04b,
-.visual-refresh .container__34c2c,
-.visual-refresh .container_fed6d3,
-.visual-refresh .header_fed6d3,
-.visual-refresh .homeWrapper__0920e,
-.visual-refresh .inspector_aeaaeb,
-.visual-refresh .modalTextContainer__4d95d,
-.visual-refresh .pill_a2c9e8 .container_f8b2d2,
-.visual-refresh .prompt__5d7c9 {
-  background: rgba(0, 0, 0, 0);
-  border: none
+.c19a557985eb7793-avatar{
+    transition:all .3s ease-in-out,transform .1s ease-in-out
 }
-
-:is(.theme-light, .theme-dark) .container_a8e786:not(.playing_a8e786) .playButtonContainer_a8e786 {
-  background: var(--hsl-main-color)
+.c19a557985eb7793-avatar.c19a557985eb7793-clickable:active{
+    transform:scale(0.9)
 }
-
-:is(.theme-light, .theme-dark) .container_a8e786:not(.playing_a8e786) .playButtonContainer_a8e786:is(:hover, :active) {
-  background: var(--hsl-hover-color)
+._82f0793afa59e5dc-botTagRegular{
+    background:var(--hsl-main-color);
+    color:var(--text-strong)
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.outer_c0bea0:not(.custom-user-profile-theme) .inner_c0bea0,
-.visual-refresh .container_f369db {
-  background: hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * .3))
+.bab7519355c8eed6-operations a{
+    color:var(--hsl-main-color)
 }
-
-.visual-refresh .header_f369db {
-  background: var(--hsl-input-shading);
-  border: none;
-  box-shadow: 0 0 2px var(--hsl-input-border-shading)
+._235ca3770d90ab7c-content a{
+    color:var(--text-link)
 }
-
-.visual-refresh .header_f369db .input__0f084 {
-  background: 0 0;
-  box-shadow: none
+.hljs{
+    background:var(--hsl-card-shading);
+    border:1px solid var(--border-normal)
 }
-
-.visual-refresh .pill_a2c9e8 {
-  background: var(--hsl-card-shading);
-  border: 2px solid var(--hsl-hover-color);
-  transition: .2s
+._752971923a1e6683-markup code{
+    background:var(--hsl-card-shading)
 }
-
-.visual-refresh .pill_a2c9e8.clickable_a2c9e8:not(.disabled_a2c9e8):hover {
-  background: var(--hsl-card-shading);
-  border-color: var(--hsl-hover-color)
+._752971923a1e6683-markup code.inline{
+    border:none;
+    background:hsl(from var(--hsl-card-shading) h s calc(100 - l)/calc(alpha * 0.5));
+    padding:2px 6px
 }
-
-.visual-refresh .pill_a2c9e8.selected_a2c9e8 {
-  background: var(--hsl-main-color);
-  border-color: var(--hsl-main-color);
-  color: var(--interactive-active)
+.c19a557985eb7793-repliedMessageClickableSpine{
+    border-color:var(--hsl-main-color)
 }
-
-.visual-refresh .pill_a2c9e8.selected_a2c9e8:not(.disabled_a2c9e8):hover {
-  background: var(--hsl-hover-color);
-  border-color: var(--hsl-hover-color)
+.c19a557985eb7793-repliedMessageClickableSpine:hover,.c19a557985eb7793-repliedMessageClickableSpine.c19a557985eb7793-repliedMessageContentHovered{
+    border-color:var(--hsl-hover-color)
 }
-
-.visual-refresh .newPostsButton_f369db {
-  background: var(--hsl-popout-shading);
-  border-color: transparent
+.c19a557985eb7793-repliedTextPreview{
+    color:var(--text-default);
+    opacity:.7
 }
-
-.visual-refresh :is(.container__9a337, .container_faa96b) {
-  background: var(--hsl-card-shading);
-  border: 2px solid transparent
+.c19a557985eb7793-repliedTextPreview .c19a557985eb7793-clickable:hover,.c19a557985eb7793-repliedTextPreview .c19a557985eb7793-repliedMessageClickableSpineHovered{
+    opacity:1
 }
-
-.visual-refresh :is(.container__9a337, .container_faa96b):hover {
-  background: var(--hsl-card-shading);
-  border-color: var(--hsl-hover-color)
+.c19a557985eb7793-messageSpine::before{
+    border-color:var(--hsl-main-color)
 }
-
-.visual-refresh :is(.container__9a337, .container_faa96b):is(.isOpen__9a337, .isOpen_faa96b) {
-  background: var(--hsl-card-shading);
-  border-color: var(--hsl-main-color)
+.c19a557985eb7793-executedCommand .c19a557985eb7793-appLauncherOnboardingCommandName{
+    color:var(--hsl-main-color);
+    background:rgba(0,0,0,0)
 }
-
-.akaBadge__488b1,
-.backButton_b9abc5,
-.checkIcon__270d7,
-.iconWrapper__54b20,
-.newMembersNotice_acdcc0,
-.pinIcon__08166,
-.selectedDot__3cf14,
-.selected__1a58a,
-.selected__1a58a:hover,
-.selectorButton_c6d3dc.selectorButtonSelected_c6d3dc::before,
-.visual-refresh .button__02a39,
-.visual-refresh .container_bc0d35.adminUpsell_bc0d35,
-.visual-refresh .iconButton__8a7fc,
-.visual-refresh .iconWrapper__7e6bb,
-.visual-refresh .searchAnswer_bd8186,
-.visual-refresh .searchFilter_bd8186 {
-  background: var(--hsl-main-color)
+.c19a557985eb7793-executedCommand .c19a557985eb7793-appLauncherOnboardingCommandName:hover{
+    color:var(--hsl-hover-color);
+    background:rgba(0,0,0,0)
 }
-
-.newMessageCount_faa96b,
-.subButton__70f7f {
-  color: var(--hsl-main-color) !important
+._5126c0cd07f243a0-replying{
+    --background-mentioned: hsl(from var(--hsl-main-color) h s l/.1);
+    --background-mentioned-hover: hsl(from var(--hsl-hover-color) h s l/.1);
+    background:var(--background-mentioned)
 }
-
-.icon__54b20 path,
-.visual-refresh .icon__7e6bb path {
-  fill: var(--header-primary)
+._5126c0cd07f243a0-replying:hover,._5126c0cd07f243a0-replying ._5126c0cd07f243a0-selected{
+    background:var(--background-mentioned-hover) !important
 }
-
-.activeIcon_d40c56 path,
-.focused_d40c56 .activeIcon_d40c56 circle,
-.multiSelectCheckbox__3f413.checked__3f413 path,
-.selectedIcon__3f413 circle {
-  fill: var(--hsl-main-color)
+._5126c0cd07f243a0-replying::before{
+    background:var(--hsl-hover-color)
 }
-
-.cta__93db4:hover {
-  color: var(--hsl-hover-color)
+.f61d60ed65f9a128-wrapper{
+    background-color:var(--hsl-main-color);
+    color:var(--text-default);
+    border-radius:5px;
+    padding:0 4px
 }
-
-.loadingCard_f369db {
-  background: var(--hsl-card-shading)
+.f61d60ed65f9a128-wrapper:hover{
+    background-color:var(--hsl-hover-color)
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.visual-refresh .container__01ae2 {
-  background: rgba(0, 0, 0, 0);
-  border: none;
-  border-bottom-left-radius: 0
+._5126c0cd07f243a0-mentioned{
+    --background-mentioned: hsl(from var(--hsl-main-color) h s l/.1);
+    --background-mentioned-hover: hsl(from var(--hsl-hover-color) h s l/.1);
+    background:var(--background-mentioned)
 }
-
-.cardDescription_f8e6bf,
-.container__4413f,
-.innerWrapper_b4589b,
-.innerWrapper_c511e4,
-.interactionsContainer_af3b89,
-.keybindGroup_f061f6,
-.keyboardShortcutsModal_f061f6,
-.loadingPopout__58f1c,
-.popoutContentWrapper_af3b89,
-.reactionTooltip_b49891,
-.visual-refresh .backdrop__8a7fc,
-.visual-refresh .container__01ae2.floating__01ae2,
-.visual-refresh .modalBg_de2fa0 {
-  background: var(--hsl-popout-shading)
+._5126c0cd07f243a0-mentioned:before{
+    background-color:var(--hsl-main-color)
 }
-
-.visual-refresh .container_fb64c9 {
-  background: hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * .5))
+._752971923a1e6683-blockquoteContainer ._752971923a1e6683-blockquoteDivider{
+    border-radius:0
 }
-
-.visual-refresh .channelTextArea_fb64c9 {
-  margin-bottom: 0
+.cacd02fa13551840-bumpBox{
+    background:var(--hsl-card-shading)
 }
-
-.visual-refresh .channelTextAreaInner_fb64c9 {
-  background-color: var(--hsl-input-shading);
-  box-shadow: 0 0 2px 2px var(--hsl-input-border-shading);
-  border-radius: 8px
+._623de82e76ad7f82-embedFull{
+    background:var(--hsl-card-shading);
+    border-top:none;
+    border-right:none;
+    border-bottom:none
 }
-
-.container_a45028,
-.visual-refresh .searchBar__97492 {
-  box-shadow: 0 0 1px 1px var(--hsl-input-border-shading)
+._60fa3b8f3ca9845f-container{
+    background:var(--hsl-card-shading)
 }
-
-.visual-refresh .channelTextAreaInner_fb64c9:focus-within {
-  box-shadow: 0 0 2px 2px var(--hsl-main-color)
+._06ab41fd2ef7af3f-hoverButtonGroup{
+    background:var(--hsl-popout-shading)
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.visual-refresh .newMessagesBar__0f481 {
-  top: 4px;
-  right: 8px;
-  background: hsl(from var(--hsl-main-color) h s l/.9);
-  border-radius: 4px;
-  transition: .1s ease-in-out
+._0ccaee68b77c7469-file{
+    background:var(--hsl-card-shading);
+    border:none
 }
-
-.visual-refresh .newMessagesBar__0f481:active {
-  padding-top: 0;
-  scale: .99
+._5a6abdc52a572b78-progressBar{
+    background:var(--hsl-main-color) !important
 }
-
-.menu_c1e9c4,
-.visual-refresh .jumpToPresentBar__0f481 {
-  background: var(--hsl-popout-shading);
-  border: none;
-  border-radius: 5px
+.d5f3cd116f175f35-wrapper{
+    background:var(--hsl-card-shading);
+    border:none
 }
-
-.visual-refresh .messagesErrorBar__0f481 {
-  background: var(--hsl-danger-color);
-  border: none;
-  border-radius: 5px
+.d5f3cd116f175f35-statusOnline{
+    background:var(--hsl-online-color)
 }
-
-.popout__3f413,
-.popout__3f413.popoutPositionTop__3f413,
-.visual-refresh .contentWrapper__08434,
-.visual-refresh .quickswitcher_ac6cb0,
-.visual-refresh .wrapper__44df5 {
-  background: var(--hsl-popout-shading);
-  border: none
+.d5f3cd116f175f35-statusOffline{
+    background:var(--hsl-offline-color)
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.visual-refresh .reactions__23977 .reactionMe__23977 {
-  background: hsl(from var(--hsl-main-color) h s l/.15);
-  border-color: var(--hsl-main-color)
+._083ae98ea5145b08-guildInviteContainer{
+    background:var(--hsl-card-shading)
 }
-
-.visual-refresh :is(.reaction__23977, .reactionBtn__23977):hover {
-  border: 1px solid var(--hsl-hover-color)
+._083ae98ea5145b08-footerContent{
+    background:none
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.visual-refresh .searchResultsWrap_a9e706 {
-  background: hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * .3));
-  border: none
+._72090deda6ab7f6d-tile{
+    background:var(--hsl-card-shading);
+    border:none
 }
-
-.visual-refresh .button__02a39:hover {
-  background: var(--hsl-hover-color);
-  color: var(--interactive-active)
+._72090deda6ab7f6d-tile:hover{
+    background:var(--hsl-card-shading)
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-:is(.theme-dark, .theme-light) .themed__9293f {
-  background: hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * .5))
+.cf09d85aafe7e124-wrapperAudio{
+    background:var(--hsl-card-shading);
+    border:none
 }
-
-:is(.theme-dark, .theme-light) .dot__9293f {
-  display: none
+.cf09d85aafe7e124-audioControls{
+    background:rgba(0,0,0,0)
 }
-
-.bodyWave__1dfae,
-.children__9293f::after {
-  display: none
+.cf09d85aafe7e124-wrapper{
+    background:var(--hsl-card-shading)
 }
-
-.visual-refresh .searchBar__97492 {
-  background-color: var(--hsl-input-shading);
-  border-color: transparent
+._4d95d73152192cf9-textContainer,._4d95d73152192cf9-footer{
+    background:var(--hsl-card-shading);
+    border:none
 }
-
-.visual-refresh .searchBar__97492:focus-within {
-  box-shadow: 0 0 2px 1px var(--hsl-main-color);
-  border-color: transparent
+._4d95d73152192cf9-codeView{
+    background:rgba(0,0,0,0)
 }
-
-.visual-refresh .searchFilter_bd8186 {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0
+._4d95d73152192cf9-languageSelector{
+    background:var(--hsl-popout-shading)
 }
-
-.visual-refresh .searchAnswer_bd8186 {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0
+._4d95d73152192cf9-modalTextContainer{
+    background:rgba(0,0,0,0);
+    border:none
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.visual-refresh .container__133bf,
-.visual-refresh .container_c8ffbb {
-  background: 0 0;
-  border: none
+._4d95d73152192cf9-modalContent ._4d95d73152192cf9-codeView{
+    background:rgba(0,0,0,0)
 }
-
-.visual-refresh .membersWrap_c8ffbb {
-  background: hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * .2));
-  border: none;
-  height: 100%
+.c19a557985eb7793-cozy.c19a557985eb7793-hasThread::after{
+    border-color:var(--hsl-main-color)
 }
-
-.members_c8ffbb,
-.nowPlayingColumn__133bf,
-.visual-refresh .tabBody__133bf {
-  background: 0 0
+._9271d23503a01b50-container{
+    border-color:var(--hsl-main-color)
 }
-
-.membersGroup_c8ffbb {
-  display: flex;
-  color: var(--hsl-main-color);
-  font-weight: 700;
-  align-items: center
+._9271d23503a01b50-container{
+    background:var(--hsl-card-shading);
+    border:none
 }
-
-.membersGroup_c8ffbb:before {
-  content: "";
-  height: 2px;
-  flex-grow: 1;
-  background: linear-gradient(to left, currentColor 50%, transparent);
-  margin-right: 5px
+._9271d23503a01b50-cta{
+    color:var(--hsl-main-color)
 }
-
-.membersGroup_c8ffbb:after {
-  content: "";
-  height: 2px;
-  flex-grow: 1;
-  background: linear-gradient(to right, currentColor 50%, transparent);
-  margin-left: 5px
+.a8e786485f0c32f8-container{
+    background:var(--hsl-card-shading);
+    border:none
 }
-
-.visual-refresh .container__0f2e8 {
-  background: var(--hsl-card-shading);
-  border-radius: 8px;
-  border-width: 2px;
-  padding-left: 10px
+.a8e786485f0c32f8-ripple{
+    background:var(--hsl-main-color)
 }
-
-.username__703b9:after,
-.username__703b9:before {
-  bottom: 0;
-  left: 0;
-  border-radius: 3px;
-  top: 0;
-  position: absolute;
-  z-index: -1;
-  content: ""
+:is(.theme-light,.theme-dark) .a8e786485f0c32f8-container:not(.a8e786485f0c32f8-playing) .a8e786485f0c32f8-playButtonContainer{
+    background:var(--hsl-main-color)
 }
-
-.selected__0f2e8,
-.selected__0f2e8:hover,
-.visual-refresh .channelRow_e4503a:hover:not(.disabled_e4503a) {
-  background: var(--hsl-card-shading);
-  border-color: var(--hsl-main-color)
+:is(.theme-light,.theme-dark) .a8e786485f0c32f8-container:not(.a8e786485f0c32f8-playing) .a8e786485f0c32f8-playButtonContainer:is(:hover,:active){
+    background:var(--hsl-hover-color)
 }
-
-.member__5d473 {
-  background: rgba(0, 0, 0, 0);
-  backface-visibility: hidden
+.a8e786485f0c32f8-playing .a8e786485f0c32f8-playIcon{
+    color:var(--hsl-main-color)
 }
-
-.memberInner__5d473 {
-  position: relative;
-  width: unset;
-  transition: .15s ease-in-out, transform .1s ease-in-out;
-  z-index: 1
+._444920e965051ae6-embedCard,._444920e965051ae6-embedCard._444920e965051ae6-selected,._444920e965051ae6-footerContainer{
+    background:var(--hsl-card-shading)
 }
-
-.username__703b9 {
-  max-width: 100%;
-  overflow: visible;
-  transition: .15s ease-in-out
+._444920e965051ae6-dot{
+    background:rgba(0,0,0,0)
 }
-
-.username__703b9:before {
-  right: 0;
-  background: linear-gradient(to right, var(--background-modifier-accent) 90%, transparent);
-  opacity: 0;
-  transition: .15s ease-in-out
+.f69538e19b6eaacd-container,._0be773cf1443f34f-container{
+    background:var(--hsl-card-shading);
+    border:none
 }
-
-.username__703b9:after {
-  right: 100%;
-  background: linear-gradient(to right, var(--hsl-main-color) 90%, transparent);
-  opacity: .8;
-  transition: .3s ease-in-out
+._4c5209741d147f1b-answer ._4c5209741d147f1b-answerInner._4c5209741d147f1b-currentlyVoting._4c5209741d147f1b-selected{
+    outline:1px solid var(--hsl-main-color)
 }
-
-.username__703b9[style^="color:"]:after,
-.username__703b9[style^="color:"]:before {
-  background: linear-gradient(to right, currentColor 90%, transparent)
+.f4f0eb773c27d83f-checkbox{
+    border-width:1px
 }
-
-.visual-refresh .activityText__5d473 {
-  color: var(--text-muted);
-  transition: .15s ease-in-out
+.f4f0eb773c27d83f-radioForeground{
+    color:currentColor
 }
-
-.activityText__5d473 strong {
-  color: var(--hsl-main-color);
-  font-weight: 700;
-  transition: .15s ease-in-out
+.f4f0eb773c27d83f-checkboxSelected{
+    border:1px solid var(--hsl-main-color);
+    background:rgba(0,0,0,0)
 }
-
-.member__5d473:hover .childContainer__91a9d,
-.visual-refresh .scroller_ac6cb0 {
-  background: rgba(0, 0, 0, 0)
+.a1443c28bb4b5d23-votedStyles{
+    --custom-poll-style-vote-percentage: hsl(from var(--hsl-main-color) h s l/.2);
+    --custom-poll-style-border: var(--hsl-main-color)
 }
 
-.member__5d473:hover .username__703b9[style^="color:"]:before {
-  opacity: .07
+.f369dba7416c67f0-container{
+    background:hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * 0.3))
 }
-
-.emptyPage__5d7c9,
-.layer__960e4,
-.selected__91a9d .childContainer__91a9d {
-  background-color: rgba(0, 0, 0, 0)
+.f369dba7416c67f0-header{
+    background:var(--hsl-input-shading);
+    border:2px solid var(--hsl-input-border-shading)
 }
-
-.selected__91a9d .username__703b9 {
-  -webkit-text-fill-color: var(--text-normal);
-  text-shadow: 0 0 3px rgba(0, 0, 0, .7)
+.f369dba7416c67f0-header ._0f0849b61557225e-input{
+    background:none;
+    box-shadow:none
 }
-
-.selected__91a9d .username__703b9:after {
-  right: 0
+.f369dba7416c67f0-headerWithMatchingPosts{
+    border-bottom:none;
+    border-color:var(--hsl-main-color)
 }
-
-.selected__91a9d .activityText__5d473,
-.selected__91a9d strong {
-  color: var(--text-normal);
-  text-shadow: 0 0 3px rgba(0, 0, 0, .7)
+.f369dba7416c67f0-matchingPostsRow{
+    background:var(--hsl-input-shading);
+    border:2px solid var(--hsl-input-border-shading);
+    border-top:1px solid var(--border-subtle)
 }
-
-.selected__91a9d .ownerIcon__5d473 {
-  filter: drop-shadow(0 0 3px rgba(0, 0, 0, .7))
+.ca49a1898ddc29e3-container{
+    background:var(--hsl-card-shading);
+    border:none
 }
-
-.ctaButton__4413f {
-  background: var(--hsl-main-color);
-  border: none
+.ca49a1898ddc29e3-descriptionContainer,.ca49a1898ddc29e3-gradient,.ca49a1898ddc29e3-linkContainer{
+    background:rgba(0,0,0,0)
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.visual-refresh .root__49fc1 {
-  background: var(--hsl-popout-shading);
-  border: none;
-  box-shadow: none
+.a2c9e80f6531ccc2-pill{
+    background:var(--hsl-card-shading);
+    border-color:var(--hsl-main-color);
+    transition:all .2s ease
 }
-
-.visual-refresh .footer__49fc1 {
-  background: rgba(0, 0, 0, 0);
-  box-shadow: none
+.a2c9e80f6531ccc2-pill.a2c9e80f6531ccc2-clickable:not(.a2c9e80f6531ccc2-disabled):hover{
+    background:var(--hsl-card-shading);
+    border-color:var(--hsl-hover-color)
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.container_eb2cd2,
-.rowContainer__991a0 {
-  border: 2px solid transparent;
-  background: var(--background-modifier-accent)
+.a2c9e80f6531ccc2-pill.a2c9e80f6531ccc2-selected{
+    background:var(--hsl-main-color);
+    border-color:var(--hsl-main-color);
+    color:var(--interactive-text-active)
 }
-
-.rowContainer__991a0:hover {
-  border-color: var(--hsl-hover-color);
-  background: var(--background-modifier-accent)
+.a2c9e80f6531ccc2-pill.a2c9e80f6531ccc2-selected:not(.a2c9e80f6531ccc2-disabled):hover{
+    background:var(--hsl-hover-color);
+    border-color:var(--hsl-hover-color)
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.combo_fcddc1 .key_fcddc1 {
-  border-color: var(--hsl-hover-color);
-  box-shadow: inset 0 -4px var(--hsl-hover-color)
+.a2c9e80f6531ccc2-pill .f8b2d28182186b83-container{
+    background:rgba(0,0,0,0);
+    border:none
 }
-
-.combo_fcddc1 .key_fcddc1:active {
-  border-color: var(--hsl-main-color);
-  box-shadow: inset 0 -2px var(--hsl-main-color)
+.f369dba7416c67f0-newPostsButton{
+    background:var(--hsl-popout-shading);
+    border-color:rgba(0,0,0,0)
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.visual-refresh .input_ac6cb0 {
-  border: none;
-  box-shadow: 0 0 2px 2px var(--hsl-input-border-shading)
+:is(._9a337c84ff86a914-container,.faa96b2163f6a142-container){
+    background:var(--hsl-card-shading);
+    border:2px solid rgba(0,0,0,0)
 }
-
-.visual-refresh .input_ac6cb0:focus-within {
-  box-shadow: 0 0 2px 2px var(--hsl-main-color)
+:is(._9a337c84ff86a914-container,.faa96b2163f6a142-container):hover{
+    background:var(--hsl-card-shading);
+    border-color:var(--hsl-hover-color)
 }
-
-.scroller_ac6cb0::-webkit-scrollbar {
-  width: 10px
+:is(._9a337c84ff86a914-container,.faa96b2163f6a142-container):is(._9a337c84ff86a914-isOpen,.faa96b2163f6a142-isOpen){
+    background:var(--hsl-card-shading);
+    border-color:var(--hsl-main-color)
 }
-
-.scroller_ac6cb0::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0) !important
+._9a337c84ff86a914-contentPreview{
+    background:var(--hsl-card-shading);
+    border:none
 }
-
-.result__71961[aria-selected=true],
-.selectorButton_c6d3dc:hover::before {
-  background: var(--hsl-hover-color)
+._08166c4389c22135-pinIcon{
+    background:var(--hsl-main-color)
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.visual-refresh :is(.scroller_cc2dff, .reactors_cc2dff) {
-  background: rgba(0, 0, 0, 0)
+.ee23ac2acd215184-divider{
+    background:rgba(0,0,0,0)
 }
-
-.visual-refresh .reactionSelected_cc2dff {
-  border: 1px solid var(--hsl-main-color)
+._7e6bb757ba16c548-iconWrapper{
+    background:var(--hsl-main-color)
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.scroller__6fd0e,
-.visual-refresh .container_a55fdc,
-.visual-refresh .pageBody__41ed7 {
-  background: rgba(0, 0, 0, 0)
+._7e6bb757ba16c548-icon path{
+    fill:var(--interactive-icon-active)
 }
-
-.tile_a2de16:hover .sourceThumbnail_a2de16 {
-  box-shadow: inset 0 0 0 2px var(--hsl-main-color)
+._34c2c51cfce1632e-container{
+    background:rgba(0,0,0,0);
+    border:none
 }
-
-.card__4bb93,
-.selectorButton_c6d3dc {
-  background: var(--background-modifier-accent)
+._93db49446403e33e-container{
+    background:rgba(0,0,0,0)
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.headerWave__1dfae {
-  background: rgba(0, 0, 0, 0);
-  color: transparent
+.f369dba7416c67f0-loadingCard{
+    background:var(--hsl-card-shading);
+    animation:cv-card-loading 1.5s infinite ease-in-out
 }
 
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.visual-refresh .header__0b563 {
-  background: hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * .5)) !important
+._01ae244280823725-resizeHandle{
+    background:rgba(0,0,0,0)
 }
-
-.visual-refresh .container__0b563 {
-  background: hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * .4)) !important
+._01ae244280823725-container{
+    background:rgba(0,0,0,0);
+    border:none;
+    border-bottom-left-radius:0
 }
-
-.visual-refresh .channelRow_e4503a {
-  background: var(--hsl-card-shading);
-  border: 2px solid transparent;
-  margin-bottom: 8px;
-  border-radius: 8px
+._01ae244280823725-container._01ae244280823725-floating{
+    background:var(--hsl-popout-shading)
 }
-
-.visual-refresh .optionButtonWrapper__270d7 {
-  background: var(--hsl-card-shading);
-  border: 2px solid transparent
+.fb64c9a451c49797-container{
+    background:hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * 0.5))
 }
-
-.card_f8e6bf,
-.container_da4aee,
-.profileCard__5d7c9,
-.visual-refresh .container__19cf2,
-.visual-refresh .container__5682d,
-.visual-refresh .container_cec934,
-.visual-refresh .optionButtonWrapper__270d7:hover {
-  background: var(--hsl-card-shading)
+._54b20d287f944f7b-iconWrapper{
+    background:var(--hsl-main-color)
 }
-
-.visual-refresh .optionButtonWrapper__270d7.selected__270d7 {
-  background: var(--hsl-card-shading);
-  border-color: var(--hsl-main-color)
+._54b20d287f944f7b-icon path{
+    fill:var(--interactive-icon-active)
 }
-
-.role__5d7c9 {
-  background: rgba(0, 0, 0, 0);
-  position: relative
+.a5700d36f7c29ded-chatHeaderBar{
+    background-color:var(--hsl-popout-shading)
 }
 
-.outer_c0bea0:not(.custom-user-profile-theme) .role_dfa8b6 .roleCircle__4f569::before,
-.roleDot__5d7c9::before {
-  content: "";
-  top: -1px;
-  right: -1px;
-  bottom: -1px;
-  left: -1px;
-  position: absolute;
-  background: inherit;
-  opacity: .2;
-  border-radius: 4px
+._0f481cbbd7530492-newMessagesBar{
+    top:4px;
+    right:8px;
+    background:hsl(from var(--hsl-main-color) h s l/0.9);
+    border-radius:4px;
+    transition:all .1s ease-in-out
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.visual-refresh .container__551b0,
-.visual-refresh .privateChannels__35e86 {
-  background: hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * .25))
+._0f481cbbd7530492-newMessagesBar:active{
+    padding-top:0;
+    scale:.99
 }
-
-.visual-refresh .navItem__551b0 {
-  position: relative;
-  z-index: 1
+._0f481cbbd7530492-jumpToPresentBar{
+    background:var(--hsl-popout-shading);
+    border:none;
+    border-radius:5px
 }
-
-.visual-refresh .navItem__551b0:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 100%;
-  bottom: 0;
-  left: 0;
-  transition: .3s ease-in-out;
-  z-index: -1;
-  border-radius: 4px
+._0f481cbbd7530492-messagesErrorBar{
+    background:var(--hsl-danger-color);
+    border:none;
+    border-radius:5px
 }
-
-.applicationStore_f07d62,
-.giftCardButton_da4aee,
-.pageWrapper__6db1d,
-.shopScroll__6db1d,
-.visual-refresh .container__956c6,
-.visual-refresh .contentHeader_de2fa0,
-.visual-refresh .modalContent_de2fa0,
-.visual-refresh .navItem__551b0.selected__551b0,
-.visual-refresh .shop__08415 {
-  background: rgba(0, 0, 0, 0)
+._44df51b030bd5ece-wrapper{
+    background:var(--hsl-popout-shading);
+    border:none
 }
 
-.visual-refresh .navItem__551b0.selected__551b0:after {
-  right: 0;
-  background: var(--hsl-main-color);
-  animation: .3s ease-in-out cv-channel-select
+._23977d5b7cef7361-reactions{
+    border-radius:4px
 }
-
-.visual-refresh .relative__8a7fc {
-  background: hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * .5))
+._23977d5b7cef7361-reactions ._23977d5b7cef7361-reactionMe{
+    background:hsl(from var(--hsl-main-color) h s l/0.15);
+    border-color:var(--hsl-main-color)
 }
-
-.actionButton_f8fa06:hover,
-.backButton_b9abc5:hover,
-.newMembersNotice_acdcc0:hover,
-.visual-refresh .iconButton__8a7fc:hover {
-  background: var(--hsl-hover-color)
+._23977d5b7cef7361-reactions ._23977d5b7cef7361-reactionMe ._23977d5b7cef7361-reactionCount{
+    color:var(--interactive-text-active)
 }
-
-.actionButton_f8fa06,
-.actionButton_f8fa06.highlight_f8fa06,
-.blockedIgnoredSettingsNotice__6811a,
-.circleIconButton__5bc7e,
-.emptyCard__7e549,
-.icon__6e9f8,
-.overlay_c0bea0,
-.visual-refresh .childWrapper__6e9f8,
-.visual-refresh .guildIcon__35a7e {
-  background-color: var(--hsl-card-shading)
+:is(._23977d5b7cef7361-reaction,._23977d5b7cef7361-reactionBtn):hover{
+    border:1px solid var(--hsl-hover-color)
 }
-
-.visual-refresh:is(.theme-dark, .theme-light) .card__84e3e {
-  background: var(--hsl-card-shading);
-  border: 2px solid transparent
+.b49891f8a231dbff-reactionTooltip{
+    background:var(--hsl-popout-shading)
 }
-
-.visual-refresh:is(.theme-dark, .theme-light) .card__84e3e:hover {
-  background: var(--hsl-card-shading);
-  border-color: var(--hsl-main-color)
+:is(.theme-light,.theme-dark) .d5cd2da5733d0b6e-reactionEmojiDetailsClickable{
+    background:var(--hsl-main-color)
 }
-
-.visual-refresh .avatar_f215b9,
-.visual-refresh .cardPrimary__73069,
-.visual-refresh .cardPrimary__73069.editable__73069,
-.visual-refresh .card__4cb8a:hover .iconMask__4cb8a,
-.visual-refresh .card_f215b9:hover .avatar_f215b9 {
-  background: var(--hsl-card-shading);
-  border-color: transparent
+:is(.theme-light,.theme-dark) .d5cd2da5733d0b6e-reactionEmojiDetailsClickable:hover{
+    background:var(--hsl-hover-color)
 }
-
-.visual-refresh:is(.theme-light, .theme-dark) .iconMask__4cb8a {
-  background: var(--hsl-card-shading);
-  border-color: transparent
+._23977d5b7cef7361-burstGlow{
+    border-radius:4px
 }
 
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.blockedIgnoredSettingsNotice__6811a {
-  border: 1px solid var(--hsl-main-color)
+.a98f3b020416ad54-searchResultsWrap{
+    background:hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * 0.3));
+    border:none
 }
-
-.actionButton_f8fa06.highlight_f8fa06 {
-  color: var(--interactive-active)
+.ae7890a1b8e75804-searchHeader{
+    background:hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * 0.4))
 }
-
-.actionButton_f8fa06.actionAccept_f8fa06 {
-  color: var(--hsl-success-color)
+._80bf8435713f6adb-searchResult{
+    background:var(--hsl-card-shading);
+    border:none
 }
-
-.actionButton_f8fa06.actionAccept_f8fa06:hover {
-  background: var(--hsl-success-color);
-  color: var(--interactive-active)
+._80bf8435713f6adb-button{
+    background:var(--hsl-main-color)
 }
-
-.actionButton_f8fa06.actionDeny_f8fa06,
-.colorDanger_c1e9c4,
-.colorDanger_c1e9c4 .label_c1e9c4 {
-  color: var(--hsl-danger-color)
+._80bf8435713f6adb-button:hover{
+    background:var(--hsl-hover-color);
+    color:var(--interactive-text-active)
 }
 
-.actionButton_f8fa06.actionDeny_f8fa06:hover {
-  background: var(--hsl-danger-color);
-  color: var(--interactive-active)
+:is(.theme-dark,.theme-light) ._9293f6b2fc12398a-themed{
+    background:hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * 0.5))
 }
-
-.contentTitle__13533,
-.item_c1e9c4.focused_c1e9c4 .label_c1e9c4 {
-  color: var(--header-primary)
+:is(.theme-dark,.theme-light) ._9293f6b2fc12398a-dot{
+    display:none
 }
-
-.searchBar__5ec2f:focus-within {
-  box-shadow: 0 0 0 2px var(--hsl-main-color)
+._9293f6b2fc12398a-children::after{
+    display:none
 }
-
-.visual-refresh .tabBar__133bf .addFriend__133bf.addFriend__133bf.addFriend__133bf {
-  background-color: rgba(0, 0, 0, 0);
-  color: var(--text-secondary);
-  border: none
+._488b1a4248d1b790-akaBadge{
+    background:var(--hsl-main-color)
 }
-
-.visual-refresh .tabBar__133bf .addFriend__133bf.addFriend__133bf.addFriend__133bf:hover {
-  background-color: var(--background-modifier-accent)
+._974928fe84ca9647-searchBar{
+    background-color:var(--hsl-input-shading);
+    border-color:var(--hsl-input-border-shading)
 }
-
-.visual-refresh .tabBar__133bf .addFriend__133bf.addFriend__133bf.addFriend__133bf[aria-selected=true] {
-  background-color: var(--hsl-main-color);
-  color: var(--text-primary)
+._974928fe84ca9647-searchBar:focus-within{
+    border-color:var(--hsl-main-color);
+    box-shadow:0 0 2px 0 var(--hsl-main-color)
 }
-
-.addFriendInputWrapper__72ba7:focus-within {
-  box-shadow: 0 0 2px 2px var(--hsl-main-color)
+.bd818628221af7aa-searchFilter,.bd818628221af7aa-searchAnswer{
+    background:var(--hsl-main-color)
 }
-
-.addFriendInputWrapper__72ba7 .input__0f084 {
-  background-color: rgba(0, 0, 0, 0);
-  box-shadow: none
+.bd818628221af7aa-searchFilter{
+    border-top-right-radius:0;
+    border-bottom-right-radius:0
 }
-
-.addFriendInputWrapper__72ba7 .input__0f084:focus-within {
-  box-shadow: none
+.bd818628221af7aa-searchAnswer{
+    border-top-left-radius:0;
+    border-bottom-left-radius:0
 }
 
-.container__7d20c {
-  background: hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * .2))
+.c8ffbb79449f399c-container{
+    background:none;
+    border:none
 }
-
-.visual-refresh .outer_bf1984,
-.visual-refresh .outer_bf1984:is(.interactive_bf1984:hover, .active_bf1984) {
-  background-color: var(--hsl-card-shading);
-  border: none
+.c8ffbb79449f399c-membersWrap{
+    background:none;
+    border:none
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.visual-refresh .page_c791b2 {
-  background: rgba(0, 0, 0, 0) !important
+.c8ffbb79449f399c-members{
+    background:hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * 0.3))
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.mainPageScroller_ca1a02 {
-  right: 0;
-  transition: .75s ease-in-out
+._27cc6d8d37ac374f-mulitplePlaceholderUsername,._27cc6d8d37ac374f-placeholderAvatar,._27cc6d8d37ac374f-placeholderUsername{
+    background:var(--hsl-card-shading)
 }
-
-.mainPageScroller_ca1a02:has(+.open_ca1a02) {
-  right: 100%
+.c8ffbb79449f399c-membersGroup{
+    display:flex;
+    color:var(--hsl-main-color);
+    font-weight:700;
+    align-items:center
 }
-
-:is(.images-light, .images-dark) .textContainer_da4aee {
-  background: 0 0
+.c8ffbb79449f399c-membersGroup:before{
+    content:"";
+    height:2px;
+    flex-grow:1;
+    background:linear-gradient(to left, currentColor 50%, transparent);
+    margin-right:5px
 }
-
-:is(.theme-dark, .theme-light) :is(.leftArrow__3cf14, .rightArrow__3cf14) {
-  background: var(--hsl-card-shading)
+.c8ffbb79449f399c-membersGroup:after{
+    content:"";
+    height:2px;
+    flex-grow:1;
+    background:linear-gradient(to right, currentColor 50%, transparent);
+    margin-left:5px
 }
-
-:is(.theme-dark, .theme-light) :is(.leftArrow__3cf14, .rightArrow__3cf14):hover {
-  background: var(--hsl-hover-color)
+._0f2e83213c878a13-container{
+    background:var(--hsl-card-shading);
+    border-radius:8px;
+    border-width:2px;
+    padding-left:10px
 }
-
-:is(.theme-dark, .theme-light) .inactiveArrow__3cf14 {
-  background: var(--hsl-card-shading)
+._0f2e83213c878a13-selected,._0f2e83213c878a13-selected:hover{
+    background:var(--hsl-card-shading);
+    border-color:var(--hsl-main-color)
 }
-
-.avatarWrapper__86ab2,
-.cardProgressBar__3cf14,
-.visual-refresh .button__06eda,
-.visual-refresh .tutorial__2692d {
-  background: var(--hsl-card-shading)
+.af3b89684c536957-popoutContentWrapper,.af3b89684c536957-interactionsContainer{
+    background:var(--hsl-popout-shading)
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.background__7449f :is(.scrollerBase__99f8c, .scrollerBase_d125d2) {
-  background: hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * .4))
+.interactionsContainerHeader_af3b89{
+    border:none
 }
-
-.visual-refresh .row_d13feb {
-  background: var(--hsl-card-shading);
-  border: var(--hsl-card-shading)
+._5d473ecff348c314-member{
+    background:rgba(0,0,0,0);
+    backface-visibility:hidden
 }
-
-.headerIcon__553a5 {
-  background-color: var(--hsl-card-shading);
-  border-color: transparent
+._5d473ecff348c314-memberInner{
+    position:relative;
+    width:100%;
+    transition:all .15s ease-in-out,transform .1s ease-in-out;
+    z-index:1
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.contentRegion__23e6b,
-.visual-refresh .shop__6db1d {
-  background: hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * .4))
+._5d473ecff348c314-memberInner:active{
+    transform:scale(0.9)
 }
-
-.visual-refresh .container_d8f25b,
-.visual-refresh .shopCard_c3d04b {
-  background: var(--hsl-card-shading);
-  border: 2px solid transparent
+._91a9d7f7e5248a56-name{
+    width:-moz-fit-content;
+    width:fit-content
 }
-
-.cardBody__72fa0,
-.skeletonBody__08415,
-.skeleton__08415,
-.visual-refresh .skeleton__72fa0 {
-  background: var(--hsl-card-shading-inverted)
+._5d473ecff348c314-member ._703b91fc872193e8-nameContainer{
+    position:static;
+    transition:all .15s ease-in-out;
+    z-index:unset
 }
-
-:is(.cardAvatar__72fa0, .cardTitle__72fa0, .cardDescription__72fa0, .cardSummary__72fa0) {
-  background: rgba(0, 0, 0, 0)
+._5d473ecff348c314-member ._703b91fc872193e8-nameContainer:before{
+    content:"";
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:-8px;
+    background:linear-gradient(to right, var(--background-mod-subtle) 90%, transparent);
+    border-radius:4px;
+    opacity:0;
+    transition:all .15s ease-in-out;
+    z-index:-1
 }
-
-.collectibleInfoContainer_c50f62,
-.visual-refresh .container__0f711,
-.visual-refresh .header_ab6641,
-.visual-refresh .wrapper__4e6ce,
-.visual-refresh .wrapper_b1e4f3 {
-  background: rgba(0, 0, 0, 0)
+._5d473ecff348c314-member ._703b91fc872193e8-nameContainer:after{
+    content:"";
+    position:absolute;
+    top:0;
+    right:calc(100% + 8px);
+    bottom:0;
+    left:-8px;
+    background:linear-gradient(to right, var(--hsl-main-color) 90%, transparent);
+    border-radius:3px;
+    opacity:.8;
+    transition:all .3s ease-in-out;
+    z-index:-1
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.container_a45028 {
-  background: var(--hsl-input-shading);
-  border-color: transparent;
-  margin: 2px
+._5d473ecff348c314-member ._703b91fc872193e8-nameContainer[style^="color:"]:before,._5d473ecff348c314-member ._703b91fc872193e8-nameContainer[style^="color:"]:after{
+    background:linear-gradient(to right, currentColor 90%, transparent)
 }
-
-.container_a45028:focus-within {
-  box-shadow: 0 0 2px 1px var(--hsl-main-color);
-  border-color: transparent
+._91a9d7f7e5248a56-nameplated ._5d473ecff348c314-member ._703b91fc872193e8-nameContainer[style^="color:"]:before,._91a9d7f7e5248a56-nameplated ._5d473ecff348c314-member ._703b91fc872193e8-nameContainer[style^="color:"]:after{
+    background:linear-gradient(to right, currentColor, transparent)
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.addGamePopout_cc46f0,
-.autocomplete__13533,
-.contentWarningPopout_be95d0,
-.contentWrapper__9c62c,
-.visual-refresh .messagesPopoutWrap__45690,
-.visual-refresh .recentMentionsPopout__95796 {
-  background: var(--hsl-popout-shading);
-  box-shadow: none
+.c9d15c8a962de3c8-truncated{
+    color:var(--text-muted);
+    transition:all .15s ease-in-out
 }
-
-.clickable__13533[aria-disabled=false] .base__13533:hover,
-.clickable__13533[aria-selected=true] .base__13533,
-.option__3f413:hover {
-  background: var(--hsl-hover-color)
+.c9d15c8a962de3c8-truncated strong{
+    color:var(--hsl-main-color);
+    font-weight:700;
+    transition:all .15s ease-in-out
 }
-
-.contentTitle__13533 {
-  padding: 4px 8px
+._5d473ecff348c314-member:hover ._91a9d7f7e5248a56-childContainer{
+    background:rgba(0,0,0,0)
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.lookFilled__3f413.select__3f413 {
-  box-shadow: none
+._5d473ecff348c314-member:hover ._703b91fc872193e8-nameContainer:before{
+    opacity:1
 }
-
-.lookFilled__3f413.select__3f413:hover {
-  border: 1px solid var(--input-border)
+._5d473ecff348c314-member:hover ._703b91fc872193e8-nameContainer[style^="color:"]:before{
+    opacity:.07
 }
-
-.option__3f413 {
-  border-radius: 8px;
-  margin: 0 8px
+._91a9d7f7e5248a56-selected ._91a9d7f7e5248a56-childContainer{
+    background-color:rgba(0,0,0,0)
 }
-
-.option__3f413[aria-selected=true],
-.option__3f413[aria-selected=true]:not(.option__3f413.multi__3f413) {
-  background: var(--hsl-main-color)
+._91a9d7f7e5248a56-selected ._703b91fc872193e8-nameContainer{
+    -webkit-text-fill-color:var(--interactive-text-active);
+    text-shadow:0 0 3px rgba(0,0,0,.7)
 }
-
-.multiSelectCheckbox__3f413.checked__3f413 {
-  background: var(--interactive-active)
+._91a9d7f7e5248a56-selected ._703b91fc872193e8-nameContainer:after{
+    right:0
 }
-
-.calendarPicker_d27f17 .react-datepicker__day.react-datepicker__day--selected::after,
-.categoryItemDefaultCategorySelected_b9ee0c,
-.categoryItemDefaultCategorySelected_b9ee0c:hover,
-.firstPartyCategorySelected__3ad28,
-.firstPartyCategorySelected__3ad28:hover,
-.optionPillItem__3f413 .optionPillBtn__3f413 .optionPillBtn__3f413,
-.stickerCategoryGenericSelected__3ad28,
-.stickerCategoryGenericSelected__3ad28:hover,
-.visual-refresh .navButtonActive__08434,
-.visual-refresh .navButtonActive__08434:hover {
-  background: var(--hsl-main-color)
+._91a9d7f7e5248a56-selected .c9d15c8a962de3c8-truncated,._91a9d7f7e5248a56-selected strong{
+    color:var(--interactive-text-active);
+    text-shadow:0 0 3px rgba(0,0,0,.7)
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.visual-refresh .channelHeader__35a7e {
-  background: var(--hsl-main-color);
-  padding-left: 20px;
-  padding-right: 6px;
-  border-radius: 8px
+._91a9d7f7e5248a56-selected ._5d473ecff348c314-ownerIcon{
+    filter:drop-shadow(0 0 3px rgba(0, 0, 0, 0.7))
 }
 
-.visual-refresh .tutorialIcon__2692d {
-  background: var(--hsl-main-color);
-  color: var(--interactive-active)
+:is(._49fc18ba07c5025f-root,._8a031a135bfcb9ba-container){
+    background:var(--hsl-modal-shading);
+    border:none;
+    box-shadow:none
 }
-
-.visual-refresh .collapseButton__427f0 {
-  left: 0
+._49fc18ba07c5025f-header,._49fc18ba07c5025f-content,._49fc18ba07c5025f-footer{
+    background:rgba(0,0,0,0)
 }
 
-.visual-refresh .container__95796 {
-  margin-left: 16px
+.eb2cd27996d667df-container{
+    border:2px solid rgba(0,0,0,0);
+    background:var(--background-mod-subtle)
 }
-
-.visual-refresh .messageContainer__95796 {
-  background: var(--hsl-card-shading);
-  border: none;
-  margin: 0
+.eb2cd27996d667df-container:hover{
+    border-color:var(--hsl-hover-color)
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.status_a423bd[style*="rgb(130, 131, 139)"] {
-  background-color: var(--hsl-offline-color) !important
+._98cf72876e6760d6-iconContainer circle{
+    fill:var(--hsl-main-color)
 }
-
-.status_a423bd[style*="rgb(64, 162, 88)"] {
-  background-color: var(--hsl-online-color) !important
+._991a00423f3b43a4-rowContainer{
+    border:2px solid rgba(0,0,0,0);
+    background:var(--background-mod-subtle)
 }
-
-.status_a423bd[style*="rgb(204, 149, 76)"] {
-  background-color: var(--hsl-idle-color) !important
+._991a00423f3b43a4-rowContainer:hover{
+    border-color:var(--hsl-hover-color);
+    background:var(--background-mod-subtle)
 }
 
-.status_a423bd[style*="rgb(216, 58, 65)"] {
-  background-color: var(--hsl-dnd-color) !important
+.f061f614def5a8d6-keyboardShortcutsModal,.keybindGrof061f614def5a8d6-up{
+    background:var(--hsl-modal-shading)
 }
-
-.focused_c1e9c4#set-status-submenu-online {
-  background-color: var(--hsl-online-color)
+._61c9355cca12ab4b-combo ._61c9355cca12ab4b-key{
+    border-color:var(--hsl-hover-color);
+    box-shadow:inset 0 -4px var(--hsl-hover-color)
 }
-
-.focused_c1e9c4#set-status-submenu-idle {
-  background-color: var(--hsl-idle-color)
+._61c9355cca12ab4b-combo ._61c9355cca12ab4b-key:active{
+    border-color:var(--hsl-main-color);
+    box-shadow:inset 0 -2px var(--hsl-main-color)
 }
 
-.focused_c1e9c4#set-status-submenu-dnd {
-  background-color: var(--hsl-dnd-color)
+.ac6cb02cd15b4b3b-scroller{
+    background:rgba(0,0,0,0)
 }
-
-.focused_c1e9c4#set-status-submenu-invisible {
-  background-color: var(--hsl-offline-color)
+.ac6cb02cd15b4b3b-scroller::-webkit-scrollbar{
+    width:10px
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.tooltipPrimary__382e7 {
-  background-color: var(--hsl-popout-shading);
-  border: none
+.ac6cb02cd15b4b3b-scroller::-webkit-scrollbar-track{
+    background:rgba(0,0,0,0) !important
 }
-
-.containerBackground_d4ced7::after,
-.tooltipPrimary__382e7 .tooltipPointer__382e7 {
-  border-top-color: var(--hsl-popout-shading)
+.ac6cb02cd15b4b3b-input{
+    background:var(--hsl-input-shading);
+    border:2px solid var(--hsl-input-border-shading)
 }
-
-.notches__06283,
-.outer_c0bea0:not(.custom-user-profile-theme) .outer_ab8609::after,
-.outer_c0bea0:not(.custom-user-profile-theme) .outer_ab8609::before,
-.tooltipPrimary__382e7 .tooltipPointer__382e7::after,
-.tooltipPrimary__382e7 .tooltipPointer__382e7::before {
-  display: none
+.ac6cb02cd15b4b3b-input:focus-within{
+    border-color:var(--hsl-main-color);
+    box-shadow:0 0 2px 0 var(--hsl-main-color)
 }
-
-.tooltipBrand__382e7 {
-  background-color: var(--hsl-main-color);
-  border: none
+._71961da99d37ac57-result[aria-selected=true]{
+    background:var(--hsl-hover-color)
 }
 
-.tooltipBrand__382e7 .tooltipPointer__382e7 {
-  border-top-color: var(--hsl-main-color)
+._7f7273e3e762eb9d-footer{
+    background:rgba(0,0,0,0)
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.visual-refresh .navButton__08434 {
-  border-radius: 5px
+._9e06aaa5aecd6e3e-pillContainer{
+    background:var(--background-mod-subtle)
 }
-
-.emojiItem_fc7141.emojiItemSelected_fc7141,
-.expandedInfo_e9cb00,
-.joinOptionContent__959cb.active__959cb,
-.option__54675,
-.stickerInspected_c6367b .inspectedIndicator_c6367b,
-.visual-refresh .navButton__08434:hover {
-  background: var(--background-modifier-accent)
+._9e06aaa5aecd6e3e-pillItemSelected{
+    background:var(--hsl-main-color)
 }
 
-.visual-refresh .emojiPickerHasTabWrapper_c0e32c :is(.emojiPicker_c0e32c, .header_c0e32c) {
-  background: rgba(0, 0, 0, 0)
+.e5f3a99c23b47bde-premiumBrandRefreshBackground{
+    background:var(--hsl-modal-shading) !important
 }
-
-.visual-refresh .wrapper__14245 {
-  background: hsl(from var(--hsl-main-color) h s l/.8);
-  margin-bottom: 10px;
-  border-radius: 4px
+.e50a4da433dc80b9-skuSelectModalContent.e50a4da433dc80b9-premiumBrandRefreshContent.e50a4da433dc80b9-premiumBrandRefreshContent{
+    background:rgba(0,0,0,0)
 }
-
-.visual-refresh .wrapper__14245::after {
-  height: 0
+._6df1abcb56d96feb-card{
+    background:var(--background-mod-subtle)
 }
-
-.visual-refresh .searchBar_c0e32c {
-  margin-right: 12px
+.ca0af25a2bbb4e6d-spinner{
+    background:rgba(0,0,0,0)
 }
-
-.visual-refresh :is(.emojiPicker_c0e32c, .header_c0e32c) {
-  background: var(--hsl-popout-shading);
-  border: none
+.d50aac0b42bc0bbc-customGiftBoxHighlighted{
+    border-color:var(--hsl-main-color)
 }
-
-.calendarPicker_d27f17 .react-datepicker,
-.calendarPicker_d27f17 .react-datepicker__header,
-.queryContainer__55c99,
-.visual-refresh .footer__45690,
-.visual-refresh .header__45690,
-.visual-refresh .header__8ef02 {
-  background: rgba(0, 0, 0, 0)
+._3398004a3d491de2-iconBackground{
+    background:var(--hsl-main-color);
+    color:var(--interactive-icon-active)
 }
-
-.visual-refresh .packHeader_e94b8c {
-  margin-left: -8px;
-  margin-bottom: 10px
+.b130855d8984d74e-selectionBox{
+    background:var(--background-mod-subtle);
+    outline:none
 }
-
-.categoryFadeBlurple_d02962 {
-  background: hsl(from var(--hsl-main-color) h s l/.8)
+.b130855d8984d74e-selectedPlan{
+    background:var(--background-mod-subtle);
+    outline:2px solid var(--hsl-main-color)
 }
-
-.categoryFade_d02962:hover {
-  border: 2px solid var(--hsl-main-color)
+._50f142ddcd129c8c-previewContainerSelected{
+    background:var(--background-mod-subtle);
+    outline:2px solid var(--hsl-main-color);
+    border:none
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.row__0624f,
-.visual-refresh .messageGroupWrapper__45690 {
-  background: var(--background-modifier-accent);
-  border: none
+.bf1b4a30ef37af9c-customGiftMessage{
+    background:rgba(0,0,0,0)
 }
-
-.visual-refresh .jumpButton__45690 {
-  background: var(--hsl-main-color);
-  border-color: transparent;
-  color: var(--interactive-active)
+._4106ae7c1472c1de-wrapper{
+    background:rgba(0,0,0,0)
 }
-
-.visual-refresh .jumpButton__45690:hover {
-  background: var(--hsl-hover-color);
-  color: var(--interactive-active)
+._8b579725ff08eeaa-cardInput{
+    background-color:var(--hsl-input-shading);
+    border-color:var(--hsl-input-border-shading)
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.containerBackground_d4ced7,
-.visual-refresh .container__55c99,
-.visual-refresh .container_fcf29c {
-  background: var(--hsl-popout-shading);
-  border: none
+._8b579725ff08eeaa-cardInputFocused{
+    border-color:var(--hsl-main-color);
+    box-shadow:0 0 2px 0 var(--hsl-main-color)
 }
-
-.option__56fec:hover :is(.filter__56fec, .answer__56fec, .plusIcon__56fec) {
-  color: var(--interactive-active)
+.a8c622117370c730-content,._5e07c67f3bc3bdd9-upsellFooter{
+    background:rgba(0,0,0,0)
 }
-
-.option__56fec:hover :is(.searchResultChannelIcon__56fec, .searchResultChannelCategory__56fec) {
-  opacity: 1
+._96f95c174d3b94a0-value,._96f95c174d3b94a0-value:focus{
+    box-shadow:none
 }
 
-.option__56fec:hover strong {
-  color: var(--interactive-active)
+.b7854763c4a57c63-uploadDropModal .b7854763c4a57c63-bgScale{
+    background:var(--hsl-main-color)
 }
-
-.option__56fec[aria-selected=true] {
-  background-color: var(--hsl-hover-color);
-  box-shadow: none
+.b7854763c4a57c63-uploadDropModal .b7854763c4a57c63-inner{
+    border-color:var(--text-strong)
 }
 
-.option__56fec[aria-selected=true] :is(strong, .plusIcon__56fec) {
-  color: var(--interactive-active)
+._0907c3e69b3b62a9-selectorButton{
+    background:var(--background-mod-subtle)
 }
-
-.datePicker__56fec .datePickerHint__56fec .hintValue__56fec {
-  background: var(--hsl-main-color);
-  padding: 0 5px
+:is(.theme-light,.theme-dark) ._3d4a037904e40932-item{
+    border-color:var(--hsl-main-color)
 }
-
-:is(.theme-light, .theme-dark) .calendarPicker_d27f17 .react-datepicker__day-name {
-  color: var(--header-primary)
+._0907c3e69b3b62a9-selectorButtonSelected{
+    background:var(--hsl-main-color)
 }
 
-.calendarPicker_d27f17 .react-datepicker__month {
-  border: 1px solid var(--hsl-main-color);
-  background: var(--hsl-card-shading);
-  border-radius: 4px
+._921c50dc4baa4b4f-pillIconOnline{
+    background:var(--hsl-online-color)
 }
 
-.calendarPicker_d27f17 .react-datepicker__day:is(.react-datepicker__day--keyboard-selected, .react-datepicker__day--selected:hover, :hover) {
-  background: var(--hsl-main-color)
+:is(.cc1819cb49c2d109-actionButtons,._6088c3df6d10c76d-closeButton){
+    background:var(--hsl-modal-shading)
 }
 
-:is(.theme-light, .theme-dark) .calendarPicker_d27f17 .react-datepicker__day:is(.react-datepicker__day--disabled, .react-datepicker__day--disabled:hover) {
-  background: rgba(0, 0, 0, 0)
+._01c8cef726c85956-scroller,._01c8cef726c85956-voters{
+    background:rgba(0,0,0,0)
 }
 
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.visual-refresh .browser_d98031 {
-  background-color: var(--hsl-popout-shading);
-  box-shadow: none
+._6fd0e42f91edfda6-scroller{
+    background:rgba(0,0,0,0)
 }
-
-.container__7bdb0,
-.guildSection_d5cd2d,
-.overviewContainerNoVideo__95856,
-.overviewContainerWithVideo__95856,
-.rowDivider_cb32c7,
-.underline__761e5,
-.visual-refresh .header_d9c882 {
-  background: rgba(0, 0, 0, 0)
+._1dfaec293e55bc43-headerWave{
+    background:rgba(0,0,0,0);
+    color:rgba(0,0,0,0)
 }
-
-.clickable__761e5,
-.command_c94584,
-.container_cb32c7,
-.visual-refresh .container__6764b {
-  background: var(--background-modifier-accent);
-  border: 2px solid transparent
+._1dfaec293e55bc43-bodyWave{
+    display:none
 }
-
-.commandContainer_c94584,
-.sectionContentContainer_b18295 {
-  gap: 8px;
-  background: rgba(0, 0, 0, 0)
+._3add81a1a1ae9da9-topPerksCard,._4d7bb356d058f441-card,._5b98ee5ec86ed598-wrapper{
+    background:var(--hsl-card-shading)
 }
-
-.visual-refresh .container__6764b:hover {
-  background: var(--background-modifier-accent);
-  border: 2px solid var(--hsl-hover-color)
+.b4589bedc187b0eb-innerWrapper{
+    background:var(--hsl-popout-shading)
 }
 
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.sectionRowsContentContainer__927fc {
-  gap: 8px
+:is(.theme-dark,.theme-light) ._0b56311ebc6682e2-header{
+    background:hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * 0.5)) !important;
+    border-top:none
 }
-
-.command_c94584:hover,
-.container_cb32c7:hover {
-  background: var(--hsl-card-shading);
-  border-color: var(--hsl-hover-color)
+._0b56311ebc6682e2-container{
+    background:hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * 0.4)) !important
 }
-
-.rowContainer_cb32c7,
-.rowContainer_cb32c7:first-child,
-.rowContainer_cb32c7:last-child {
-  border-radius: 8px
+._41ed70e52483df6d-pageBody{
+    background:rgba(0,0,0,0)
 }
-
-.commandContainer_c94584 .command_c94584,
-.commandContainer_c94584 .command_c94584:not(:last-child) {
-  border: 2px solid transparent
+.bc0d3515e6cb489a-container{
+    background:var(--hsl-card-shading)
 }
-
-.commandContainer_c94584 :is(.command_c94584, .command_c94584:first-child, .command_c94584:last-child) {
-  border-radius: 8px
+.bc0d3515e6cb489a-container.bc0d3515e6cb489a-adminUpsell{
+    background:var(--hsl-main-color)
 }
-
-.sectionContentContainer_b18295 {
-  display: flex;
-  flex-direction: column
+.e4503acec53c64dd-channelRow{
+    background:var(--hsl-card-shading);
+    border:2px solid rgba(0,0,0,0);
+    margin-bottom:8px;
+    border-radius:8px
 }
-
-.clickable__761e5:hover {
-  background: var(--hsl-card-shading);
-  border-color: var(--hsl-hover-color)
+.e4503acec53c64dd-channelRow:hover:not(.e4503acec53c64dd-disabled){
+    background:var(--hsl-card-shading);
+    border-color:var(--hsl-main-color)
 }
-
-.clickable__761e5,
-.clickable__761e5:first-child,
-.clickable__761e5:last-child {
-  border-radius: 8px
+._5d7c9a81ac5dd074-prompt{
+    background:rgba(0,0,0,0);
+    border:none
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.visual-refresh :is(.picker__09f65, .picker__09f65.refresh__09f65) {
-  background: var(--hsl-popout-shading)
+._270d7a28db32b312-optionButtonWrapper{
+    background:var(--hsl-card-shading);
+    border:2px solid rgba(0,0,0,0)
 }
-
-.visual-refresh :is(.soundButton__9be63, .soundButtonRefresh__9be63) {
-  background-color: var(--background-modifier-accent)
+._270d7a28db32b312-optionButtonWrapper:hover{
+    background:var(--hsl-card-shading);
+    border-color:var(--hsl-hover-color)
 }
-
-.visual-refresh :is(.soundButton__9be63, .soundButtonRefresh__9be63):is(:hover, :focus-within, .focused__9be63) {
-  border-color: var(--hsl-main-color)
+._270d7a28db32b312-optionButtonWrapper._270d7a28db32b312-selected{
+    background:var(--hsl-card-shading);
+    border-color:var(--hsl-main-color)
 }
-
-.visual-refresh :is(.soundButton__9be63, .soundButtonRefresh__9be63):is(:hover, :focus-within, .focused__9be63).hoverActiveBackground__9be63 {
-  background: var(--hsl-card-shading)
+._270d7a28db32b312-checkIcon{
+    background:var(--hsl-main-color)
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.visual-refresh .popoutContainer__0f481 {
-  background: var(--hsl-popout-shading);
-  box-shadow: none;
-  -webkit-backdrop-filter: none;
-  backdrop-filter: none
+._5d7c9a81ac5dd074-profileCard{
+    background:var(--hsl-card-shading)
 }
-
-:is(.theme-dark, .theme-light) .footer_be95d0 {
-  background: rgba(0, 0, 0, 0)
+._5d7c9a81ac5dd074-role{
+    background:rgba(0,0,0,0);
+    position:relative
 }
-
-.container_d5ae15,
-.iconBadge__2b1f5,
-.innerWrapperBase__70f7f,
-.outer_c0bea0:not(.custom-user-profile-theme) .outer_ab8609,
-.visual-refresh .streamPreview__6da2d {
-  background: var(--hsl-popout-shading)
+._5d7c9a81ac5dd074-roleDot::before{
+    content:"";
+    top:-1px;
+    right:-1px;
+    bottom:-1px;
+    left:-1px;
+    position:absolute;
+    background:inherit;
+    opacity:.2;
+    border-radius:4px
 }
-
-.appliedBoostContainer_ceb06a,
-.avatarBackground_eb2508,
-.background__1fed1,
-.badgeList__1fed1,
-.fieldList__1fed1,
-.giftButton_b322b1:hover,
-.header__5cea9,
-.outer_c0bea0:not(.custom-user-profile-theme) .inner_ab8609,
-.paginator__01014,
-.panel_c0bea0.outer_c0bea0:not(.custom-user-profile-theme),
-.payment_e9cb00,
-.previewContainer__6da2d,
-.selectedBackground_e681d1,
-.visual-refresh .container_d878e7,
-.visual-refresh .contentRegionScroller__23e6b,
-.visual-refresh .standardSidebarView__23e6b {
-  background: rgba(0, 0, 0, 0)
+._5d7c9a81ac5dd074-emptyPage{
+    background-color:rgba(0,0,0,0)
 }
 
-:is(.theme-dark, .theme-light) .watchButton__6da2d {
-  border-color: var(--hsl-main-color)
+._551b0894962ff66f-container{
+    background:hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * 0.2))
 }
-
-:is(.theme-dark, .theme-light) .watchButton__6da2d:not([disabled]):hover {
-  border-color: var(--hsl-hover-color)
+._551b0894962ff66f-navItem{
+    position:relative;
+    z-index:1
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.full-motion .translate_faf9c0 {
-  transform: unset !important
+._551b0894962ff66f-navItem:after{
+    content:"";
+    position:absolute;
+    top:0;
+    right:100%;
+    bottom:0;
+    left:0;
+    transition:all .3s ease-in-out;
+    z-index:-1;
+    border-radius:4px
 }
-
-.outer_c0bea0:not(.custom-user-profile-theme).biteSize_c0bea0::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: var(--user-popout-image) center/cover no-repeat;
-  background-attachment: var(--user-popout-attachment);
-  filter: var(--user-popout-filter);
-  z-index: -1
+._551b0894962ff66f-navItem._551b0894962ff66f-selected{
+    background:rgba(0,0,0,0)
 }
-
-.outer_c0bea0:not(.custom-user-profile-theme).fullSize_c0bea0::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: var(--user-modal-image) center/cover no-repeat;
-  background-attachment: var(--user-modal-attachment);
-  filter: var(--user-modal-filter);
-  z-index: -1
+._551b0894962ff66f-navItem._551b0894962ff66f-selected:after{
+    right:0;
+    background:var(--hsl-main-color);
+    animation:cv-channel-select .3s ease-in-out
 }
-
-:is(.visual-refresh-chat-input, :not(.visual-refresh-chat-input)) .inlineContainer__74017 {
-  background-color: var(--hsl-input-shading);
-  border: none;
-  box-shadow: 0 0 2px var(--hsl-input-border-shading)
+._8a7fc664acf53af6-backdrop{
+    background:var(--hsl-popout-shading)
 }
-
-:is(.visual-refresh-chat-input, :not(.visual-refresh-chat-input)) .inlineContainer__74017:focus-within {
-  box-shadow: 0 0 2px 2px var(--hsl-main-color)
+._8a7fc664acf53af6-relative{
+    background:hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * 0.5))
 }
-
-:is(.visual-refresh-chat-input, :not(.visual-refresh-chat-input)) .custom-user-profile-theme .inlineContainer__74017 {
-  background: var(--input-background);
-  box-shadow: 0 0 0 2px var(--profile-body-border-color)
+._8a7fc664acf53af6-iconButton{
+    background:var(--hsl-main-color)
 }
-
-:is(.visual-refresh-chat-input, :not(.visual-refresh-chat-input)) .custom-user-profile-theme .inlineContainer__74017:focus-within {
-  box-shadow: 0 0 2px 2px var(--profile-gradient-primary-color)
+._8a7fc664acf53af6-iconButton:hover{
+    background:var(--hsl-hover-color)
 }
-
-.visual-refresh .custom-user-profile-theme .top_b3f026 .item_b3f026 {
-  --selected-tab-item-color: var(--profile-gradient-secondary-color)
+.a592e1970a0ce22c-container{
+    border:none
 }
-
-.visual-refresh .custom-user-profile-theme .top_b3f026 .item_b3f026.selected_b3f026 {
-  --selected-tab-item-color: var(--profile-gradient-primary-color)
+._23746ba3de9452d8-scroller{
+    background:hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * 0.4))
 }
-
-.custom-user-profile-theme ::-webkit-scrollbar-thumb {
-  background-color: var(--profile-gradient-primary-color)
+:is(.theme-dark,.theme-light) ._84e3e626b96552ad-card{
+    background:var(--hsl-card-shading);
+    border:none
 }
-
-.custom-user-profile-theme .textarea_dde0a8:focus {
-  box-shadow: 0 0 2px 2px var(--profile-gradient-primary-color)
+:is(.theme-dark,.theme-light) ._84e3e626b96552ad-card:hover{
+    background:var(--hsl-card-shading);
+    box-shadow:0 0 0 2px var(--hsl-hover-color)
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.outer_c0bea0:not(.custom-user-profile-theme) .role_dfa8b6 {
-  background: rgba(0, 0, 0, 0);
-  border-color: transparent;
-  position: relative
+.f215b9f268869c67-avatar{
+    background:var(--hsl-card-shading);
+    border:none
 }
-
-.outer_c0bea0:not(.custom-user-profile-theme) .role_dfa8b6 .roleRemoveButton_dfa8b6 {
-  position: static
+.f215b9f268869c67-card:hover .f215b9f268869c67-avatar{
+    background:var(--hsl-card-shading)
 }
-
-.outer_c0bea0:not(.custom-user-profile-theme) .role_dfa8b6 .roleRemoveIcon_dfa8b6 {
-  left: 15px
+._19cf24ad0aef5ead-container,._5682dbf1b47888b6-container{
+    background:var(--hsl-card-shading)
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.mask__44b0c rect[fill*="#82838b"] {
-  fill: var(--hsl-offline-color)
+:is(.theme-light,.theme-dark) ._4cb8ad5be329b603-iconMask{
+    background:var(--hsl-card-shading);
+    width:48px;
+    height:48px;
+    padding:0;
+    margin-left:8px
 }
-
-.mask__44b0c rect[fill*="#40a258"] {
-  fill: var(--hsl-online-color)
+._4cb8ad5be329b603-card:hover ._4cb8ad5be329b603-iconMask{
+    background:var(--hsl-card-shading)
 }
-
-.mask__44b0c rect[fill*="#cc954c"] {
-  fill: var(--hsl-idle-color)
+._4cb8ad5be329b603-presenceCountDot{
+    background:var(--hsl-online-color)
 }
-
-.mask__44b0c rect[fill*="#d83a41"] {
-  fill: var(--hsl-dnd-color)
+.cbd375bef7ac11dc-container{
+    background:hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * 0.4))
 }
-
-.mask__44b0c rect[fill*="#593695"] {
-  fill: var(--hsl-streaming-color)
+.cec93441fbd47328-container{
+    background:var(--hsl-card-shading)
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.contentColumnDefault__23e6b {
-  padding-top: 50px
+._956c67492d3b967a-container{
+    background:rgba(0,0,0,0)
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.visual-refresh .sidebarRegionScroller__23e6b {
-  background: hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * .3));
-  padding: 20px 8px 60px 20px
+._4577670752bdbe9c-modalBg{
+    background:var(--hsl-modal-shading)
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.accountProfileCard__1fed1,
-.boostContainer_ceb06a,
-.card__5cea9,
-.connectContainer_c7f964,
-.connection_c7f964,
-.descriptionBox__981f7,
-.detailsBlock_e335a7,
-.giftCard_a45ed3,
-.guildContainer__5dba5,
-.joinOptions__959cb,
-.mainTableContainer_fa2640,
-.notDetected_cc46f0,
-.paymentPane__01014,
-.perkCard_b62c4e,
-.roleRow__5f97b:hover:not(.roleRowDisableHover__5f97b) .circleButton__5f97b,
-.settingCard__1a4ef,
-.settingCard__1a4ef.active__1a4ef,
-.soundButtonSettingContainer__84bad,
-.visual-refresh .expandedFolderBackground__48112 {
-  background: var(--hsl-card-shading)
+._4577670752bdbe9c-modalContent{
+    background:rgba(0,0,0,0) !important
 }
 
-.backgroundOptionRing__53965,
-.itemSelected_ec9088,
-.option__54675:hover {
-  border: 2px solid var(--hsl-main-color)
+._133bf5eea8e33a34-tabBody{
+    background:none
 }
-
-.visual-refresh-chat-input .bioTextAreaContainer__6a919 {
-  background: var(--hsl-input-shading);
-  box-shadow: 0 0 0 2px var(--hsl-input-border-shading)
+._133bf5eea8e33a34-container{
+    background:none;
+    border:none
 }
-
-.visual-refresh-chat-input .bioTextAreaContainer__6a919:focus-within {
-  border-color: transparent;
-  box-shadow: 0 0 2px 2px var(--hsl-main-color)
+._133bf5eea8e33a34-peopleColumn{
+    background:hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * 0.4))
 }
-
-.accountButtonInner_c7f964,
-.metadataContainer_c7f964 {
-  background-color: var(--background-modifier-accent)
+._6811a89c5c687a9a-blockedIgnoredSettingsNotice{
+    border:1px solid var(--hsl-main-color);
+    background-color:var(--hsl-card-shading)
 }
-
-.connectionHeader_c7f964 {
-  background: rgba(0, 0, 0, 0);
-  padding-bottom: 0
+.f8fa068db52f043f-actionButton{
+    background-color:var(--hsl-card-shading)
 }
-
-:is(.theme-light, .theme-dark) .hoverablePayment_e9cb00:hover {
-  background: rgba(0, 0, 0, 0)
+.f8fa068db52f043f-actionButton.f8fa068db52f043f-highlight{
+    background-color:var(--hsl-card-shading);
+    color:var(--interactive-text-active)
 }
-
-:is(.theme-light, .theme-dark) .bottomDivider__01014 {
-  border-bottom-color: var(--background-modifier-accent)
+.f8fa068db52f043f-actionButton:hover{
+    background:var(--hsl-hover-color)
 }
-
-:is(.theme-light, .theme-dark) .codeRedemptionRedirect_a706ba {
-  background: var(--hsl-card-shading);
-  border: none
+.f8fa068db52f043f-actionButton.f8fa068db52f043f-actionAccept{
+    color:var(--hsl-success-color)
 }
-
-.container__06283 {
-  -webkit-mask-image: url(https://clearvision.github.io/icons/pill.svg);
-  mask-image: url(https://clearvision.github.io/icons/pill.svg);
-  background: var(--hsl-main-color) !important
+.f8fa068db52f043f-actionButton.f8fa068db52f043f-actionAccept:hover{
+    background:var(--hsl-success-color);
+    color:var(--interactive-text-active)
 }
-
-:is(.theme-light, .theme-dark) .progress__06283 {
-  background: var(--hsl-background-shading)
+.f8fa068db52f043f-actionButton.f8fa068db52f043f-actionDeny{
+    color:var(--hsl-danger-color)
 }
-
-:is(.theme-light, .theme-dark) .sliderBar_ac7648 {
-  background-color: var(--background-modifier-accent)
+.f8fa068db52f043f-actionButton.f8fa068db52f043f-actionDeny:hover{
+    background:var(--hsl-danger-color);
+    color:var(--interactive-text-active)
 }
-
-.cameraWrapper_d41d5f,
-.visual-refresh .auditLog__43dab,
-.visual-refresh .scrollerContainer_cdb2b0 {
-  background: var(--hsl-card-shading);
-  border: none
+._5ec2fb8b5de26b21-searchBar{
+    border-width:2px
 }
-
-.nowPlaying_cc46f0 {
-  background: hsl(from "color.success" h s l/.8)
+._133bf5eea8e33a34-tabBar ._133bf5eea8e33a34-addFriend._133bf5eea8e33a34-addFriend._133bf5eea8e33a34-addFriend{
+    background-color:rgba(0,0,0,0);
+    color:var(--text-subtle);
+    border:none
 }
-
-:is(.theme-light, html:not(.theme-dark)) .game_cc46f0 {
-  box-shadow: 0 1px 0 0 var(--background-modifier-accent)
+._133bf5eea8e33a34-tabBar ._133bf5eea8e33a34-addFriend._133bf5eea8e33a34-addFriend._133bf5eea8e33a34-addFriend:hover{
+    background-color:var(--background-mod-subtle)
 }
-
-.cardFolder__1a4ef,
-.expandedContainer__9d98d,
-.groupCollapsedContainer__9d98d,
-.groupContainer__9d98d,
-.groupHeader__9d98d,
-.scroller__53543 {
-  background: rgba(0, 0, 0, 0)
+._133bf5eea8e33a34-tabBar ._133bf5eea8e33a34-addFriend._133bf5eea8e33a34-addFriend._133bf5eea8e33a34-addFriend[aria-selected=true]{
+    background-color:var(--hsl-main-color);
+    color:var(--text-strong)
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.header_d5ae15 {
-  background: var(--hsl-input-shading)
+._72ba79a5dfa2ce86-addFriendInputWrapper{
+    background:var(--hsl-input-shading);
+    border:2px solid var(--hsl-input-border-shading)
 }
-
-.group__344e6 {
-  border-color: var(--background-modifier-accent)
+._72ba79a5dfa2ce86-addFriendInputWrapper:focus-within{
+    border-color:var(--hsl-main-color);
+    box-shadow:0 0 2px 0 var(--hsl-main-color)
 }
-
-.item__344e6 {
-  background: var(--hsl-card-shading);
-  cursor: pointer
+._72ba79a5dfa2ce86-input{
+    background:rgba(0,0,0,0);
+    border:none;
+    box-shadow:none
 }
-
-.item__344e6.selected__344e6 {
-  background-color: hsl(from var(--hsl-main-color) h s l/.4)
+._133bf5eea8e33a34-nowPlayingColumn{
+    background:none
 }
-
-.deny__344e6 {
-  color: var(--hsl-danger-color);
-  border-right: 1px solid var(--background-modifier-accent)
+._7d20cf18f8a2784c-container{
+    background:hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * 0.2))
 }
-
-.deny__344e6.selected__344e6 {
-  background-color: hsl(from var(--hsl-danger-color) h s l/.6)
+._7d20cf18f8a2784c-scroller{
+    border:none
 }
-
-.allow__344e6 {
-  color: var(--hsl-success-color);
-  border-left: 1px solid var(--background-modifier-accent)
+.bf1984a18b3ec6f0-outer,.bf1984a18b3ec6f0-outer:is(.bf1984a18b3ec6f0-interactive:hover,.bf1984a18b3ec6f0-interactive){
+    background-color:var(--hsl-card-shading);
+    border:none
 }
-
-.allow__344e6.selected__344e6 {
-  background-color: hsl(from var(--hsl-success-color) h s l/.6)
+._00943886e1cf89d1-section{
+    border:none
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.traitContainer__4cbea {
-  background: var(--hsl-input-shading);
-  border: none;
-  box-shadow: 0 0 1px 1px var(--hsl-input-border-shading)
+._7e549558f336cddb-emptyCard{
+    background-color:var(--hsl-card-shading)
 }
 
-.traitContainer__4cbea:focus-within {
-  box-shadow: 0 0 2px 1px var(--hsl-main-color)
+.c791b281f2fedc32-page{
+    background:rgba(0,0,0,0) !important
 }
-
-.emojiWrapper__4cbea {
-  border: none;
-  padding-left: 10px
+._09a38002c6c2466d-mainTableContainer{
+    background:var(--hsl-card-shading);
+    border:none
 }
-
-.traitInput__4cbea {
-  background: rgba(0, 0, 0, 0);
-  box-shadow: none;
-  height: 32px
+.acdcc0f00bb2135b-newMembersNotice{
+    background:var(--hsl-main-color)
 }
-
-.traitInput__4cbea:focus-within {
-  box-shadow: none
+.acdcc0f00bb2135b-newMembersNotice:hover{
+    background:var(--hsl-hover-color)
 }
-
-.visual-refresh .container_d8f25b:hover {
-  background: var(--hsl-card-shading);
-  border: 2px solid var(--hsl-main-color)
+._71c22426f1aad6f4-otherRoles{
+    background:var(--background-mod-subtle)
 }
 
-.roleRow__5f97b:hover:not(.roleRowDisableHover__5f97b) .circleButton__5f97b:hover {
-  background: var(--hsl-main-color)
+.f391e3680aff100a-list{
+    background:hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * 0.4))
 }
 
-.visual-refresh :is(.headerExpanded__43dab, .divider__43dab, .changeDetails__43dab) {
-  background: rgba(0, 0, 0, 0)
+.f07d62e29a48ceee-applicationStore{
+    background:rgba(0,0,0,0)
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.visual-refresh .panels_c48ade {
-  background: hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * .5));
-  border-radius: 0;
-  border: none;
-  width: 100%;
-  left: 0;
-  bottom: 0;
-  padding: 8px
+._0920e02cc8fc7b7b-homeWrapper{
+    background:rgba(0,0,0,0);
+    border:none
 }
-
-:is(.theme-light, .theme-dark) .panel__5dec7 {
-  background-color: rgba(0, 0, 0, 0)
+.ca1a02dcad190ff8-mainPageScroller,.ca1a02dcad190ff8-allPerksScroller{
+    background:hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * 0.4))
 }
-
-:is(.theme-light, .theme-dark) .wrapper__0d616 {
-  background: rgba(0, 0, 0, 0)
+.ca1a02dcad190ff8-mainPageScroller{
+    right:0;
+    transition:all .75s ease-in-out
 }
-
-.contentWrapper__0d616 {
-  background: 0 0 !important
+.ca1a02dcad190ff8-mainPageScroller:has(+.ca1a02dcad190ff8-open){
+    right:100%
 }
-
-.postEnrollmentBackgroundCollapsed__636a2,
-.postEnrollmentBackgroundExpanded__636a2 {
-  background-image: none !important;
-  background-color: rgba(0, 0, 0, 0);
-  border: none
+.b5493bb5330ab072-card,.da4aee5b24d1a407-container{
+    background:var(--hsl-card-shading)
 }
-
-.contentInteractable__636a2 .headerText__636a2 {
-  color: var(--text-normal)
+:is(.images-light,.images-dark) .da4aee5b24d1a407-textContainer{
+    background:none
 }
-
-.contentInteractable__636a2 .submenuIcon__636a2 {
-  color: var(--interactive-normal)
+.da4aee5b24d1a407-giftCardButton{
+    background:rgba(0,0,0,0)
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.visual-refresh .guilds_c48ade {
-  margin-bottom: var(--custom-app-panels-height);
-  background: rgba(0, 0, 0, 0);
-  padding-top: 10px
+.b5493bb5330ab072-cardDescription{
+    background:var(--hsl-popout-shading)
 }
-
-.circleIconButton__5bc7e.selected__5bc7e,
-.iconBadge__2b1f5.isCurrentUserConnected__650eb,
-.mention__3b95d,
-.mention__3b95d:active {
-  background: var(--hsl-main-color)
+.ca1a02dcad190ff8-seeAllPerksButton{
+    background:var(--hsl-card-shading);
+    border:none
 }
-
-.item__58105 {
-  box-shadow: 0 0 3px 1px var(--hsl-main-color)
+.b9abc541a0f3bad0-backButton{
+    background:var(--hsl-main-color)
 }
-
-.pill__5bc7e {
-  bottom: 0
+.b9abc541a0f3bad0-backButton:hover{
+    background:var(--hsl-hover-color)
 }
-
-.visual-refresh .childWrapper__6e9f8>svg {
-  width: 100%;
-  height: 100%;
-  background: var(--home-icon) center/cover no-repeat
+:is(.theme-dark,.theme-light) :is(._3cf145205b86c3e6-leftArrow,._3cf145205b86c3e6-rightArrow){
+    background:var(--hsl-card-shading)
 }
-
-.icon__29444,
-.visual-refresh .childWrapper__6e9f8 path,
-.visual-refresh .sidebar_c48ade:after {
-  display: none
+:is(.theme-dark,.theme-light) :is(._3cf145205b86c3e6-leftArrow,._3cf145205b86c3e6-rightArrow):hover{
+    background:var(--hsl-hover-color)
 }
-
-.visual-refresh .circleIconButton__5bc7e:hover:not(.disabled__5bc7e) {
-  background: var(--hsl-hover-color)
+:is(.theme-dark,.theme-light) ._3cf145205b86c3e6-inactiveArrow{
+    background:var(--hsl-card-shading)
 }
-
-.mention__3b95d {
-  border-radius: 5px
+._3cf145205b86c3e6-cardProgressBar{
+    background:var(--hsl-card-shading)
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.visual-refresh .wrapperCommon__29444 .mainContent__29444 .name__29444 {
-  flex: 1
+._3cf145205b86c3e6-selectedDot{
+    background:var(--hsl-main-color)
 }
-
-.visual-refresh .name__29444 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--hsl-main-color);
-  font-weight: 700
+.innerWrapper_c511e4{
+    background:var(--hsl-popout-shading)
 }
 
-.visual-refresh .name__29444::before {
-  content: "";
-  height: 2px;
-  flex-grow: 1;
-  transition: .3s ease-in-out;
-  background: linear-gradient(to left, var(--hsl-main-color) 50%, transparent);
-  margin-right: 5px
+._7449fa59699cedd9-background :is(._99f8cc7ad4790ce9-scrollerBase,.d125d22cdfd32cfe-scrollerBase){
+    background:hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * 0.4))
 }
-
-.visual-refresh .name__29444::after {
-  content: "";
-  height: 2px;
-  flex-grow: 1;
-  transition: .3s ease-in-out;
-  background: linear-gradient(to right, var(--hsl-main-color) 50%, transparent);
-  margin-left: 5px
+.d13feb942bc5e7c6-row,.d13feb942bc5e7c6-row:hover{
+    background:var(--hsl-card-shading);
+    border:var(--hsl-card-shading)
 }
-
-.visual-refresh .children__29444 {
-  margin-left: 6px
+._553a560af5c280e6-headerIcon{
+    background-color:var(--hsl-card-shading);
+    border-color:rgba(0,0,0,0)
 }
-
-.collapsed__29444 .name__29444::after,
-.collapsed__29444 .name__29444::before {
-  flex-grow: 0
+.dca174a2baed7ac1-container{
+    background:var(--hsl-popout-shading);
+    border:none
 }
-
-.wrapper__29444.muted__29444 :is(.name__29444, .addButtonIcon__29444) {
-  color: var(--hsl-main-color);
-  opacity: .5
+.dca174a2baed7ac1-avatarWrapper{
+    background:var(--hsl-card-shading)
 }
 
-.wrapper__29444:is(.wrapper__29444, .muted__29444):hover .name__29444 {
-  color: var(--hsl-hover-color)
+._8946359d8adb1488-container{
+    background:rgba(0,0,0,0)
 }
-
-.wrapper__29444:is(.wrapper__29444, .muted__29444):hover .name__29444::before {
-  background: linear-gradient(to left, var(--hsl-hover-color) 50%, transparent)
+._8946359d8adb1488-contentContainer{
+    background:hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * 0.4))
 }
-
-.wrapper__29444:is(.wrapper__29444, .muted__29444):hover .name__29444::after {
-  background: linear-gradient(to right, var(--hsl-hover-color) 50%, transparent)
+._5573a546299c96e8-container{
+    background:var(--hsl-card-shading);
+    border-color:rgba(0,0,0,0)
 }
-
-.wrapper__29444:is(.wrapper__29444, .muted__29444):hover .addButtonIcon__29444 {
-  color: var(--hsl-hover-color)
+._5573a546299c96e8-parentContainer:hover ._5573a546299c96e8-container{
+    background:var(--hsl-card-shading);
+    border-color:var(--hsl-hover-color)
 }
-
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.newChannel__599fa {
-  background: var(--hsl-main-color) !important;
-  color: var(--header-primary)
+._5573a546299c96e8-container:is(._5573a546299c96e8-active,._5573a546299c96e8-warning){
+    background:var(--hsl-card-shading)
 }
-
-.icon__2ea32,
-.name__2ea32 {
-  color: var(--channel-default)
+._5573a546299c96e8-parentContainer:hover ._5573a546299c96e8-container:is(._5573a546299c96e8-active,._5573a546299c96e8-warning){
+    background:var(--hsl-card-shading);
+    border-color:var(--hsl-hover-color)
 }
-
-.visual-refresh .sidebarList_c48ade {
-  margin-bottom: var(--custom-app-panels-height);
-  border-top-left-radius: 10px;
-  border: none
+._8946359d8adb1488-sidebarContainer{
+    background:hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * 0.3))
 }
-
-.visual-refresh .container__2637a {
-  background: hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * .25));
-  padding: 0
+._6c25357d6a3f0021-container{
+    background:rgba(0,0,0,0);
+    border:none
 }
 
-.visual-refresh .animatedContainer_f37cb1 {
-  background-color: rgba(0, 0, 0, 0);
-  border: none
+._1feb0fca744244ab-shopScroll,._084152b107f71237-shopScroll,._1feb0fca744244ab-page{
+    background:rgba(0,0,0,0)
 }
-
-.visual-refresh .unread__2ea32 {
-  box-shadow: 0 0 6px 1px var(--hsl-main-color)
+._6db1d32c47b6ad72-shop{
+    background:hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * 0.4))
 }
-
-.visual-refresh .bottom__7aaec,
-.visual-refresh .unreadBottom__629e4 {
-  bottom: 8px
+._084152b107f71237-shop{
+    background:rgba(0,0,0,0)
 }
-
-.link__2ea32::before,
-.visual-refresh .interactive__972a0::before {
-  top: 0;
-  right: 100%;
-  bottom: 0;
-  left: 0;
-  transition: .15s ease-in-out;
-  z-index: -1;
-  border-radius: 4px
+._1feb0fca744244ab-divider{
+    margin-top:0
 }
-
-.visual-refresh .bar__3b95d,
-.visual-refresh .bar__7aaec {
-  background-color: var(--hsl-main-color);
-  border-color: var(--hsl-main-color)
+.fcbddd55b8b335a1-productCardContainer{
+    background:var(--hsl-card-shading);
+    border:2px solid rgba(0,0,0,0)
 }
-
-.visual-refresh .barText__7aaec,
-.visual-refresh .unreadIcon__7aaec {
-  color: var(--button-filled-brand-text) !important
+.fcbddd55b8b335a1-productCardContainer:hover{
+    border-color:var(--hsl-main-color)
 }
-
-.link__2ea32 {
-  transition: .15s ease-in-out;
-  margin-left: 4px
+.e4f643832afbf3d3-productSkeletonCardContainer,._084152b107f71237-featuredBlockSkeleton{
+    background:var(--hsl-card-shading)
 }
-
-.icon__2ea32 {
-  width: 18px;
-  height: 18px;
-  margin-right: 3px;
-  transition: .15s ease-in-out
+.full-motion .e4f643832afbf3d3-pulseAnimation,.full-motion ._084152b107f71237-featuredBlockSkeleton{
+    animation:cv-card-loading 1.5s infinite ease-in-out
 }
-
-.name__2ea32 {
-  transition: .15s ease-in-out
+.e4f643832afbf3d3-productSkeletonText,._084152b107f71237-featuredBlockSkeletonLogo{
+    background:var(--background-mod-subtle)
 }
-
-.wrapper__2ea32.modeMuted__2ea32 .icon__2ea32,
-.wrapper__2ea32.modeMuted__2ea32 .name__2ea32 {
-  color: var(--channel-muted)
+._1187745e085c713e-filterBar{
+    background:rgba(0,0,0,0)
 }
-
-.wrapper__2ea32.modeMuted__2ea32:hover .link__2ea32,
-.wrapper__2ea32:hover .link__2ea32 {
-  background: var(--background-modifier-accent)
+._1187745e085c713e-circleToggled{
+    outline-color:var(--hsl-main-color)
 }
-
-.wrapper__2ea32.modeMuted__2ea32:hover .icon__2ea32,
-.wrapper__2ea32.modeMuted__2ea32:hover .name__2ea32,
-.wrapper__2ea32:hover .icon__2ea32,
-.wrapper__2ea32:hover .name__2ea32 {
-  color: var(--channel-hover)
+._1187745e085c713e-themeToggled{
+    background:var(--hsl-card-shading);
+    border-color:var(--hsl-main-color)
 }
-
-.wrapper__2ea32.modeUnreadImportant__2ea32 .name__2ea32 {
-  color: var(--channel-unread);
-  text-shadow: 0 0 3px
+.c50f6267327b9a8c-collectibleInfoContainer{
+    background:rgba(0,0,0,0)
 }
-
-.wrapper__2ea32.modeUnreadImportant__2ea32 .icon__2ea32 {
-  color: var(--channel-unread);
-  filter: drop-shadow(0 0 3px)
+._1ab14d14e9559e7e-baseCardOutline{
+    background:var(--hsl-card-shading);
+    border:2px solid var(--hsl-main-color)
 }
 
-.wrapper__2ea32.modeUnreadImportant__2ea32:hover :is(.name__2ea32, .icon__2ea32) {
-  color: var(--channel-unread-hover)
+._4a84a2c88d373bef-scroller,.fb04e18e9304920d-scroller{
+    background:hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * 0.4))
 }
 
-.wrapper__2ea32.modeSelected__2ea32 .link__2ea32 {
-  background-color: rgba(0, 0, 0, 0)
+._4e6cebf8beed1ad8-wrapper{
+    background:rgba(0,0,0,0)
 }
-
-.wrapper__2ea32.modeSelected__2ea32 .link__2ea32::before {
-  right: 0;
-  background: var(--channel-selected-bg);
-  animation: .3s ease-in-out cv-channel-select
+._58f1c3000c2c5b3e-loadingPopout{
+    background:var(--hsl-popout-shading)
 }
 
-.wrapper__2ea32.modeSelected__2ea32 .icon__2ea32,
-.wrapper__2ea32.modeSelected__2ea32 .name__2ea32 {
-  color: var(--channel-selected)
+._13533e3c5791980f-autocomplete{
+    background:var(--hsl-popout-shading);
+    box-shadow:none
 }
-
-.wrapper__2ea32.modeConnected__2ea32 .name__2ea32 {
-  color: var(--hsl-main-color);
-  text-shadow: 0 0 3px
+._13533e3c5791980f-clickable[aria-disabled=false] ._13533e3c5791980f-base:hover{
+    background:var(--hsl-hover-color)
 }
-
-.wrapper__2ea32.modeConnected__2ea32 .icon__2ea32 {
-  color: var(--hsl-main-color);
-  filter: drop-shadow(0 0 3px)
+._13533e3c5791980f-clickable[aria-selected=true] ._13533e3c5791980f-base{
+    background:var(--hsl-hover-color)
 }
-
-.visual-refresh .sidebar_c48ade,
-.visual-refresh .users__260e1,
-.visual-refresh .wrapper__260e1 {
-  background: rgba(0, 0, 0, 0)
+._13533e3c5791980f-contentTitle{
+    padding:4px 8px;
+    color:var(--text-strong)
 }
-
-.visual-refresh .users__260e1 {
-  padding: 0 8px 0 6px
+.b1e4f3fb96801b99-wrapper{
+    background:rgba(0,0,0,0)
 }
-
-.visual-refresh .total__260e1 {
-  padding: 0 6px 0 1px
+._1a58aeaaf7cc4963-selected,._1a58aeaaf7cc4963-selected:hover{
+    background:var(--hsl-main-color)
 }
 
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-.visual-refresh .scroller__99e7c {
-  background: rgba(0, 0, 0, 0);
-  margin: 0
+.lookFilled_a16aea.a16aea1526925c2c-select{
+    box-shadow:none
 }
-
-.visual-refresh .headerText__99e7c {
-  display: flex;
-  text-transform: uppercase;
-  font-size: 14px;
-  font-weight: 700;
-  align-items: center
+.lookFilled_a16aea.a16aea1526925c2c-select:hover{
+    border:1px solid var(--input-border)
 }
-
-.visual-refresh .headerText__99e7c::before {
-  content: "";
-  height: 2px;
-  flex-grow: 1;
-  background: linear-gradient(to left, currentColor 50%, transparent);
-  margin-right: 5px
+.a16aea1526925c2c-popout,.a16aea1526925c2c-popout.a16aea1526925c2c-popoutPositionTop{
+    background:var(--hsl-popout-shading);
+    border:none
 }
-
-.visual-refresh .headerText__99e7c::after {
-  content: "";
-  height: 2px;
-  flex-grow: 1;
-  background: linear-gradient(to right, currentColor 50%, transparent);
-  margin-left: 5px
+.a16aea1526925c2c-option{
+    border-radius:8px;
+    margin:0 8px
 }
-
-.visual-refresh :is(.plusIcon__675e5, .privateChannelRecipientsInviteButtonIcon__99e7c) {
-  margin: 0 -4px 0 0
+.a16aea1526925c2c-option:hover{
+    background:var(--hsl-hover-color)
 }
-
-.visual-refresh :is(.plusIcon__675e5, .privateChannelRecipientsInviteButtonIcon__99e7c) .icon__9293f {
-  color: var(--hsl-main-color)
+.a16aea1526925c2c-option[aria-selected=true]{
+    background:var(--hsl-main-color)
 }
-
-.visual-refresh :is(.plusIcon__675e5, .privateChannelRecipientsInviteButtonIcon__99e7c):hover .icon__9293f {
-  color: var(--hsl-hover-color)
+.a16aea1526925c2c-option[aria-selected=true]:not(.a16aea1526925c2c-option.a16aea1526925c2c-multi){
+    background:var(--hsl-main-color)
 }
-
-.empty__99e7c {
-  fill: var(--text-normal);
-  opacity: .15
+.a16aea1526925c2c-selectedIcon{
+    color:var(--interactive-text-active)
 }
-
-.visual-refresh .interactive__972a0 {
-  transition: .15s ease-in-out;
-  border-radius: 4px
+.a16aea1526925c2c-selectedIcon circle{
+    fill:var(--hsl-main-color)
 }
-
-.visual-refresh .interactive__972a0::before {
-  content: "";
-  position: absolute
+.multiSelectCheckbox_a16aea.checked_a16aea{
+    background:var(--interactive-text-active)
 }
-
-.visual-refresh .interactive__972a0:hover {
-  background: var(--background-modifier-accent)
+.multiSelectCheckbox_a16aea.checked_a16aea path{
+    fill:var(--hsl-main-color)
+}
+.a16aea1526925c2c-optionPillItem .a16aea1526925c2c-optionPillBtn{
+    background:rgba(0,0,0,0);
+    border:none
 }
+.a16aea1526925c2c-optionPillItem .a16aea1526925c2c-optionPillBtn .a16aea1526925c2c-optionPillBtn{
+    background:var(--hsl-main-color)
+}
 
-.visual-refresh .interactive__972a0.interactiveSelected__972a0 {
-  background-color: rgba(0, 0, 0, 0);
-  color: var(--interactive-active)
+._957962c2bd49881b-recentMentionsPopout{
+    background:var(--hsl-popout-shading);
+    box-shadow:none
+}
+.ab66419eae73260f-header{
+    background:rgba(0,0,0,0)
+}
+._35a7ecf3aba351b2-channelHeader{
+    background:hsl(from var(--hsl-main-color) h s l/0.8);
+    padding-left:20px;
+    padding-right:6px;
+    border-radius:8px
+}
+._35a7ecf3aba351b2-guildIcon{
+    background-color:var(--hsl-card-shading)
+}
+.d404a36e7b59cdcf-icon{
+    background:var(--hsl-main-color);
+    color:var(--interactive-icon-active)
+}
+.ed0c8cb44ff95773-jumpButton{
+    background:var(--hsl-main-color);
+    border:none
+}
+.ed0c8cb44ff95773-jumpButton:hover{
+    background:var(--hsl-hover-color)
+}
+._0f7115b4703f7b3a-container{
+    background:rgba(0,0,0,0)
 }
+.db811b930f9884ca-maskBackground{
+    background:var(--hsl-main-color) !important
+}
+._2692d04af6567ec8-tutorial{
+    background:var(--hsl-card-shading)
+}
+._2692d04af6567ec8-tutorialIcon{
+    background:var(--hsl-main-color);
+    color:var(--interactive-text-active)
+}
+._1ccd1ba5cb2270c2-messages{
+    background:var(--hsl-card-shading);
+    border:none
+}
+._35a7ecf3aba351b2-collapseButton{
+    left:0
+}
+._957962c2bd49881b-container{
+    margin-left:16px
+}
+._957962c2bd49881b-messageContainer{
+    background:var(--hsl-card-shading);
+    border:none;
+    margin:0
+}
 
-.visual-refresh .interactive__972a0.interactiveSelected__972a0::before {
-  right: 0;
-  background: var(--hsl-main-color);
-  animation: .3s ease-in-out cv-channel-select
+.c1e9c47c23f12ca3-menu{
+    background:var(--hsl-popout-shading);
+    border:none;
+    border-radius:5px
+}
+.c1e9c47c23f12ca3-colorDefault.c1e9c47c23f12ca3-focused{
+    background-color:var(--hsl-hover-color)
+}
+.c1e9c47c23f12ca3-colorDefault:active:not(.c1e9c47c23f12ca3-hideInteraction){
+    background-color:var(--hsl-main-color)
+}
+.c1e9c47c23f12ca3-colorDefault:active .c1e9c47c23f12ca3-label{
+    color:var(--interactive-text-active)
+}
+.c1e9c47c23f12ca3-colorDanger.c1e9c47c23f12ca3-focused{
+    background-color:var(--hsl-danger-color)
+}
+.c1e9c47c23f12ca3-colorDanger.c1e9c47c23f12ca3-focused:not(.c1e9c47c23f12ca3-checkboxContainer) path{
+    fill:var(--interactive-text-active)
+}
+.c1e9c47c23f12ca3-colorDanger:active:not(.c1e9c47c23f12ca3-hideInteraction){
+    background-color:var(--hsl-danger-color);
+    color:var(--interactive-text-active)
+}
+.c1e9c47c23f12ca3-item.c1e9c47c23f12ca3-focused .c1e9c47c23f12ca3-label{
+    color:var(--interactive-text-active)
+}
+.a423bdd721ddcc83-status[style*="rgb(132, 133, 141)"]{
+    background-color:var(--hsl-offline-color) !important
+}
+.a423bdd721ddcc83-status[style*="rgb(69, 163, 102)"]{
+    background-color:var(--hsl-online-color) !important
+}
+.a423bdd721ddcc83-status[style*="rgb(255, 192, 78)"]{
+    background-color:var(--hsl-idle-color) !important
+}
+.a423bdd721ddcc83-status[style*="rgb(218, 62, 68)"]{
+    background-color:var(--hsl-dnd-color) !important
+}
+.c1e9c47c23f12ca3-focused#set-status-submenu-online{
+    background-color:var(--hsl-online-color)
+}
+.c1e9c47c23f12ca3-focused#set-status-submenu-idle{
+    background-color:var(--hsl-idle-color)
+}
+.c1e9c47c23f12ca3-focused#set-status-submenu-dnd{
+    background-color:var(--hsl-dnd-color)
+}
+.c1e9c47c23f12ca3-focused#set-status-submenu-invisible{
+    background-color:var(--hsl-offline-color)
+}
+.d40c56f847687e8d-activeIcon path{
+    fill:var(--hsl-main-color)
+}
+.d40c56f847687e8d-focused .d40c56f847687e8d-activeIcon circle{
+    fill:var(--hsl-main-color)
 }
 
-.visual-refresh .interactive__972a0.interactiveSelected__972a0 .text__8ac07 {
-  color: var(--interactive-active)
+.c36707910f687430-tooltipPrimary{
+    background-color:var(--hsl-popout-shading);
+    border:none
 }
+.c36707910f687430-tooltipPrimary .c36707910f687430-tooltipPointer{
+    border-top-color:var(--hsl-popout-shading)
+}
+.c36707910f687430-tooltipPrimary .c36707910f687430-tooltipPointer::before,.c36707910f687430-tooltipPrimary .c36707910f687430-tooltipPointer::after{
+    display:none
+}
+.c36707910f687430-tooltipBrand{
+    background-color:var(--hsl-main-color);
+    border:none
+}
+.c36707910f687430-tooltipBrand .c36707910f687430-tooltipPointer{
+    border-top-color:var(--hsl-main-color)
+}
 
-/*! Kira and Diego v6.9 by Kira and Diego Team */
-:is(.theme-light, .theme-dark, .theme-darker, .theme-midnight),
-:is(.theme-light, .theme-dark, .theme-darker, .theme-midnight):is(.theme-light, .theme-dark) {
-  --text-normal: hsl(from var(--normal-text) h calc(var(--saturation-factor, 1) * s) l/alpha);
-  --text-muted: hsl(from var(--muted-text) h calc(var(--saturation-factor, 1) * s) l/alpha);
-  --text-primary: hsl(from var(--primary-text) h calc(var(--saturation-factor, 1) * s) l/alpha);
-  --text-secondary: hsl(from var(--secondary-text) h calc(var(--saturation-factor, 1) * s) l/alpha);
-  --hsl-background-shading: hsl(from var(--background-shading) h calc(var(--saturation-factor, 1) * s) l/alpha);
-  --hsl-card-shading: hsl(from var(--card-shading) h calc(var(--saturation-factor, 1) * s) l/alpha);
-  --hsl-popout-shading: hsl(from var(--popout-shading) h calc(var(--saturation-factor, 1) * s) l/alpha);
-  --hsl-modal-shading: hsl(from var(--modal-shading) h calc(var(--saturation-factor, 1) * s) l/alpha);
-  --hsl-input-shading: hsl(from var(--input-shading) h calc(var(--saturation-factor, 1) * s) l/alpha);
-  --hsl-input-border-shading: hsl(from var(--hsl-input-shading) h s l/.1)
+._084343c4f11eaaab-contentWrapper{
+    background:var(--hsl-popout-shading);
+    border:none
+}
+.aeaaeb2a573807f0-inspector{
+    background:rgba(0,0,0,0);
+    border:none
+}
+._084343c4f11eaaab-navButton{
+    border-radius:5px
+}
+._084343c4f11eaaab-navButton:hover{
+    background:var(--background-mod-subtle)
+}
+._084343c4f11eaaab-navButtonActive{
+    background:var(--hsl-main-color)
+}
+._084343c4f11eaaab-navButtonActive:hover{
+    background:var(--hsl-main-color)
+}
+.c0e32c5cffed3d9f-emojiPickerHasTabWrapper :is(.c0e32c5cffed3d9f-emojiPicker,.c0e32c5cffed3d9f-header){
+    background:rgba(0,0,0,0)
+}
+._14245bb948377a25-wrapper{
+    background:hsl(from var(--hsl-main-color) h s l/0.8);
+    margin-bottom:10px;
+    border-radius:4px
+}
+._14245bb948377a25-wrapper::after{
+    height:0
+}
+.searchBar_c0e32c{
+    margin-right:12px
+}
+:is(.c0e32c5cffed3d9f-emojiPicker,.c0e32c5cffed3d9f-header){
+    background:var(--hsl-popout-shading);
+    border:none
+}
+._8ef02eea17068b73-header{
+    background:rgba(0,0,0,0)
+}
+.e94b8cb2ff7b5c8d-packHeader{
+    margin-left:-8px;
+    margin-bottom:10px
 }
+.fed6d32841cc2da2-container,.fed6d32841cc2da2-header{
+    background:rgba(0,0,0,0);
+    border:none
+}
+.fc7141859aaa98b7-emojiItem.fc7141859aaa98b7-emojiItemSelected{
+    background:var(--background-mod-subtle)
+}
+.c6367b0f171ba6d7-stickerInspected .c6367b0f171ba6d7-inspectedIndicator{
+    background:var(--background-mod-subtle)
+}
+.d02962a38047ac3c-categoryFadeBlurple{
+    background:hsl(from var(--hsl-main-color) h s l/0.8)
+}
+.d02962a38047ac3c-categoryFadeBlurple,.d02962a38047ac3c-categoryFadeBlurple:hover{
+    border:none
+}
+.d02962a38047ac3c-categoryFade{
+    border:none
+}
+.d02962a38047ac3c-categoryFade:hover{
+    border:2px solid var(--hsl-main-color)
+}
+.b9ee0c229bc0b6bb-categoryItemDefaultCategorySelected,.b9ee0c229bc0b6bb-categoryItemDefaultCategorySelected:hover{
+    background:var(--hsl-main-color)
+}
+._3ad28b0867fa3fad-stickerCategoryGenericSelected,._3ad28b0867fa3fad-stickerCategoryGenericSelected:hover,._3ad28b0867fa3fad-firstPartyCategorySelected,._3ad28b0867fa3fad-firstPartyCategorySelected:hover{
+    background:var(--hsl-main-color)
+}
 
-:root {
-  --channel-default: var(--channels-default);
-  --channel-muted: var(--interactive-muted);
-  --channel-hover: var(--interactive-hover);
-  --channel-selected: var(--interactive-active);
-  --channel-selected-bg: var(--hsl-main-color);
-  --channel-unread: var(--hsl-main-color);
-  --channel-unread-hover: var(--hsl-hover-color);
-  --hsl-main-color: hsl(from var(--main-color) h calc(var(--saturation-factor, 1) * s) l/alpha);
-  --hsl-hover-color: hsl(from var(--hover-color) h calc(var(--saturation-factor, 1) * s) l/alpha);
-  --hsl-success-color: hsl(from var(--success-color) h calc(var(--saturation-factor, 1) * s) l/alpha);
-  --hsl-warning-color: hsl(from var(--warning-color) h calc(var(--saturation-factor, 1) * s) l/alpha);
-  --hsl-danger-color: hsl(from var(--danger-color) h calc(var(--saturation-factor, 1) * s) l/alpha);
-  --hsl-info-color: hsl(from var(--info-color) h calc(var(--saturation-factor, 1) * s) l/alpha);
-  --hsl-online-color: hsl(from var(--online-color) h calc(var(--saturation-factor, 1) * s) l/alpha);
-  --hsl-idle-color: hsl(from var(--idle-color) h calc(var(--saturation-factor, 1) * s) l/alpha);
-  --hsl-dnd-color: hsl(from var(--dnd-color) h calc(var(--saturation-factor, 1) * s) l/alpha);
-  --hsl-streaming-color: hsl(from var(--streaming-color) h calc(var(--saturation-factor, 1) * s) l/alpha);
-  --hsl-offline-color: hsl(from var(--offline-color) h calc(var(--saturation-factor, 1) * s) l/alpha);
-  --font-primary: 'Times New Roman', sans-serif;
-  --font-display: 'Times New Roman', sans-serif;
-  --font-code: Consolas, Liberation Mono, Menlo, Courier, monospace;
-  --main-color: #b211c4;
-  --hover-color: #a020f0;
-  --success-color: #43b581;
-  --warning-color: #fff;
-  --danger-color: #982929;
-  --info-color: #fff;
-  --online-color: #43b581;
-  --idle-color: #faa61a;
-  --dnd-color: #982929;
-  --streaming-color: #593695;
-  --offline-color: #6c6c6c;
-  --background-shading-percent: 80%;
-  --background-image: url(https://raw.githubusercontent.com/Kira-Kohler/theme/refs/heads/main/wallpaper1920x1080.png);
-  --background-attachment: fixed;
-  --background-filter: saturate(calc(var(--saturation-factor, 1) * 1));
-  --user-popout-image: var(--background-image);
-  --user-popout-attachment: var(--background-attachment);
-  --user-popout-filter: brightness(var(--background-brightness, 100%)) contrast(var(--background-contrast, 100%)) saturate(var(--background-saturation, 100%)) invert(var(--background-invert, 0%)) grayscale(var(--background-grayscale, 0%)) sepia(var(--background-sepia, 0%)) blur(calc(var(--background-blur, 0px) + 3px));
-  --user-popout-overlay: rgba(0, 0, 0, 0.65);
-  --user-modal-image: var(--background-image);
-  --user-modal-attachment: var(--background-attachment);
-  --user-modal-filter: brightness(var(--background-brightness, 100%)) contrast(var(--background-contrast, 100%)) saturate(var(--background-saturation, 100%)) invert(var(--background-invert, 0%)) grayscale(var(--background-grayscale, 0%)) sepia(var(--background-sepia, 0%)) blur(calc(var(--background-blur, 0px) + 3px));
-  --home-icon: url(https://raw.githubusercontent.com/Kira-Kohler/theme/refs/heads/main/heart2.png);
-  --main-font: 'Times New Roman', sans-serif;
-  --code-font: Consolas, Liberation Mono, Menlo, Courier, monospace;
-  --channel-unread: var(--main-color);
-  --channel-color: rgba(255, 255, 255, 0.3);
-  --muted-color: rgba(255, 255, 255, 0.1);
-  --server-unread: var(--main-color);
-  --channel-text-selected: #fff;
-  --url-color: var(--main-color);
-  --text-normal: rgb(220, 221, 222);
-  --text-muted: rgb(114, 118, 125);
-  --channels-width: 220px;
-  --members-width: 240px;
-  --background-shading: rgba(0, 0, 0, 0.7);
-  --background-overlay: rgba(0, 0, 0, 0.7);
-  --background-position: center;
-  --background-size: cover;
-  --background-repeat: no-repeat;
-  --background-brightness: 80%;
-  --background-contrast: 120%;
-  --background-saturation: 100%;
-  --background-invert: 0%;
-  --background-grayscale: 0%;
-  --background-sepia: 0%;
-  --background-blur: 0px;
-  --backdrop-overlay: rgba(0, 0, 0, 0.8);
-  --backdrop-image: var(--background-image);
-  --backdrop-position: var(--background-position);
-  --backdrop-size: var(--background-size);
-  --backdrop-repeat: var(--background-repeat);
-  --backdrop-attachment: var(--background-attachment);
-  --backdrop-brightness: var(--background-brightness);
-  --backdrop-contrast: var(--background-contrast);
-  --backdrop-saturation: var(--background-saturation);
-  --backdrop-invert: var(--background-invert);
-  --backdrop-grayscale: var(--background-grayscale);
-  --backdrop-sepia: var(--backdrop-sepia);
-  --backdrop-blur: var(--background-blur);
-  --user-popout-position: var(--background-position);
-  --user-popout-size: var(--background-size);
-  --user-popout-repeat: var(--background-repeat);
-  --user-popout-brightness: var(--background-brightness);
-  --user-popout-contrast: var(--background-contrast);
-  --user-popout-saturation: var(--background-saturation);
-  --user-popout-invert: var(--background-invert);
-  --user-popout-grayscale: var(--background-grayscale);
-  --user-popout-sepia: var(--background-sepia);
-  --user-modal-position: var(--background-position);
-  --user-modal-size: var(--background-size);
-  --user-modal-repeat: var(--background-repeat);
-  --user-modal-brightness: var(--background-brightness);
-  --user-modal-contrast: var(--background-contrast);
-  --user-modal-saturation: var(--background-saturation);
-  --user-modal-invert: var(--background-invert);
-  --user-modal-grayscale: var(--background-grayscale);
-  --user-modal-sepia: var(--background-sepia);
-  --home-position: center;
-  --home-size: 40px;
-  --popout-color: rgba(0, 0, 0, 0.7);
-  --modal-color: rgba(0, 0, 0, 0.5);
-  --bd-blue: var(--main-color);
-  --bd-blue-hover: var(--hover-color);
-  --bd-blue-active: var(--hover-color)
+.e8b59c4b335dd2fc-messagesPopoutWrap{
+    background:var(--hsl-popout-shading);
+    box-shadow:none
+}
+.e8b59c4b335dd2fc-header,.e8b59c4b335dd2fc-footer{
+    background:rgba(0,0,0,0)
 }
+.e8b59c4b335dd2fc-messageGroupWrapper{
+    background:var(--background-mod-subtle);
+    border:none
+}
 
-:is(.theme-light, .theme-dark .theme-light) {
-  --background-shading: rgba(252, 252, 252, 0.8);
-  --card-shading: rgba(252, 252, 252, 0.3);
-  --popout-shading: rgba(252, 252, 252, 0.7);
-  --modal-shading: rgba(252, 252, 252, 0.5);
-  --input-shading: rgba(0, 0, 0, 0.3);
-  --normal-text: #36363c;
-  --muted-text: #75757e;
-  --primary-text: #303035;
-  --secondary-text: #60606a
+.b6544fb09f373e60-container{
+    background:var(--hsl-popout-shading);
+    border:none
+}
+._5fa2fb5c4d963128-selectDropdown{
+    background:var(--hsl-popout-shading)
+}
+.d27f17593b8064c5-calendarPicker .react-datepicker{
+    background:var(--hsl-popout-shading)
+}
+.d27f17593b8064c5-calendarPicker .react-datepicker__header{
+    background:rgba(0,0,0,0)
+}
+.d27f17593b8064c5-calendarPicker .react-datepicker__current-month{
+    color:var(--hsl-main-color)
+}
+:is(.theme-light,.theme-dark) .d27f17593b8064c5-calendarPicker .react-datepicker__day-name{
+    color:var(--text-strong)
 }
+.d27f17593b8064c5-calendarPicker .react-datepicker__month{
+    border:1px solid var(--hsl-main-color);
+    background:var(--hsl-card-shading);
+    border-radius:4px
+}
+.d27f17593b8064c5-calendarPicker .react-datepicker__day.react-datepicker__day--selected::after{
+    background:var(--hsl-main-color)
+}
+.d27f17593b8064c5-calendarPicker .react-datepicker__day:is(.react-datepicker__day--keyboard-selected,.react-datepicker__day--selected:hover,:hover){
+    background:var(--hsl-main-color)
+}
+:is(.theme-light,.theme-dark) .d27f17593b8064c5-calendarPicker .react-datepicker__day:is(.react-datepicker__day--disabled,.react-datepicker__day--disabled:hover){
+    background:rgba(0,0,0,0)
+}
 
-:is(.theme-dark, .theme-light .theme-dark) {
-  --background-shading: rgba(0, 0, 0, 0.7);
-  --card-shading: rgba(0, 0, 0, 0.2);
-  --popout-shading: rgba(0, 0, 0, 0.6);
-  --modal-shading: rgba(0, 0, 0, 0.4);
-  --input-shading: rgba(255, 255, 255, 0.05);
-  --normal-text: #d8d8db;
-  --muted-text: #aeaeb4;
-  --primary-text: #ffffff;
-  --secondary-text: #c8c8cd
+.d98031d9a3e08b09-browser{
+    background-color:var(--hsl-popout-shading);
+    box-shadow:none
+}
+.d9c8822889d1d4a1-header{
+    background:rgba(0,0,0,0)
+}
+._6764bd76e0340219-container{
+    background:var(--background-mod-subtle);
+    border:2px solid rgba(0,0,0,0)
+}
+._6764bd76e0340219-container:hover{
+    background:var(--background-mod-subtle);
+    border:2px solid var(--hsl-hover-color)
+}
+._1b24f0fdfb13e41c-icon{
+    background:var(--hsl-main-color);
+    color:var(--interactive-icon-active)
 }
+._76f047ded9fef6d4-popout{
+    background-color:var(--hsl-popout-shading)
+}
+._9a792ca8df2a06f0-browser{
+    background-color:var(--hsl-modal-shading);
+    box-shadow:none
+}
 
-:is(.theme-darker, .theme-light .theme-darker) {
-  --background-shading: rgba(0, 0, 0, 0.7);
-  --card-shading: rgba(0, 0, 0, 0.3);
-  --popout-shading: rgba(0, 0, 0, 0.7);
-  --modal-shading: rgba(0, 0, 0, 0.5);
-  --input-shading: rgba(255, 255, 255, 0.05);
-  --normal-text: #fbfbfb;
-  --muted-text: #94949c;
-  --primary-text: #fbfbfb;
-  --secondary-text: #aeaeb4
+._9c62c6ed231468c4-contentWrapper{
+    background:var(--hsl-popout-shading);
+    box-shadow:none
+}
+._927fca0ac7164d54-sectionRowsContentContainer{
+    gap:8px
+}
+.cb32c78a53f54371-container{
+    background:var(--background-mod-subtle)
+}
+.cb32c78a53f54371-container:hover{
+    background:var(--hsl-card-shading);
+    box-shadow:0 0 0 2px var(--hsl-hover-color)
+}
+.cb32c78a53f54371-rowContainer,.cb32c78a53f54371-rowContainer:first-child,.cb32c78a53f54371-rowContainer:last-child{
+    border-radius:8px
+}
+.cb32c78a53f54371-rowDivider{
+    background:rgba(0,0,0,0)
+}
+._7bdb06a4e863b838-container{
+    background:rgba(0,0,0,0)
 }
+._958562d63bb1e99d-overviewContainerNoVideo,._958562d63bb1e99d-overviewContainerWithVideo{
+    background:rgba(0,0,0,0)
+}
+.c94584907f9d5a22-commandContainer{
+    gap:8px;
+    background:rgba(0,0,0,0)
+}
+.c94584907f9d5a22-commandContainer .c94584907f9d5a22-command{
+    border:2px solid rgba(0,0,0,0)
+}
+.c94584907f9d5a22-commandContainer .c94584907f9d5a22-command:not(:last-child){
+    border:2px solid rgba(0,0,0,0)
+}
+.c94584907f9d5a22-commandContainer .c94584907f9d5a22-command:not(:last-child):hover{
+    border-color:var(--hsl-hover-color)
+}
+.c94584907f9d5a22-commandContainer :is(.c94584907f9d5a22-command,.c94584907f9d5a22-command:first-child,.c94584907f9d5a22-command:last-child){
+    border-radius:8px
+}
+.c94584907f9d5a22-command{
+    background:var(--background-mod-subtle);
+    border:2px solid rgba(0,0,0,0)
+}
+.c94584907f9d5a22-command:hover{
+    background:var(--hsl-card-shading);
+    border-color:var(--hsl-hover-color)
+}
+.b1829502d296aaa8-sectionContentContainer{
+    display:flex;
+    flex-direction:column;
+    background:rgba(0,0,0,0);
+    gap:8px
+}
+._761e57435cf1c50a-clickable{
+    background:var(--background-mod-subtle);
+    border:2px solid rgba(0,0,0,0)
+}
+._761e57435cf1c50a-clickable:hover{
+    background:var(--hsl-card-shading);
+    border-color:var(--hsl-hover-color)
+}
+._761e57435cf1c50a-clickable,._761e57435cf1c50a-clickable:first-child,._761e57435cf1c50a-clickable:last-child{
+    border-radius:8px
+}
+._761e57435cf1c50a-underline{
+    background:rgba(0,0,0,0)
+}
 
-:is(.theme-midnight, .theme-light .theme-midnight) {
-  --background-shading: rgba(0, 0, 0, 0.8);
-  --card-shading: rgba(0, 0, 0, 0.4);
-  --popout-shading: rgba(0, 0, 0, 0.8);
-  --modal-shading: rgba(0, 0, 0, 0.6);
-  --input-shading: rgba(255, 255, 255, 0.05);
-  --normal-text: #dcdcde;
-  --muted-text: #86868e;
-  --primary-text: #e7e7e9;
-  --secondary-text: #9c9ca3
+:is(._09f65b4b8a3f8d26-picker,._09f65b4b8a3f8d26-picker.refresh__09f65){
+    background:var(--hsl-popout-shading);
+    box-shadow:none
+}
+._614244fbcb264b94-sectionContainer{
+    background:hsl(from var(--hsl-main-color) h s l/0.8);
+    margin-bottom:10px;
+    border-radius:4px
+}
+._9be63f0b86033228-soundButtonWrapper{
+    background:rgba(0,0,0,0)
+}
+:is(._9be63f0b86033228-soundButton,.soundButtonRefresh__9be63){
+    background-color:var(--background-mod-subtle)
+}
+:is(._9be63f0b86033228-soundButton,.soundButtonRefresh__9be63):is(:hover,:focus-within,._9be63f0b86033228-focused){
+    border-color:var(--hsl-main-color)
+}
+:is(._9be63f0b86033228-soundButton,.soundButtonRefresh__9be63):is(:hover,:focus-within,._9be63f0b86033228-focused)._9be63f0b86033228-hoverActiveBackground{
+    background:var(--hsl-card-shading)
+}
+
+._0f481cbbd7530492-popoutContainer{
+    background:var(--hsl-popout-shading);
+    box-shadow:none;
+    backdrop-filter:none
+}
+.d5cd2da5733d0b6e-guildSection{
+    background:rgba(0,0,0,0)
+}
+.containerBackground_d4ced7{
+    background:var(--hsl-popout-shading);
+    border:none
+}
+.containerBackground_d4ced7::after{
+    border-top-color:var(--hsl-popout-shading)
+}
+.d2eed6166a4ad770-contentWarningPopout{
+    background:var(--hsl-popout-shading);
+    box-shadow:none
+}
+:is(.theme-dark,.theme-light) .d2eed6166a4ad770-footer{
+    background:rgba(0,0,0,0)
+}
+._6da2d8abf659f945-streamPreview{
+    background:var(--hsl-popout-shading)
+}
+._6da2d8abf659f945-previewContainer{
+    background:rgba(0,0,0,0)
+}
+._4e30a003110eaaf1-container{
+    background:var(--hsl-popout-shading)
+}
+.b1bfd4bdd69b9a6d-container{
+    background:var(--background-mod-subtle)
+}
+
+.full-motion .faf9c0f0be1b8685-translate{
+    transform:unset !important
+}
+.user-profile-popout:not(.custom-user-profile-theme)::before{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:var(--user-popout-image) var(--user-popout-position)/var(--user-popout-size) no-repeat;
+    background-attachment:var(--user-popout-attachment);
+    filter:var(--user-popout-filter);
+    z-index:-1
+}
+:is(.user-profile-modal,.user-profile-modal-v2):not(.custom-user-profile-theme)::before{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:var(--user-modal-image) var(--user-modal-position)/var(--user-modal-size) no-repeat;
+    background-attachment:var(--user-modal-attachment);
+    filter:var(--user-modal-filter);
+    z-index:-1
+}
+.c0bea05627c5dc35-outer{
+    border:none
+}
+.c0bea05627c5dc35-outer:not(.custom-user-profile-theme){
+    background:var(--hsl-background-shading)
+}
+.c0bea05627c5dc35-outer:not(.custom-user-profile-theme) .c0bea05627c5dc35-inner{
+    background:rgba(0,0,0,0)
+}
+.c0bea05627c5dc35-overlay{
+    background-color:var(--hsl-card-shading)
+}
+.c0bea05627c5dc35-outer:not(.custom-user-profile-theme) .ab86098b36386ff7-outer{
+    background:var(--hsl-popout-shading)
+}
+.c0bea05627c5dc35-outer:not(.custom-user-profile-theme) .ab86098b36386ff7-inner{
+    background:rgba(0,0,0,0)
+}
+.ab86098b36386ff7-outer::before,.ab86098b36386ff7-outer::after{
+    display:none
+}
+._4e35b986167c457d-tooltip{
+    background:var(--hsl-popout-shading);
+    box-shadow:none
+}
+._4e35b986167c457d-caretIcon ._4e35b986167c457d-caretFill{
+    fill:var(--hsl-popout-shading)
+}
+.custom-user-profile-theme ._740174f3d6a2c8fe-inlineContainer{
+    background:var(--user-profile-note-background-focus);
+    box-shadow:0 0 0 2px var(--user-profile-border)
+}
+.custom-user-profile-theme ._740174f3d6a2c8fe-inlineContainer:focus-within{
+    box-shadow:0 0 2px 2px var(--profile-gradient-primary-color)
+}
+._9c3bea41fd465666-profile{
+    background:var(--hsl-background-shading);
+    outline:none;
+    margin-bottom:24px;
+    border-radius:8px
+}
+._9c3bea41fd465666-profileNote ._9daaef1a8070429c-textarea{
+    margin-top:2px;
+    border-color:var(--hsl-input-border-shading);
+    background:var(--hsl-input-shading)
+}
+._9c3bea41fd465666-profileNote ._9daaef1a8070429c-textarea:focus:focus,._9c3bea41fd465666-profileNote ._9daaef1a8070429c-textarea:focus:hover{
+    background:var(--hsl-input-shading);
+    border-color:var(--hsl-main-color)
+}
+.custom-user-profile-theme .aa8da23faa27393c-top .aa8da23faa27393c-item{
+    --selected-tab-item-color: var(--profile-gradient-secondary-color)
+}
+.custom-user-profile-theme .aa8da23faa27393c-top .aa8da23faa27393c-item.aa8da23faa27393c-selected{
+    --selected-tab-item-color: var(--profile-gradient-primary-color)
+}
+.custom-user-profile-theme .a22cb0c66246f5d3-primary{
+    background-color:var(--control-background-primary-default);
+    border-color:var(--control-border-primary-default)
+}
+.custom-user-profile-theme .a22cb0c66246f5d3-secondary{
+    background-color:var(--control-background-secondary-default);
+    border-color:var(--control-border-secondary-default)
+}
+.custom-user-profile-theme ::-webkit-scrollbar-thumb{
+    background-color:var(--profile-gradient-primary-color)
+}
+.custom-user-profile-theme ._9daaef1a8070429c-textarea{
+    background:var(--user-profile-note-background-focus)
+}
+.custom-user-profile-theme ._9daaef1a8070429c-textarea:focus,.custom-user-profile-theme ._9daaef1a8070429c-textarea:focus:hover{
+    border-color:var(--profile-gradient-primary-color);
+    background:var(--user-profile-note-background-focus)
+}
+.user-profile-sidebar:not(.custom-user-profile-theme){
+    background:hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * 0.3))
+}
+
+.c0bea05627c5dc35-outer:not(.custom-user-profile-theme) .dfa8b6b94cddb191-role{
+    border-radius:4px;
+    position:relative
+}
+.c0bea05627c5dc35-outer:not(.custom-user-profile-theme) .dfa8b6b94cddb191-role .dfa8b6b94cddb191-roleRemoveButton{
+    position:static
+}
+.c0bea05627c5dc35-outer:not(.custom-user-profile-theme) .dfa8b6b94cddb191-role .dfa8b6b94cddb191-roleRemoveIcon{
+    left:14px
+}
+.c0bea05627c5dc35-outer:not(.custom-user-profile-theme) .dfa8b6b94cddb191-role ._4f569b8941af22d1-roleCircle::before{
+    content:"";
+    top:-1px;
+    right:-1px;
+    bottom:-1px;
+    left:-1px;
+    position:absolute;
+    background:inherit;
+    opacity:.2;
+    border-radius:4px
+}
+._4f569b8941af22d1-background{
+    fill:none
+}
+._4f569b8941af22d1-dotBorderBase{
+    fill:none
+}
+._4f569b8941af22d1-dotBorderColor{
+    opacity:1
+}
+._3dde27fb71170aa9-container{
+    background:var(--hsl-popout-shading);
+    border:none
+}
+
+._44b0c28be7879b7b-mask rect[fill*="#84858d"]{
+    fill:var(--hsl-offline-color)
+}
+._44b0c28be7879b7b-mask rect[fill*="#45a366"]{
+    fill:var(--hsl-online-color)
+}
+._44b0c28be7879b7b-mask rect[fill*="#ffc04e"]{
+    fill:var(--hsl-idle-color)
+}
+._44b0c28be7879b7b-mask rect[fill*="#da3e44"]{
+    fill:var(--hsl-dnd-color)
+}
+._44b0c28be7879b7b-mask rect[fill*="#9147ff"]{
+    fill:var(--hsl-streaming-color)
+}
+
+._960e4207cea8323e-layer{
+    background-color:rgba(0,0,0,0)
+}
+._23e6b439306f125a-contentRegion{
+    background:hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * 0.4))
+}
+._23e6b439306f125a-contentRegionScroller{
+    background:rgba(0,0,0,0)
+}
+._23e6b439306f125a-contentColumnDefault{
+    padding-top:50px
+}
+._9a9f981d3524e20f-container{
+    background:var(--hsl-popout-shading);
+    border:none
+}
+._730694f5672c9601-cardPrimary,._730694f5672c9601-cardPrimary._730694f5672c9601-editable{
+    --__card-accent-color: var(--hsl-card-shading);
+    background:var(--hsl-card-shading);
+    border-color:rgba(0,0,0,0)
+}
+._730694f5672c9601-card a{
+    color:var(--hsl-main-color)
+}
+.b846e57d7dad7f1a-card::before{
+    background:var(--hsl-card-shading);
+    border-color:var(--hsl-main-color)
+}
+.d96a9cdaeeba104e-container,.d96a9cdaeeba104e-clickableContainer{
+    background:rgba(0,0,0,0)
+}
+.d96a9cdaeeba104e-backgroundModifierContainer{
+    background:var(--hsl-card-shading);
+    border-top-color:rgba(0,0,0,0);
+    border-right-color:rgba(0,0,0,0);
+    border-bottom-color:rgba(0,0,0,0)
+}
+.d96a9cdaeeba104e-backgroundModifierContainer:is(:hover,:active):not(.d96a9cdaeeba104e-disabled):not(.d96a9cdaeeba104e-noAction){
+    background:var(--hsl-card-shading)
+}
+.d96a9cdaeeba104e-backgroundModifierContainer.d96a9cdaeeba104e-selected{
+    background:var(--hsl-card-shading);
+    border-color:var(--hsl-main-color)
+}
+.d96a9cdaeeba104e-selected.d96a9cdaeeba104e-statusGreen{
+    border-color:var(--status-positive)
+}
+.d96a9cdaeeba104e-selected.d96a9cdaeeba104e-statusYellow{
+    border-color:var(--status-warning)
+}
+.d96a9cdaeeba104e-selected.d96a9cdaeeba104e-d96a9cdaeeba104e-statusOrange{
+    border-color:var(--orange-360)
+}
+.d96a9cdaeeba104e-selected.d96a9cdaeeba104e-d96a9cdaeeba104e-statusRed{
+    border-color:var(--status-danger)
+}
+._217b73c8e5e3ff6d-collapseable,._217b73c8e5e3ff6d-collapseable:active{
+    background:var(--hsl-card-shading);
+    border:none
+}
+._459fb7bcd881f8d6-customColorPicker{
+    background:var(--hsl-popout-shading)
+}
+
+._23e6b439306f125a-standardSidebarView{
+    background:rgba(0,0,0,0)
+}
+._23e6b439306f125a-sidebarRegionScroller{
+    background:hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * 0.3));
+    padding:20px 8px 60px 20px
+}
+
+._409aa1aeee28d5f7-fixedContent::after{
+    display:none
+}
+._409aa1aeee28d5f7-sectionLabel{
+    justify-content:center
+}
+._409aa1aeee28d5f7-sectionLabel::before{
+    content:"";
+    height:2px;
+    flex-grow:1;
+    background:linear-gradient(to left, var(--hsl-main-color) 50%, transparent)
+}
+._409aa1aeee28d5f7-sectionLabel::after{
+    content:"";
+    height:2px;
+    flex-grow:1;
+    background:linear-gradient(to right, var(--hsl-main-color) 50%, transparent)
+}
+._409aa1aeee28d5f7-label{
+    color:var(--hsl-main-color) !important;
+    margin:0 5px
+}
+.caf372efc4d47562-item:hover{
+    background:var(--background-mod-subtle)
+}
+.caf372efc4d47562-item.caf372efc4d47562-active{
+    background:var(--hsl-main-color)
+}
+.e9e3ed8b8badfe05-content,.e9e3ed8b8badfe05-contentHeader{
+    background:rgba(0,0,0,0)
+}
+._1fed1dd06c7aabf7-accountProfileCard{
+    background:var(--hsl-card-shading)
+}
+._1fed1dd06c7aabf7-badgeList,._1fed1dd06c7aabf7-background,._1fed1dd06c7aabf7-fieldList{
+    background:rgba(0,0,0,0)
+}
+.d878e741f1c1999b-container,.eb2508e5fd9f2b15-avatarBackground{
+    background:rgba(0,0,0,0)
+}
+._0399167be87f87ca-iconBadge{
+    background:var(--hsl-main-color) !important
+}
+._3981368466c83a53-modalContent._3981368466c83a53-modalContent{
+    background:rgba(0,0,0,0)
+}
+.fc7677f98f23281c-fontButton.fc7677f98f23281c-selected,.caa50c0e8e84d066-effectContainer.caa50c0e8e84d066-selected{
+    border:1px solid var(--hsl-main-color)
+}
+.dfa67d97f51bb0c5-decorationGridItem{
+    background:var(--background-mod-subtle)
+}
+.dfa67d97f51bb0c5-selected{
+    box-shadow:inset 0 0 0 2px var(--hsl-main-color)
+}
+._51743c06a2d65fd0-decorationPreview,._51743c06a2d65fd0-smallDecorationPreviewsContainer{
+    background:var(--background-mod-subtle)
+}
+._51743c06a2d65fd0-shopPreviewBanner{
+    background:rgba(0,0,0,0)
+}
+._6980e70e22009ed7-inventoryControlsButton{
+    background:var(--background-mod-subtle)
+}
+._6980e70e22009ed7-selected{
+    box-shadow:inset 0 0 0 2px var(--hsl-main-color)
+}
+.b4019af268c3fab7-effectGridItem{
+    background:var(--background-mod-subtle)
+}
+.b4019af268c3fab7-selected{
+    box-shadow:inset 0 0 0 2px var(--hsl-main-color)
+}
+._5cea9da4c2ca012f-card{
+    background:var(--background-mod-subtle)
+}
+._5cea9da4c2ca012f-header{
+    background:rgba(0,0,0,0)
+}
+.de806995aea91de8-emptyContainer{
+    background:rgba(0,0,0,0)
+}
+.f8c98cc3d7c1bc42-box{
+    background:var(--background-mod-subtle);
+    border:none
+}
+._0624fc41b766635c-row{
+    background:var(--background-mod-subtle);
+    border:none
+}
+._50a5493e9d9cc496-authedAppV2{
+    background:var(--background-mod-subtle)
+}
+._50a5493e9d9cc496-headerV2{
+    background:rgba(0,0,0,0)
+}
+._50a5493e9d9cc496-appDetailsContainer{
+    background:rgba(0,0,0,0)
+}
+._50a5493e9d9cc496-appDetailsContainer ._50a5493e9d9cc496-appDetailsSection{
+    background:var(--background-mod-subtle);
+    padding:16px;
+    margin:0
+}
+._50a5493e9d9cc496-appDetailsContainer ._50a5493e9d9cc496-appDetailsSection:active{
+    background:var(--background-mod-subtle)
+}
+._50a5493e9d9cc496-appDetailsContainer ._50a5493e9d9cc496-appDetailsSection:first-child{
+    border-radius:8px 8px 0 0
+}
+._50a5493e9d9cc496-appDetailsContainer ._50a5493e9d9cc496-appDetailsSection:nth-child(2){
+    border-radius:0 0 8px 8px
+}
+.d84e0fd1f07926c7-actionMenuButton{
+    background:var(--background-mod-subtle)
+}
+._803f2f55621144fb-sessionIcon{
+    background:var(--hsl-main-color);
+    color:var(--text-strong)
+}
+.c7f964e7e0fc8b47-accountButtonInner,._750deea9823265e4-accountBtnInner{
+    background-color:var(--background-mod-subtle);
+    border:2px solid rgba(0,0,0,0)
+}
+.c7f964e7e0fc8b47-accountButtonInner:hover,._750deea9823265e4-accountBtnInner:hover{
+    background-color:var(--background-mod-subtle);
+    border-color:var(--hsl-main-color)
+}
+.c7f964e7e0fc8b47-connectionHeader{
+    background:rgba(0,0,0,0);
+    padding-bottom:0
+}
+.c7f964e7e0fc8b47-metadataContainer{
+    background-color:var(--background-mod-subtle)
+}
+.b62c4e4ee0e62730-perkCard{
+    background:var(--background-mod-subtle)
+}
+._70f7f6541f6f031e-innerWrapperBase{
+    background:var(--hsl-popout-shading)
+}
+._70f7f6541f6f031e-subButton{
+    color:var(--hsl-main-color) !important
+}
+.a61c561e7be40d05-expandedProgressBarContainerSettingsPage{
+    background:var(--hsl-card-shading);
+    margin:0
+}
+.a45ed3bc8a11b547-giftCard{
+    background:var(--hsl-card-shading)
+}
+._5dba5003598d9c70-guildContainer,.ceb06aa49ba836f9-boostContainer{
+    background:var(--hsl-card-shading)
+}
+.ceb06aa49ba836f9-appliedBoostContainer{
+    background:rgba(0,0,0,0)
+}
+.e335a78803b4d1df-detailsBlock{
+    background:var(--hsl-card-shading)
+}
+._01014d2e38bd7c76-paymentPane{
+    background:var(--hsl-card-shading)
+}
+.e9cb00d6250845ad-payment{
+    background:rgba(0,0,0,0)
+}
+.e9cb00d6250845ad-expandedInfo{
+    background:var(--background-mod-subtle)
+}
+.a706ba33cbeb179a-codeRedemptionRedirect{
+    background:rgba(0,0,0,0);
+    border:none
+}
+._36dee59b8fa89219-selectionCircle{
+    box-shadow:inset 0 0 0 4px var(--hsl-main-color)
+}
+._36dee59b8fa89219-checkmark{
+    color:var(--hsl-main-color)
+}
+._062838a9530acec0-container{
+    -webkit-mask-image:url(https://Kira and Diego.github.io/icons/pill.svg);
+    mask-image:url(https://Kira and Diego.github.io/icons/pill.svg);
+    background:var(--hsl-main-color) !important
+}
+:is(.theme-light,.theme-dark) ._062838a9530acec0-progress{
+    background:var(--hsl-background-shading)
+}
+._062838a9530acec0-notches{
+    display:none
+}
+:is(.theme-light,.theme-dark) .ac7648c9bd968881-sliderBar{
+    background-color:var(--background-mod-subtle)
+}
+._84bad078060c37c1-soundButtonSettingContainer{
+    background:var(--background-mod-subtle)
+}
+._11e1f74ed34823b2-cameraWrapper{
+    background:var(--background-mod-subtle);
+    border:none
+}
+._53965a42989baf13-backgroundOptionRing{
+    border:2px solid var(--hsl-main-color)
+}
+._740f25428e5fa983-defaultKeybindGroup{
+    background:var(--background-mod-subtle);
+    border:none
+}
+._7db089e5a4993141-headerContainer{
+    background:rgba(0,0,0,0);
+    gap:0
+}
+.a16aea1526925c2c-container{
+    flex-direction:unset
+}
+._0ecc4bce434fd124-iconContainer>foreignObject{
+    background:rgba(0,0,0,0)
+}
+.cc46f0f859f26200-notDetected{
+    background:var(--hsl-card-shading)
+}
+.cc46f0f859f26200-nowPlaying{
+    background:hsl(from var(--hsl-success-color) h s l/0.8)
+}
+.cc46f0f859f26200-addGamePopout{
+    background:var(--hsl-popout-shading);
+    box-shadow:none
+}
+:is(.theme-light,html:not(.theme-dark)) .cc46f0f859f26200-game{
+    box-shadow:0 1px 0 0 var(--background-mod-subtle)
+}
+._9d98d3a9398a6f7d-expandedContainer,._9d98d3a9398a6f7d-groupHeader,._9d98d3a9398a6f7d-groupCollapsedContainer,._9d98d3a9398a6f7d-groupContainer{
+    background:rgba(0,0,0,0)
+}
+
+._1a4ef2934d882343-settingCard,._1a4ef2934d882343-settingCard._1a4ef2934d882343-active{
+    background:var(--hsl-card-shading)
+}
+._1a4ef2934d882343-cardFolder{
+    background:rgba(0,0,0,0)
+}
+._535437b3d3b11fd1-scroller{
+    background:rgba(0,0,0,0)
+}
+._0ab2c03be0b88164-createOverwritePopout{
+    background:var(--hsl-popout-shading)
+}
+._344e69670924b1be-group{
+    border-color:var(--background-mod-subtle)
+}
+._344e69670924b1be-item{
+    background:var(--hsl-card-shading);
+    cursor:pointer
+}
+._344e69670924b1be-item._344e69670924b1be-selected{
+    background-color:hsl(from var(--hsl-main-color) h s l/0.4)
+}
+._344e69670924b1be-deny{
+    color:var(--hsl-danger-color);
+    border-right:1px solid var(--background-mod-subtle)
+}
+._344e69670924b1be-deny._344e69670924b1be-selected{
+    background-color:hsl(from var(--hsl-danger-color) h s l/0.6)
+}
+._344e69670924b1be-allow{
+    color:var(--hsl-success-color);
+    border-left:1px solid var(--background-mod-subtle)
+}
+._344e69670924b1be-allow._344e69670924b1be-selected{
+    background-color:hsl(from var(--hsl-success-color) h s l/0.6)
+}
+
+.ec9088ea8b115e41-itemSelected{
+    border:2px solid var(--hsl-main-color)
+}
+._83b1d7042b9be375-wrapper,._83b1d7042b9be375-wrapper:hover{
+    background:rgba(0,0,0,0)
+}
+._83b1d7042b9be375-action{
+    background:var(--hsl-popout-shading)
+}
+.fa2640ef99d88f6e-mainTableContainer{
+    background:var(--hsl-card-shading)
+}
+.d8f25bf4f76423e6-container{
+    background:var(--hsl-card-shading);
+    border:2px solid rgba(0,0,0,0)
+}
+.d8f25bf4f76423e6-container:hover{
+    background:var(--hsl-card-shading);
+    border:2px solid var(--hsl-main-color)
+}
+.d8f25bf4f76423e6-icon{
+    background:var(--hsl-main-color);
+    color:var(--interactive-text-active)
+}
+.e29cd7b93c4f1266-titleContainer{
+    background:rgba(0,0,0,0)
+}
+.c6bf1b7af480dfda-header{
+    background:rgba(0,0,0,0);
+    transition:background .15s ease-in-out
+}
+.c6bf1b7af480dfda-stickyHeaderElevated{
+    background:var(--hsl-popout-shading)
+}
+._09ccca11226b11ad-container{
+    background:var(--hsl-popout-shading)
+}
+._959cbfbb20fb39e8-joinOptions{
+    background:var(--hsl-card-shading)
+}
+._959cbfbb20fb39e8-joinOptionContent._959cbfbb20fb39e8-uninteractive{
+    background:var(--background-mod-subtle)
+}
+.eae0ef2ab2653087-safetyChecklist,._5dac89b770bde66c-simpleItemWrapper{
+    background:var(--hsl-card-shading);
+    border:none
+}
+._5dac89b770bde66c-valuePill{
+    background:var(--hsl-card-shading);
+    border:1px solid var(--hsl-main-color)
+}
+._43dab84f7529cb48-auditLog{
+    background:var(--hsl-card-shading);
+    border:none
+}
+._43dab84f7529cb48-headerExpanded,._43dab84f7529cb48-divider,._43dab84f7529cb48-changeDetails{
+    background:rgba(0,0,0,0)
+}
+.scrollerContainer_cdb2b0{
+    background:var(--hsl-card-shading);
+    border:none
+}
+.a25a68d7be1be409-editCard{
+    background:var(--hsl-card-shading);
+    border:none
+}
+:is(.ed9c90c31c2038a5-mentionLimitContainer,._6446fb2bd9a3c2e5-actionContainer){
+    background:var(--background-mod-subtle)
+}
+._6a63119adb6c6ba0-keywordsTextArea{
+    background:var(--hsl-input-shading);
+    border-color:var(--hsl-input-border-shading)
+}
+._6a63119adb6c6ba0-keywordsTextArea:focus{
+    border-color:var(--hsl-main-color);
+    box-shadow:0 0 2px 0 var(--hsl-main-color)
+}
+.bc45130a46a61b36-actionContainer,.b6c6eb5e65b969d2-stepCountIcon{
+    background:var(--background-mod-subtle)
+}
+.ed9c90c31c2038a5-stepperContainer{
+    background:rgba(0,0,0,0);
+    border:none
+}
+.c615b70a52ed6dcb-textArea{
+    background:var(--hsl-input-shading);
+    border-color:var(--hsl-input-border-shading)
+}
+.c615b70a52ed6dcb-textArea:focus-within{
+    border-color:var(--hsl-main-color);
+    box-shadow:0 0 2px 0 var(--hsl-main-color)
+}
+._7dd5e5d187db8f31-guildDetails{
+    background:var(--hsl-popout-shading)
+}
+._7dd5e5d187db8f31-featureCard{
+    background:var(--hsl-card-shading)
+}
+._7dd5e5d187db8f31-featureIcon{
+    background:rgba(0,0,0,0)
+}
+._73000d97b1b29da5-upsellContainer{
+    background:var(--hsl-card-shading)
+}
+._73000d97b1b29da5-upsellFooter{
+    background:rgba(0,0,0,0)
+}
+.dd30dca4d268da6e-howItWorksContainer{
+    background:rgba(0,0,0,0);
+    padding:0
+}
+.dd30dca4d268da6e-howItWorksImageContainer{
+    background:rgba(0,0,0,0)
+}
+.fc2e20723675447f-card{
+    background:var(--hsl-card-shading)
+}
+._02e4c53e15067b10-avatarCard{
+    background:var(--background-mod-subtle)
+}
+:is(._02e4c53e15067b10-verticalConnector,._02e4c53e15067b10-horizontalConnector){
+    border-color:var(--background-mod-subtle) !important
+}
+._981f723644a1a061-descriptionBox{
+    background:var(--hsl-card-shading)
+}
+._540ed2de1cc1ed38-developerPortalCtaWrapper{
+    background:rgba(0,0,0,0)
+}
+._0dfeca4dc5b253f7-analyticsCard{
+    background:var(--hsl-card-shading)
+}
+
+._5e434347c823b592-panels{
+    background:hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * 0.5));
+    border-radius:0;
+    border:none;
+    width:100%;
+    left:0;
+    bottom:0;
+    padding:8px
+}
+:is(.theme-light,.theme-dark) ._5dec784a68542d60-panel{
+    background-color:rgba(0,0,0,0)
+}
+:is(.theme-light,.theme-dark) .e131a99484292a19-button.e131a99484292a19-buttonColor{
+    background:var(--hsl-main-color)
+}
+:is(.theme-light,.theme-dark) .e131a99484292a19-button.e131a99484292a19-buttonColor:hover{
+    background:var(--hsl-hover-color)
+}
+:is(.theme-light,.theme-dark) .e131a99484292a19-button.e131a99484292a19-buttonColor.e131a99484292a19-buttonActive{
+    background:hsl(from var(--hsl-main-color) h s l/0.4);
+    color:var(--button-secondary-text);
+    border-color:hsl(from var(--hsl-main-color) h s l/0.2)
+}
+:is(.theme-light,.theme-dark) .e131a99484292a19-button.e131a99484292a19-buttonColor.e131a99484292a19-buttonActive:hover{
+    background:hsl(from var(--hsl-hover-color) h s l/0.3)
+}
+.e131a99484292a19-noiseCancellationPopout{
+    background:var(--hsl-popout-shading)
+}
+:is(.theme-light,.theme-dark) ._0d6162a4e6a4b802-wrapper{
+    background:rgba(0,0,0,0)
+}
+._0d6162a4e6a4b802-contentWrapper{
+    background:none !important
+}
+.postEnrollmentBackgroundCollapsed__636a2,.postEnrollmentBackgroundExpanded__636a2{
+    background-image:none !important;
+    background-color:rgba(0,0,0,0);
+    border:none
+}
+.headerText__636a2,.submenuIcon__636a2{
+    color:rgba(0,0,0,0)
+}
+.contentInteractable__636a2 .postEnrollmentBackgroundExpanded__636a2{
+    background-color:var(--hsl-popout-shading)
+}
+.contentInteractable__636a2 .headerText__636a2{
+    color:var(--text-default)
+}
+.contentInteractable__636a2 .submenuIcon__636a2{
+    color:var(--interactive-text-default)
+}
+
+.keyboard-mode .cc5dd25190031396-focusStroke{
+    stroke:var(--focus-color);
+    stroke-width:4px
+}
+.ef3116c2da186559-wrapper{
+    margin-bottom:var(--custom-app-panels-height);
+    background:rgba(0,0,0,0);
+    padding-top:10px
+}
+._581051df43c5ebb6-item{
+    box-shadow:0 0 3px 1px var(--hsl-main-color)
+}
+._5bc7ed9d4097f6b5-pill{
+    bottom:0
+}
+._6e9f8dce4cc18de3-childWrapper{
+    background-color:var(--hsl-card-shading)
+}
+._6e9f8dce4cc18de3-childWrapper>svg{
+    width:100%;
+    height:100%;
+    background:var(--home-icon) center/var(--home-size) no-repeat
+}
+._6e9f8dce4cc18de3-childWrapper path{
+    display:none
+}
+._6e9f8dce4cc18de3-wrapper:hover ._6e9f8dce4cc18de3-childWrapper{
+    background-color:var(--hsl-hover-color)
+}
+._6e9f8dce4cc18de3-wrapper._6e9f8dce4cc18de3-selected ._6e9f8dce4cc18de3-childWrapper{
+    background-color:var(--hsl-main-color)
+}
+._6e9f8dce4cc18de3-icon{
+    background-color:var(--hsl-card-shading)
+}
+._5bc7ed9d4097f6b5-circleIconButton{
+    background-color:var(--hsl-card-shading)
+}
+._5bc7ed9d4097f6b5-circleIconButton:hover:not(._5bc7ed9d4097f6b5-disabled){
+    background:var(--hsl-hover-color)
+}
+._5bc7ed9d4097f6b5-circleIconButton._5bc7ed9d4097f6b5-selected{
+    background:var(--hsl-main-color)
+}
+._3b95d7d910416e54-mention{
+    background:var(--hsl-main-color);
+    border-radius:5px
+}
+._3b95d7d910416e54-mention:active{
+    background:var(--hsl-main-color)
+}
+._2b1f52e43a8f1c02-iconBadge{
+    background:var(--hsl-popout-shading)
+}
+._2b1f52e43a8f1c02-iconBadge._650eb104245d257b-isCurrentUserConnected{
+    background:var(--hsl-main-color)
+}
+
+._29444ba32c7fbeab-wrapperCommon ._29444ba32c7fbeab-mainContent ._29444ba32c7fbeab-name{
+    flex:1
+}
+._29444ba32c7fbeab-name{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--hsl-main-color);
+    font-weight:700
+}
+._29444ba32c7fbeab-name::before{
+    content:"";
+    height:2px;
+    flex-grow:1;
+    transition:all .3s ease-in-out;
+    background:linear-gradient(to left, var(--hsl-main-color) 50%, transparent);
+    margin-right:5px
+}
+._29444ba32c7fbeab-name::after{
+    content:"";
+    height:2px;
+    flex-grow:1;
+    transition:all .3s ease-in-out;
+    background:linear-gradient(to right, var(--hsl-main-color) 50%, transparent);
+    margin-left:5px
+}
+._29444ba32c7fbeab-children{
+    margin-left:6px
+}
+._29444ba32c7fbeab-addButtonIcon{
+    color:var(--hsl-main-color)
+}
+._29444ba32c7fbeab-collapsed ._29444ba32c7fbeab-name::before,._29444ba32c7fbeab-collapsed ._29444ba32c7fbeab-name::after{
+    flex-grow:0
+}
+._29444ba32c7fbeab-wrapper._29444ba32c7fbeab-muted :is(._29444ba32c7fbeab-name,._29444ba32c7fbeab-addButtonIcon){
+    color:var(--hsl-main-color);
+    opacity:.5
+}
+._29444ba32c7fbeab-wrapper:is(._29444ba32c7fbeab-wrapper,._29444ba32c7fbeab-muted):hover ._29444ba32c7fbeab-name{
+    color:var(--hsl-hover-color)
+}
+._29444ba32c7fbeab-wrapper:is(._29444ba32c7fbeab-wrapper,._29444ba32c7fbeab-muted):hover ._29444ba32c7fbeab-name::before{
+    background:linear-gradient(to left, var(--hsl-hover-color) 50%, transparent)
+}
+._29444ba32c7fbeab-wrapper:is(._29444ba32c7fbeab-wrapper,._29444ba32c7fbeab-muted):hover ._29444ba32c7fbeab-name::after{
+    background:linear-gradient(to right, var(--hsl-hover-color) 50%, transparent)
+}
+._29444ba32c7fbeab-wrapper:is(._29444ba32c7fbeab-wrapper,._29444ba32c7fbeab-muted):hover ._29444ba32c7fbeab-addButtonIcon{
+    color:var(--hsl-hover-color)
+}
+._29444ba32c7fbeab-icon{
+    display:none
+}
+
+._599fa27f4d2464c6-newChannel{
+    background:var(--hsl-main-color) !important;
+    color:var(--text-strong)
+}
+._5e434347c823b592-sidebarList{
+    border-top-left-radius:10px;
+    border:none;
+    backdrop-filter:none
+}
+._2637a2609f343032-container{
+    background:hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * 0.2))
+}
+.f37cb1984c371ee5-animatedContainer{
+    background-color:rgba(0,0,0,0);
+    border:none
+}
+._2ea32c412048f708-unread{
+    box-shadow:0 0 6px 1px var(--hsl-main-color)
+}
+._7aaec78b97ff00f7-bar,._3b95d7d910416e54-bar{
+    background-color:var(--hsl-main-color);
+    border-color:var(--hsl-main-color)
+}
+._7aaec78b97ff00f7-barText,._7aaec78b97ff00f7-unreadIcon,._3b95d7d910416e54-text,.icon_edf32f{
+    color:var(--text-strong) !important
+}
+._5b40bdd67543ba35-spineBorder{
+    background-color:var(--hsl-main-color)
+}
+._5b40bdd67543ba35-spine{
+    color:var(--hsl-main-color)
+}
+._2ea32c412048f708-link{
+    transition:all .15s ease-in-out;
+    margin-left:4px
+}
+._2ea32c412048f708-link::before{
+    top:0;
+    right:100%;
+    bottom:0;
+    left:0;
+    transition:all .15s ease-in-out;
+    z-index:-1;
+    border-radius:4px
+}
+._2ea32c412048f708-icon{
+    width:18px;
+    height:18px;
+    margin-right:3px;
+    transition:all .15s ease-in-out;
+    color:var(--hsl-channel-normal)
+}
+._2ea32c412048f708-name{
+    transition:all .15s ease-in-out;
+    color:var(--hsl-channel-normal)
+}
+._2ea32c412048f708-wrapper._2ea32c412048f708-modeMuted ._2ea32c412048f708-name,._2ea32c412048f708-wrapper._2ea32c412048f708-modeMuted ._2ea32c412048f708-icon{
+    color:var(--hsl-channel-muted)
+}
+._2ea32c412048f708-wrapper:hover ._2ea32c412048f708-link,._2ea32c412048f708-wrapper._2ea32c412048f708-modeMuted:hover ._2ea32c412048f708-link{
+    background:var(--background-mod-subtle)
+}
+._2ea32c412048f708-wrapper:hover ._2ea32c412048f708-name,._2ea32c412048f708-wrapper:hover ._2ea32c412048f708-icon,._2ea32c412048f708-wrapper._2ea32c412048f708-modeMuted:hover ._2ea32c412048f708-name,._2ea32c412048f708-wrapper._2ea32c412048f708-modeMuted:hover ._2ea32c412048f708-icon{
+    color:var(--hsl-channel-hover)
+}
+._2ea32c412048f708-wrapper._2ea32c412048f708-modeUnreadImportant ._2ea32c412048f708-name{
+    color:var(--hsl-channel-unread);
+    text-shadow:0 0 3px
+}
+._2ea32c412048f708-wrapper._2ea32c412048f708-modeUnreadImportant ._2ea32c412048f708-icon{
+    color:var(--hsl-channel-unread);
+    filter:drop-shadow(0 0 3px)
+}
+._2ea32c412048f708-wrapper._2ea32c412048f708-modeUnreadImportant:hover :is(._2ea32c412048f708-name,._2ea32c412048f708-icon){
+    color:var(--hsl-channel-unread-hover)
+}
+._2ea32c412048f708-wrapper._2ea32c412048f708-modeSelected ._2ea32c412048f708-link{
+    background-color:rgba(0,0,0,0)
+}
+._2ea32c412048f708-wrapper._2ea32c412048f708-modeSelected ._2ea32c412048f708-link::before{
+    right:0;
+    background:var(--hsl-channel-selected-bg);
+    animation:cv-channel-select .3s ease-in-out
+}
+._2ea32c412048f708-wrapper._2ea32c412048f708-modeSelected ._2ea32c412048f708-name,._2ea32c412048f708-wrapper._2ea32c412048f708-modeSelected ._2ea32c412048f708-icon{
+    color:var(--hsl-channel-selected)
+}
+._2ea32c412048f708-wrapper._2ea32c412048f708-modeConnected ._2ea32c412048f708-name{
+    color:var(--hsl-main-color);
+    text-shadow:0 0 3px
+}
+._2ea32c412048f708-wrapper._2ea32c412048f708-modeConnected ._2ea32c412048f708-icon{
+    color:var(--hsl-main-color);
+    filter:drop-shadow(0 0 3px)
+}
+._260e1982cd52c5c3-wrapper,._260e1982cd52c5c3-users{
+    background:rgba(0,0,0,0)
+}
+._260e1982cd52c5c3-users{
+    padding:0 8px 0 6px
+}
+._260e1982cd52c5c3-total{
+    padding:0 6px 0 1px
+}
+.c3cd7d38925bcd00-list{
+    padding-left:24px
+}
+._07f9193042954787-avatar[style*="var(--status-speaking)"]::before{
+    content:"";
+    width:150px;
+    height:24px;
+    position:absolute;
+    background:linear-gradient(to right, var(--hsl-main-color) 10%, transparent);
+    opacity:.5;
+    z-index:-1;
+    border-radius:999px 0 0 999px
+}
+
+.e6b7699ce8339e1c-privateChannels{
+    background:hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * 0.2))
+}
+._99e7cad8d4c55236-scroller{
+    background:rgba(0,0,0,0);
+    margin-bottom:var(--custom-app-panels-height, 0)
+}
+._99e7cad8d4c55236-privateChannelsHeaderContainer,._99e7cad8d4c55236-privateChannelsHeaderContainer:hover{
+    color:var(--hsl-main-color)
+}
+._99e7cad8d4c55236-headerText{
+    display:flex;
+    text-transform:uppercase;
+    font-size:14px;
+    font-weight:700;
+    align-items:center
+}
+._99e7cad8d4c55236-headerText::before{
+    content:"";
+    height:2px;
+    flex-grow:1;
+    background:linear-gradient(to left, currentColor 50%, transparent);
+    margin-right:5px
+}
+._99e7cad8d4c55236-headerText::after{
+    content:"";
+    height:2px;
+    flex-grow:1;
+    background:linear-gradient(to right, currentColor 50%, transparent);
+    margin-left:5px
+}
+._99e7cad8d4c55236-privateChannelRecipientsInviteButtonIcon{
+    color:var(--hsl-main-color)
+}
+._99e7cad8d4c55236-privateChannelRecipientsInviteButtonIcon:hover{
+    color:var(--hsl-hover-color)
+}
+._99e7cad8d4c55236-empty{
+    fill:var(--text-default);
+    opacity:.15
+}
+._972a0d22c8afa7f0-interactive{
+    transition:all .15s ease-in-out;
+    border-radius:4px
+}
+._972a0d22c8afa7f0-interactive::before{
+    content:"";
+    position:absolute;
+    top:0;
+    right:100%;
+    bottom:0;
+    left:0;
+    transition:all .15s ease-in-out;
+    z-index:-1;
+    border-radius:4px
+}
+._972a0d22c8afa7f0-interactive:hover{
+    background:var(--background-mod-subtle)
+}
+._972a0d22c8afa7f0-interactive._972a0d22c8afa7f0-interactiveSelected{
+    background-color:rgba(0,0,0,0);
+    color:var(--interactive-text-active)
+}
+._972a0d22c8afa7f0-interactive._972a0d22c8afa7f0-interactiveSelected::before{
+    right:0;
+    background:var(--hsl-main-color);
+    animation:cv-channel-select .3s ease-in-out
+}
+._972a0d22c8afa7f0-interactive._972a0d22c8afa7f0-interactiveSelected ._972a0d22c8afa7f0-activityStatusText{
+    color:var(--interactive-text-active)
+}
+._972a0d22c8afa7f0-interactive._972a0d22c8afa7f0-interactiveSelected ._972a0d22c8afa7f0-activityStatusText strong{
+    color:var(--interactive-text-active)
+}
+._5e434347c823b592-sidebar{
+    background:rgba(0,0,0,0)
+}
+._5e434347c823b592-sidebar:after{
+    display:none
+}
+
+:is(.theme-light,.theme-dark,.theme-darker,.theme-midnight),
+:is(.theme-light,.theme-dark,.theme-darker,.theme-midnight):is(.theme-light,.theme-dark){
+    --text-default: hsl(from var(--normal-text) h calc(var(--saturation-factor, 1) * s) l/alpha);
+    --text-muted: hsl(from var(--muted-text) h calc(var(--saturation-factor, 1) * s) l/alpha);
+
+    --text-link: var(--hsl-main-color);
+    --text-brand: var(--hsl-main-color);
+    --text-feedback-positive: var(--hsl-success-color);
+    --text-feedback-critical: var(--hsl-danger-color);
+
+    --hsl-background-shading: hsl(from var(--background-shading) h calc(var(--saturation-factor, 1) * s) l/alpha);
+    --hsl-card-shading: hsl(from var(--card-shading) h calc(var(--saturation-factor, 1) * s) l/alpha);
+    --hsl-popout-shading: hsl(from var(--popout-shading) h calc(var(--saturation-factor, 1) * s) l/alpha);
+    --hsl-modal-shading: hsl(from var(--modal-shading) h calc(var(--saturation-factor, 1) * s) l/alpha);
+    --hsl-input-shading: hsl(from var(--input-shading) h calc(var(--saturation-factor, 1) * s) l/alpha);
+    --hsl-input-border-shading: hsl(from var(--hsl-input-shading) h s l/.1)
+}
+
+:root{
+    --hsl-main-color: hsl(from var(--main-color) h calc(var(--saturation-factor, 1) * s) l/alpha);
+    --hsl-hover-color: hsl(from var(--hover-color) h calc(var(--saturation-factor, 1) * s) l/alpha);
+    --hsl-success-color: hsl(from var(--success-color) h calc(var(--saturation-factor, 1) * s) l/alpha);
+    --hsl-warning-color: hsl(from var(--warning-color) h calc(var(--saturation-factor, 1) * s) l/alpha);
+    --hsl-danger-color: hsl(from var(--danger-color) h calc(var(--saturation-factor, 1) * s) l/alpha);
+    --hsl-info-color: hsl(from var(--info-color) h calc(var(--saturation-factor, 1) * s) l/alpha);
+    --hsl-online-color: hsl(from var(--online-color) h calc(var(--saturation-factor, 1) * s) l/alpha);
+    --hsl-idle-color: hsl(from var(--idle-color) h calc(var(--saturation-factor, 1) * s) l/alpha);
+    --hsl-dnd-color: hsl(from var(--dnd-color) h calc(var(--saturation-factor, 1) * s) l/alpha);
+    --hsl-streaming-color: hsl(from var(--streaming-color) h calc(var(--saturation-factor, 1) * s) l/alpha);
+    --hsl-offline-color: hsl(from var(--offline-color) h calc(var(--saturation-factor, 1) * s) l/alpha);
+
+    --hsl-channel-normal: var(--channel-normal);
+    --hsl-channel-muted: var(--channel-muted);
+    --hsl-channel-hover: var(--channel-hover);
+    --hsl-channel-selected: var(--channel-selected);
+    --hsl-channel-selected-bg: var(--channel-selected-bg);
+    --hsl-channel-unread: var(--channel-unread);
+    --hsl-channel-unread-hover: var(--channel-unread-hover);
+
+    --font-primary: var(--main-font);
+    --font-display: var(--main-font);
+    --font-code: var(--code-font);
+    --focus-primary: var(--focus-color);
+    --main-color: #b211c4;
+    --hover-color: #a020f0;
+    --success-color: #43b581;
+    --warning-color: #fff;
+    --danger-color: #982929;
+    --info-color: #fff;
+    --online-color: #43b581;
+    --idle-color: #faa61a;
+    --dnd-color: #982929;
+    --streaming-color: #593695;
+    --offline-color: #6c6c6c;
+
+    --background-shading-percent: 80%;
+    --background-image: url(https://raw.githubusercontent.com/Kira-Kohler/theme/refs/heads/main/wallpaper1920x1080.png);
+    --background-position: center;
+    --background-size: cover;
+    --background-attachment: fixed;
+    --background-filter: saturate(calc(var(--saturation-factor, 1) * 1));
+
+    --user-popout-image: var(--background-image);
+    --user-popout-position: var(--background-position);
+    --user-popout-size: var(--background-size);
+    --user-popout-attachment: var(--background-attachment);
+    --user-popout-filter: brightness(var(--background-brightness, 100%)) contrast(var(--background-contrast, 100%)) saturate(var(--background-saturation, 100%)) invert(var(--background-invert, 0%)) grayscale(var(--background-grayscale, 0%)) sepia(var(--background-sepia, 0%)) blur(calc(var(--background-blur, 0px) + 3px));
+
+    --user-modal-image: var(--background-image);
+    --user-modal-position: var(--background-position);
+    --user-modal-size: var(--background-size);
+    --user-modal-attachment: var(--background-attachment);
+    --user-modal-filter: brightness(var(--background-brightness, 100%)) contrast(var(--background-contrast, 100%)) saturate(var(--background-saturation, 100%)) invert(var(--background-invert, 0%)) grayscale(var(--background-grayscale, 0%)) sepia(var(--background-sepia, 0%)) blur(calc(var(--background-blur, 0px) + 3px));
+    --home-icon: url(https://raw.githubusercontent.com/Kira-Kohler/theme/refs/heads/main/heart2.png);
+    --home-size: 40px;
+    --main-font: 'Times New Roman', sans-serif;
+    --code-font: Consolas, Liberation Mono, Menlo, Courier, monospace;
+    --channel-normal: var(--channels-default);
+    --channel-muted: var(--interactive-muted);
+    --channel-hover: var(--interactive-hover);
+    --channel-selected: var(--interactive-active);
+    --channel-selected-bg: var(--main-color);
+    --channel-unread: var(--main-color);
+    --channel-unread-hover: var(--hover-color);
+
+    --focus-color: var(--main-color);
+    --user-popout-overlay: rgba(0, 0, 0, 0.65);
+
+    --channel-color: rgba(255, 255, 255, 0.3);
+    --muted-color: rgba(255, 255, 255, 0.1);
+    --server-unread: var(--main-color);
+    --channel-text-selected: #fff;
+    --url-color: var(--main-color);
+    --channels-width: 220px;
+    --members-width: 240px;
+
+    --background-overlay: rgba(0, 0, 0, 0.7);
+    --background-repeat: no-repeat;
+    --background-brightness: 80%;
+    --background-contrast: 120%;
+    --background-saturation: 100%;
+    --background-invert: 0%;
+    --background-grayscale: 0%;
+    --background-sepia: 0%;
+    --background-blur: 0px;
+
+    --backdrop-overlay: rgba(0, 0, 0, 0.8);
+    --backdrop-image: var(--background-image);
+    --backdrop-position: var(--background-position);
+    --backdrop-size: var(--background-size);
+    --backdrop-repeat: var(--background-repeat);
+    --backdrop-attachment: var(--background-attachment);
+    --backdrop-brightness: var(--background-brightness);
+    --backdrop-contrast: var(--background-contrast);
+    --backdrop-saturation: var(--background-saturation);
+    --backdrop-invert: var(--background-invert);
+    --backdrop-grayscale: var(--background-grayscale);
+    --backdrop-sepia: var(--backdrop-sepia);
+    --backdrop-blur: var(--background-blur);
+
+    --home-position: center;
+    --popout-color: rgba(0, 0, 0, 0.7);
+    --modal-color: rgba(0, 0, 0, 0.5);
+
+    --bd-blue: var(--main-color);
+    --bd-blue-hover: var(--hover-color);
+    --bd-blue-active: var(--hover-color);
+    --text-normal: rgb(220, 221, 222);
+    --text-muted: rgb(114, 118, 125);
+}
+
+:is(.theme-light,.theme-dark .theme-light){
+    --background-shading: rgba(252, 252, 252, 0.8);
+    --card-shading: rgba(252, 252, 252, 0.3);
+    --popout-shading: rgba(252, 252, 252, 0.7);
+    --modal-shading: rgba(252, 252, 252, 0.5);
+    --input-shading: rgba(0, 0, 0, 0.3);
+    --normal-text: #36363c;
+    --muted-text: #75757e;
+    --primary-text: #303035;
+    --secondary-text: #60606a
+}
+:is(.theme-dark,.theme-light .theme-dark){
+    --background-shading: rgba(0, 0, 0, 0.7);
+    --card-shading: rgba(0, 0, 0, 0.2);
+    --popout-shading: rgba(0, 0, 0, 0.6);
+    --modal-shading: rgba(0, 0, 0, 0.4);
+    --input-shading: rgba(255, 255, 255, 0.05);
+    --normal-text: #d8d8db;
+    --muted-text: #aeaeb4;
+    --primary-text: #ffffff;
+    --secondary-text: #c8c8cd
+}
+:is(.theme-darker,.theme-light .theme-darker){
+    --background-shading: rgba(0, 0, 0, 0.7);
+    --card-shading: rgba(0, 0, 0, 0.3);
+    --popout-shading: rgba(0, 0, 0, 0.7);
+    --modal-shading: rgba(0, 0, 0, 0.5);
+    --input-shading: rgba(255, 255, 255, 0.05);
+    --normal-text: #fbfbfb;
+    --muted-text: #94949c;
+    --primary-text: #fbfbfb;
+    --secondary-text: #aeaeb4
+}
+:is(.theme-midnight,.theme-light .theme-midnight){
+    --background-shading: rgba(0, 0, 0, 0.8);
+    --card-shading: rgba(0, 0, 0, 0.4);
+    --popout-shading: rgba(0, 0, 0, 0.8);
+    --modal-shading: rgba(0, 0, 0, 0.6);
+    --input-shading: rgba(255, 255, 255, 0.05);
+    --normal-text: #dcdcde;
+    --muted-text: #86868e;
+    --primary-text: #e7e7e9;
+    --secondary-text: #9c9ca3
 }
